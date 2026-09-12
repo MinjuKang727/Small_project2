@@ -1,0 +1,2656 @@
+2026-08-14 18:51:19,917 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-14 18:51:20,766 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-14 18:52:16,369 [ERROR] auto_blog.py:335 - cannot access local variable 'info_dict' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 333, in <module>
+    read_xlsx(data_folder_src)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 292, in read_xlsx
+    content_str += get_content_str(content_type, data_list) + "\n\n"
+                   ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 119, in get_content_str
+    answer = info_dict[Xlsx_key.ANSWER.value]
+             ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'info_dict' where it is not associated with a value
+2026-08-14 18:56:28,346 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-14 18:56:29,022 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-14 18:56:30,322 [INFO] auto_blog.py:286 - 엑셀 파일을 읽기 완료
+2026-08-14 18:56:30,407 [INFO] auto_blog.py:291 - '속담'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 18:56:30,407 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 강태공이 세월 낚듯 한다.)
+2026-08-14 18:56:30,408 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 꽃은 목화가 제일이다.)
+2026-08-14 18:56:30,408 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 군작이 어찌 대봉의 뜻을 알랴)
+2026-08-14 18:56:30,409 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 감기 고뿔도 남을 안 준다.)
+2026-08-14 18:56:30,409 [INFO] auto_blog.py:291 - '어휘'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 18:56:30,409 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 침체)
+2026-08-14 18:56:38,715 [INFO] auto_blog.py:136 - 크롤링할 단어 선택 중...
+2026-08-14 18:56:41,608 [INFO] auto_blog.py:249 - 크롤링 완료....(단어: 침체)
+2026-08-14 18:56:41,609 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 침착)
+2026-08-14 18:56:48,417 [INFO] auto_blog.py:136 - 크롤링할 단어 선택 중...
+2026-08-14 18:56:51,930 [INFO] auto_blog.py:249 - 크롤링 완료....(단어: 침착)
+2026-08-14 18:56:51,931 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 부착)
+2026-08-14 18:56:58,728 [INFO] auto_blog.py:136 - 크롤링할 단어 선택 중...
+2026-08-14 18:57:01,592 [INFO] auto_blog.py:249 - 크롤링 완료....(단어: 부착)
+2026-08-14 18:57:01,593 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 고착)
+2026-08-14 18:57:08,423 [INFO] auto_blog.py:136 - 크롤링할 단어 선택 중...
+2026-08-14 18:57:11,391 [INFO] auto_blog.py:249 - 크롤링 완료....(단어: 고착)
+2026-08-14 18:57:11,392 [INFO] auto_blog.py:291 - '헷갈리는 어휘'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 18:57:11,392 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 코로나에 걸려 밤새 아팠는데 (이튿날 / 이튿날) 되니까 회복되었다.)
+2026-08-14 18:57:11,392 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: (연두빛 / 연둣빛) 새순이 돋는 걸 보고 봄이 온지 알았다.)
+2026-08-14 18:57:11,392 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 마름들은 (사래논 / 사래답)을 점점 넓혀가며 제 주머니만 불렸다.)
+2026-08-14 18:59:55,231 [INFO] auto_blog.py:304 - 만든 블로그 내용을 저장하지 않고 종료합니다.
+2026-08-14 19:00:00,362 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-14 19:00:00,735 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-14 19:00:01,559 [INFO] auto_blog.py:287 - 엑셀 파일을 읽기 완료
+2026-08-14 19:00:01,570 [INFO] auto_blog.py:292 - '속담'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 19:00:01,570 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 강태공이 세월 낚듯 한다.)
+2026-08-14 19:00:01,570 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 꽃은 목화가 제일이다.)
+2026-08-14 19:00:01,570 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 군작이 어찌 대봉의 뜻을 알랴)
+2026-08-14 19:00:01,570 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 감기 고뿔도 남을 안 준다.)
+2026-08-14 19:00:01,571 [INFO] auto_blog.py:292 - '어휘'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 19:00:01,571 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 침체)
+2026-08-14 19:00:09,510 [INFO] auto_blog.py:137 - 크롤링할 단어 선택 중...
+2026-08-14 19:00:13,015 [INFO] auto_blog.py:250 - 크롤링 완료....(단어: 침체)
+2026-08-14 19:00:13,015 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 침착)
+2026-08-14 19:00:19,218 [INFO] auto_blog.py:137 - 크롤링할 단어 선택 중...
+2026-08-14 19:00:22,133 [INFO] auto_blog.py:250 - 크롤링 완료....(단어: 침착)
+2026-08-14 19:00:22,134 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 부착)
+2026-08-14 19:00:30,151 [INFO] auto_blog.py:137 - 크롤링할 단어 선택 중...
+2026-08-14 19:00:34,244 [INFO] auto_blog.py:250 - 크롤링 완료....(단어: 부착)
+2026-08-14 19:00:34,244 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 고착)
+2026-08-14 19:00:41,846 [INFO] auto_blog.py:137 - 크롤링할 단어 선택 중...
+2026-08-14 19:00:44,847 [INFO] auto_blog.py:250 - 크롤링 완료....(단어: 고착)
+2026-08-14 19:00:44,848 [INFO] auto_blog.py:292 - '헷갈리는 어휘'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 19:00:44,848 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 코로나에 걸려 밤새 아팠는데 (이튿날 / 이튿날) 되니까 회복되었다.)
+2026-08-14 19:00:44,848 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: (연두빛 / 연둣빛) 새순이 돋는 걸 보고 봄이 온지 알았다.)
+2026-08-14 19:00:44,848 [INFO] auto_blog.py:86 - 블로그 작성중...(단어: 마름들은 (사래논 / 사래답)을 점점 넓혀가며 제 주머니만 불렸다.)
+2026-08-14 19:01:01,331 [INFO] auto_blog.py:305 - 만든 블로그 내용을 저장하지 않고 종료합니다.
+2026-08-14 19:05:54,739 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-14 19:05:55,357 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-14 19:05:57,109 [INFO] auto_blog.py:288 - 엑셀 파일을 읽기 완료
+2026-08-14 19:05:57,115 [INFO] auto_blog.py:293 - '속담'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 19:05:57,115 [INFO] auto_blog.py:87 - 블로그 작성중...(단어: 강태공이 세월 낚듯 한다.)
+2026-08-14 19:05:57,115 [INFO] auto_blog.py:87 - 블로그 작성중...(단어: 꽃은 목화가 제일이다.)
+2026-08-14 19:05:57,115 [INFO] auto_blog.py:87 - 블로그 작성중...(단어: 군작이 어찌 대봉의 뜻을 알랴)
+2026-08-14 19:05:57,115 [INFO] auto_blog.py:87 - 블로그 작성중...(단어: 감기 고뿔도 남을 안 준다.)
+2026-08-14 19:05:57,116 [INFO] auto_blog.py:293 - '어휘'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 19:05:57,116 [INFO] auto_blog.py:87 - 블로그 작성중...(단어: 침체)
+2026-08-14 19:06:04,305 [INFO] auto_blog.py:138 - 크롤링할 단어 선택 중...
+2026-08-14 19:06:07,791 [INFO] auto_blog.py:251 - 크롤링 완료....(단어: 침체)
+2026-08-14 19:06:07,791 [INFO] auto_blog.py:87 - 블로그 작성중...(단어: 침착)
+2026-08-14 19:06:14,425 [INFO] auto_blog.py:138 - 크롤링할 단어 선택 중...
+2026-08-14 19:06:17,376 [INFO] auto_blog.py:251 - 크롤링 완료....(단어: 침착)
+2026-08-14 19:06:17,376 [INFO] auto_blog.py:87 - 블로그 작성중...(단어: 부착)
+2026-08-14 19:06:24,602 [INFO] auto_blog.py:138 - 크롤링할 단어 선택 중...
+2026-08-14 19:06:27,657 [INFO] auto_blog.py:251 - 크롤링 완료....(단어: 부착)
+2026-08-14 19:06:27,658 [INFO] auto_blog.py:87 - 블로그 작성중...(단어: 고착)
+2026-08-14 19:06:34,382 [INFO] auto_blog.py:138 - 크롤링할 단어 선택 중...
+2026-08-14 19:06:37,890 [INFO] auto_blog.py:251 - 크롤링 완료....(단어: 고착)
+2026-08-14 19:06:37,891 [INFO] auto_blog.py:293 - '헷갈리는 어휘'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 19:06:37,891 [INFO] auto_blog.py:87 - 블로그 작성중...(단어: 코로나에 걸려 밤새 아팠는데 (이튿날 / 이튿날) 되니까 회복되었다.)
+2026-08-14 19:06:37,893 [INFO] auto_blog.py:87 - 블로그 작성중...(단어: (연두빛 / 연둣빛) 새순이 돋는 걸 보고 봄이 온지 알았다.)
+2026-08-14 19:06:37,893 [INFO] auto_blog.py:87 - 블로그 작성중...(단어: 마름들은 (사래논 / 사래답)을 점점 넓혀가며 제 주머니만 불렸다.)
+2026-08-14 23:03:54,138 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-14 23:03:54,693 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-14 23:08:04,904 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-14 23:08:05,697 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-14 23:08:07,459 [INFO] auto_blog.py:300 - 엑셀 파일을 읽기 완료
+2026-08-14 23:08:07,460 [INFO] auto_blog.py:304 - '어휘'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 23:08:07,460 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 침체)
+2026-08-14 23:08:22,247 [INFO] auto_blog.py:144 - 크롤링할 단어 선택 중...
+2026-08-14 23:08:26,870 [INFO] auto_blog.py:257 - 크롤링 완료....(단어: 침체)
+2026-08-14 23:08:26,870 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 침착)
+2026-08-14 23:08:39,489 [INFO] auto_blog.py:144 - 크롤링할 단어 선택 중...
+2026-08-14 23:08:43,821 [INFO] auto_blog.py:257 - 크롤링 완료....(단어: 침착)
+2026-08-14 23:08:43,821 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 부착)
+2026-08-14 23:08:51,460 [INFO] auto_blog.py:144 - 크롤링할 단어 선택 중...
+2026-08-14 23:08:54,892 [INFO] auto_blog.py:257 - 크롤링 완료....(단어: 부착)
+2026-08-14 23:08:54,892 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 고착)
+2026-08-14 23:09:01,265 [INFO] auto_blog.py:144 - 크롤링할 단어 선택 중...
+2026-08-14 23:09:04,896 [INFO] auto_blog.py:257 - 크롤링 완료....(단어: 고착)
+2026-08-14 23:09:04,897 [INFO] auto_blog.py:304 - '헷갈리는 어휘'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 23:09:04,897 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 코로나에 걸려 밤새 아팠는데 (이튿날 / 이튿날) 되니까 회복되었다.)
+2026-08-14 23:09:04,897 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: (연두빛 / 연둣빛) 새순이 돋는 걸 보고 봄이 온지 알았다.)
+2026-08-14 23:09:04,897 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 마름들은 (사래논 / 사래답)을 점점 넓혀가며 제 주머니만 불렸다.)
+2026-08-14 23:09:04,898 [INFO] auto_blog.py:304 - '속담'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 23:09:04,898 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 강태공이 세월 낚듯 한다.)
+2026-08-14 23:09:04,898 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 꽃은 목화가 제일이다.)
+2026-08-14 23:09:04,898 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 군작이 어찌 대봉의 뜻을 알랴)
+2026-08-14 23:09:04,898 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 감기 고뿔도 남을 안 준다.)
+2026-08-14 23:17:43,412 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-14 23:17:44,043 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-14 23:17:45,266 [INFO] auto_blog.py:300 - 엑셀 파일을 읽기 완료
+2026-08-14 23:17:45,267 [INFO] auto_blog.py:304 - '어휘'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 23:17:45,268 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 침체)
+2026-08-14 23:17:56,825 [INFO] auto_blog.py:144 - 크롤링할 단어 선택 중...
+2026-08-14 23:18:00,225 [INFO] auto_blog.py:257 - 크롤링 완료....(단어: 침체)
+2026-08-14 23:18:00,226 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 침착)
+2026-08-14 23:18:12,517 [INFO] auto_blog.py:144 - 크롤링할 단어 선택 중...
+2026-08-14 23:18:16,453 [INFO] auto_blog.py:257 - 크롤링 완료....(단어: 침착)
+2026-08-14 23:18:16,454 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 부착)
+2026-08-14 23:18:26,103 [INFO] auto_blog.py:144 - 크롤링할 단어 선택 중...
+2026-08-14 23:18:29,673 [INFO] auto_blog.py:257 - 크롤링 완료....(단어: 부착)
+2026-08-14 23:18:29,673 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 고착)
+2026-08-14 23:18:37,389 [INFO] auto_blog.py:144 - 크롤링할 단어 선택 중...
+2026-08-14 23:18:40,320 [INFO] auto_blog.py:257 - 크롤링 완료....(단어: 고착)
+2026-08-14 23:18:40,320 [INFO] auto_blog.py:304 - '헷갈리는 어휘'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 23:18:40,320 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 코로나에 걸려 밤새 아팠는데 (이튿날 / 이튿날) 되니까 회복되었다.)
+2026-08-14 23:18:40,321 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: (연두빛 / 연둣빛) 새순이 돋는 걸 보고 봄이 온지 알았다.)
+2026-08-14 23:18:40,321 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 마름들은 (사래논 / 사래답)을 점점 넓혀가며 제 주머니만 불렸다.)
+2026-08-14 23:18:40,321 [INFO] auto_blog.py:304 - '속담'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 23:18:40,321 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 강태공이 세월 낚듯 한다.)
+2026-08-14 23:18:40,321 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 꽃은 목화가 제일이다.)
+2026-08-14 23:18:40,322 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 군작이 어찌 대봉의 뜻을 알랴)
+2026-08-14 23:18:40,322 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 감기 고뿔도 남을 안 준다.)
+2026-08-14 23:19:35,646 [INFO] auto_blog.py:337 - [TEST] pre_content: 
+2026-08-14 23:24:10,224 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-14 23:24:10,827 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-14 23:24:12,025 [INFO] auto_blog.py:300 - 엑셀 파일을 읽기 완료
+2026-08-14 23:24:12,025 [INFO] auto_blog.py:304 - '어휘'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 23:24:12,025 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 침체)
+2026-08-14 23:24:22,935 [INFO] auto_blog.py:144 - 크롤링할 단어 선택 중...
+2026-08-14 23:24:26,560 [INFO] auto_blog.py:257 - 크롤링 완료....(단어: 침체)
+2026-08-14 23:24:26,561 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 침착)
+2026-08-14 23:24:34,968 [INFO] auto_blog.py:144 - 크롤링할 단어 선택 중...
+2026-08-14 23:24:38,493 [INFO] auto_blog.py:257 - 크롤링 완료....(단어: 침착)
+2026-08-14 23:24:38,493 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 부착)
+2026-08-14 23:24:47,783 [INFO] auto_blog.py:144 - 크롤링할 단어 선택 중...
+2026-08-14 23:24:51,272 [INFO] auto_blog.py:257 - 크롤링 완료....(단어: 부착)
+2026-08-14 23:24:51,273 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 고착)
+2026-08-14 23:24:57,800 [INFO] auto_blog.py:144 - 크롤링할 단어 선택 중...
+2026-08-14 23:25:01,308 [INFO] auto_blog.py:257 - 크롤링 완료....(단어: 고착)
+2026-08-14 23:25:01,309 [INFO] auto_blog.py:304 - '헷갈리는 어휘'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 23:25:01,309 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 코로나에 걸려 밤새 아팠는데 (이튿날 / 이튿날) 되니까 회복되었다.)
+2026-08-14 23:25:01,310 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: (연두빛 / 연둣빛) 새순이 돋는 걸 보고 봄이 온지 알았다.)
+2026-08-14 23:25:01,311 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 마름들은 (사래논 / 사래답)을 점점 넓혀가며 제 주머니만 불렸다.)
+2026-08-14 23:25:01,311 [INFO] auto_blog.py:304 - '속담'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-14 23:25:01,312 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 강태공이 세월 낚듯 한다.)
+2026-08-14 23:25:01,312 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 꽃은 목화가 제일이다.)
+2026-08-14 23:25:01,312 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 군작이 어찌 대봉의 뜻을 알랴)
+2026-08-14 23:25:01,313 [INFO] auto_blog.py:93 - 블로그 작성중...(단어: 감기 고뿔도 남을 안 준다.)
+2026-08-14 23:26:04,462 [INFO] auto_blog.py:337 - [TEST] pre_content repr: ''
+2026-08-14 23:26:04,462 [INFO] auto_blog.py:338 - [TEST] stripped repr: ''
+2026-08-15 00:51:02,145 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 00:51:04,079 [INFO] logger.py:11 - Get LATEST chromedriver version for google-chrome
+2026-08-15 00:51:05,200 [INFO] logger.py:11 - Get LATEST chromedriver version for google-chrome
+2026-08-15 00:51:05,360 [INFO] logger.py:11 - WebDriver version 151.0.7922.138 selected
+2026-08-15 00:51:05,366 [INFO] logger.py:11 - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.138/win64/chromedriver-win64.zip
+2026-08-15 00:51:05,366 [INFO] logger.py:11 - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.138/win64/chromedriver-win64.zip
+2026-08-15 00:51:05,787 [INFO] logger.py:11 - Driver downloading response is 200
+2026-08-15 00:51:07,558 [INFO] logger.py:11 - Driver has been saved in cache [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138]
+2026-08-15 00:51:21,671 [INFO] auto_blog.py:412 - 엑셀 파일을 읽기 완료
+2026-08-15 00:51:21,672 [INFO] auto_blog.py:417 - '어휘'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-15 00:51:21,673 [INFO] auto_blog.py:205 - 블로그 작성중...(단어: 침체)
+2026-08-15 00:51:44,515 [INFO] auto_blog.py:256 - 크롤링할 단어 선택 중...
+2026-08-15 00:51:48,685 [INFO] auto_blog.py:369 - 크롤링 완료....(단어: 침체)
+2026-08-15 00:51:48,685 [INFO] auto_blog.py:205 - 블로그 작성중...(단어: 침착)
+2026-08-15 00:51:56,604 [INFO] auto_blog.py:256 - 크롤링할 단어 선택 중...
+2026-08-15 00:52:00,207 [INFO] auto_blog.py:369 - 크롤링 완료....(단어: 침착)
+2026-08-15 00:52:00,208 [INFO] auto_blog.py:205 - 블로그 작성중...(단어: 부착)
+2026-08-15 00:52:10,706 [INFO] auto_blog.py:256 - 크롤링할 단어 선택 중...
+2026-08-15 00:52:15,298 [INFO] auto_blog.py:369 - 크롤링 완료....(단어: 부착)
+2026-08-15 00:52:15,298 [INFO] auto_blog.py:205 - 블로그 작성중...(단어: 고착)
+2026-08-15 00:52:22,075 [INFO] auto_blog.py:256 - 크롤링할 단어 선택 중...
+2026-08-15 00:52:25,832 [INFO] auto_blog.py:369 - 크롤링 완료....(단어: 고착)
+2026-08-15 00:52:25,833 [INFO] auto_blog.py:417 - '헷갈리는 어휘'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-15 00:52:25,834 [INFO] auto_blog.py:205 - 블로그 작성중...(단어: 코로나에 걸려 밤새 아팠는데 (이튿날 / 이튿날) 되니까 회복되었다.)
+2026-08-15 00:52:25,835 [INFO] auto_blog.py:205 - 블로그 작성중...(단어: (연두빛 / 연둣빛) 새순이 돋는 걸 보고 봄이 온지 알았다.)
+2026-08-15 00:52:25,836 [INFO] auto_blog.py:205 - 블로그 작성중...(단어: 마름들은 (사래논 / 사래답)을 점점 넓혀가며 제 주머니만 불렸다.)
+2026-08-15 00:52:25,836 [INFO] auto_blog.py:417 - '속담'의 데이터로 블로그 내용을 작성 중입니다.
+2026-08-15 00:52:25,837 [INFO] auto_blog.py:205 - 블로그 작성중...(단어: 강태공이 세월 낚듯 한다.)
+2026-08-15 00:52:25,837 [INFO] auto_blog.py:205 - 블로그 작성중...(단어: 꽃은 목화가 제일이다.)
+2026-08-15 00:52:25,838 [INFO] auto_blog.py:205 - 블로그 작성중...(단어: 군작이 어찌 대봉의 뜻을 알랴)
+2026-08-15 00:52:25,838 [INFO] auto_blog.py:205 - 블로그 작성중...(단어: 감기 고뿔도 남을 안 준다.)
+2026-08-15 18:40:58,456 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 18:41:00,024 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 18:42:14,160 [ERROR] auto_blog.py:762 - type() takes 1 or 3 arguments
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 759, in <module>
+    q_choose_work.reply(select)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 226, in reply
+    get_img_content()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 730, in get_img_content
+    title_str = get_title_str()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 738, in get_title_str
+    groupby_data = read_xlsx()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 648, in read_xlsx
+    xlsx_src = SRC.XLSX.ck_exist()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 78, in ck_exist
+    if type(path, str):
+       ~~~~^^^^^^^^^^^
+TypeError: type() takes 1 or 3 arguments
+2026-08-15 18:42:50,806 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 18:42:52,186 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 18:42:55,745 [ERROR] auto_blog.py:762 - cannot access local variable 'suffix' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 759, in <module>
+    q_choose_work.reply(select)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 226, in reply
+    get_img_content()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 730, in get_img_content
+    title_str = get_title_str()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 738, in get_title_str
+    groupby_data = read_xlsx()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 648, in read_xlsx
+    xlsx_src = SRC.XLSX.ck_exist()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 115, in ck_exist
+    elif suffix in (".ttf"):
+         ^^^^^^
+UnboundLocalError: cannot access local variable 'suffix' where it is not associated with a value
+2026-08-15 18:43:40,504 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 18:43:40,903 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 18:43:43,409 [ERROR] auto_blog.py:762 - cannot access local variable 'suffix' where it is not associated with a value
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 759, in <module>
+    q_choose_work.reply(select)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 226, in reply
+    get_img_content()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 730, in get_img_content
+    title_str = get_title_str()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 738, in get_title_str
+    groupby_data = read_xlsx()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 648, in read_xlsx
+    xlsx_src = SRC.XLSX.ck_exist()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 115, in ck_exist
+    elif suffix == ".ttf":
+         ^^^^^^
+UnboundLocalError: cannot access local variable 'suffix' where it is not associated with a value
+2026-08-15 18:44:05,361 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 18:44:05,932 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 18:44:08,853 [ERROR] auto_blog.py:761 - 'str' object has no attribute 'suffix'
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 758, in <module>
+    q_choose_work.reply(select)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 225, in reply
+    get_img_content()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 729, in get_img_content
+    title_str = get_title_str()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 737, in get_title_str
+    groupby_data = read_xlsx()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 666, in read_xlsx
+    target_sheet = Sheet.set_cur_sheet(target_sheet)
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 140, in set_cur_sheet
+    SRC.THUMBNAIL_IMG.set(sheet.value.THUMBNAIL_IMG.ck_exist())
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 79, in ck_exist
+    suffix = path.suffix.lower()
+             ^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'suffix'
+2026-08-15 18:45:22,378 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 18:45:22,759 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 18:45:24,171 [ERROR] auto_blog.py:761 - 'str' object has no attribute 'suffix'
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 758, in <module>
+    q_choose_work.reply(select)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 225, in reply
+    get_img_content()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 729, in get_img_content
+    title_str = get_title_str()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 737, in get_title_str
+    groupby_data = read_xlsx()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 666, in read_xlsx
+    target_sheet = Sheet.set_cur_sheet(target_sheet)
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 140, in set_cur_sheet
+    SRC.THUMBNAIL_IMG.set(sheet.value.THUMBNAIL_IMG.ck_exist())
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 79, in ck_exist
+    suffix = path.suffix.lower()
+             ^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'suffix'
+2026-08-15 19:04:24,456 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:04:25,632 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:04:30,015 [INFO] auto_blog.py:79 - [TEST] not is instnace of Path
+2026-08-15 19:04:30,015 [ERROR] auto_blog.py:762 - 'str' object has no attribute 'suffix'
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 759, in <module>
+    q_choose_work.reply(select)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 226, in reply
+    get_img_content()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 730, in get_img_content
+    title_str = get_title_str()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 738, in get_title_str
+    groupby_data = read_xlsx()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 667, in read_xlsx
+    target_sheet = Sheet.set_cur_sheet(target_sheet)
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 141, in set_cur_sheet
+    SRC.THUMBNAIL_IMG.set(sheet.value.THUMBNAIL_IMG.ck_exist())
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 80, in ck_exist
+    suffix = path.suffix.lower()
+             ^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'suffix'
+2026-08-15 19:06:46,323 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:06:48,707 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:16:57,375 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:16:57,799 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:17:06,310 [ERROR] auto_blog.py:777 - list assignment index out of range
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 774, in <module>
+    q_choose_work.reply(select)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 227, in reply
+    get_img_content()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 732, in get_img_content
+    title_str = get_title_str()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 739, in get_title_str
+    groupby_data = read_xlsx()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 668, in read_xlsx
+    target_sheet = Sheet.set_cur_sheet(target_sheet)
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 142, in set_cur_sheet
+    SRC.THUMBNAIL_IMG.set(sheet.value.THUMBNAIL_IMG.ck_exist())
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 76, in set
+    self.value[0] = path
+    ~~~~~~~~~~^^^
+IndexError: list assignment index out of range
+2026-08-15 19:20:21,942 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:20:22,288 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:20:22,983 [ERROR] auto_blog.py:777 - list assignment index out of range
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 774, in <module>
+    q_choose_work.reply(select)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 227, in reply
+    get_img_content()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 732, in get_img_content
+    title_str = get_title_str()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 739, in get_title_str
+    groupby_data = read_xlsx()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 668, in read_xlsx
+    target_sheet = Sheet.set_cur_sheet(target_sheet)
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 143, in set_cur_sheet
+    Sheet.CUR_SHEET.value[0] = sheet
+    ~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list assignment index out of range
+2026-08-15 19:21:58,388 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:21:58,766 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:21:59,374 [ERROR] auto_blog.py:777 - 'types.SimpleNamespace' object does not support item assignment
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 774, in <module>
+    q_choose_work.reply(select)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 227, in reply
+    get_img_content()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 732, in get_img_content
+    title_str = get_title_str()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 739, in get_title_str
+    groupby_data = read_xlsx()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 668, in read_xlsx
+    target_sheet = Sheet.set_cur_sheet(target_sheet).NAME
+                   ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 143, in set_cur_sheet
+    Sheet.CUR_SHEET.value[0] = sheet.value
+    ~~~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'types.SimpleNamespace' object does not support item assignment
+2026-08-15 19:23:42,774 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:23:43,172 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:23:43,960 [INFO] auto_blog.py:679 - 엑셀 파일을 읽기 완료
+2026-08-15 19:23:43,961 [INFO] auto_blog.py:742 - '어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:23:43,961 [ERROR] auto_blog.py:777 - 'Sheet' object has no attribute 'THUMBNAIL_TXT'
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 158, in get
+    value1 = getattr(cur_sheet_info, key1)
+AttributeError: 'Sheet' object has no attribute 'THUMBNAIL_TXT'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 774, in <module>
+    q_choose_work.reply(select)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 227, in reply
+    get_img_content()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 732, in get_img_content
+    title_str = get_title_str()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 743, in get_title_str
+    title_str += f"{Sheet.get("THUMBNAIL_TXT")}\n#{name}\n"
+                    ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 164, in get
+    raise AttributeError(e)
+AttributeError: 'Sheet' object has no attribute 'THUMBNAIL_TXT'
+2026-08-15 19:24:34,188 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:24:34,531 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:24:35,203 [INFO] auto_blog.py:679 - 엑셀 파일을 읽기 완료
+2026-08-15 19:24:35,203 [INFO] auto_blog.py:742 - '어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:24:35,203 [ERROR] auto_blog.py:777 - 'types.SimpleNamespace' object has no attribute 'THUMBNAIL_TXT'
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 158, in get
+    value1 = getattr(cur_sheet_info, key1)
+AttributeError: 'types.SimpleNamespace' object has no attribute 'THUMBNAIL_TXT'. Did you mean: 'TUMBNAIL_TXT'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 774, in <module>
+    q_choose_work.reply(select)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 227, in reply
+    get_img_content()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 732, in get_img_content
+    title_str = get_title_str()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 743, in get_title_str
+    title_str += f"{Sheet.get("THUMBNAIL_TXT")}\n#{name}\n"
+                    ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 164, in get
+    raise AttributeError(e)
+AttributeError: 'types.SimpleNamespace' object has no attribute 'THUMBNAIL_TXT'
+2026-08-15 19:25:51,052 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:25:51,500 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:25:52,445 [INFO] auto_blog.py:680 - 엑셀 파일을 읽기 완료
+2026-08-15 19:25:52,445 [INFO] auto_blog.py:743 - '어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:25:52,445 [ERROR] auto_blog.py:778 - 'types.SimpleNamespace' object has no attribute 'THUMBNAIL_TXT'
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 159, in get
+    value1 = getattr(cur_sheet.value, key1)
+AttributeError: 'types.SimpleNamespace' object has no attribute 'THUMBNAIL_TXT'. Did you mean: 'TUMBNAIL_TXT'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 775, in <module>
+    q_choose_work.reply(select)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 228, in reply
+    get_img_content()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 733, in get_img_content
+    title_str = get_title_str()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 744, in get_title_str
+    title_str += f"{Sheet.get("THUMBNAIL_TXT")}\n#{name}\n"
+                    ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 165, in get
+    raise AttributeError(e)
+AttributeError: 'types.SimpleNamespace' object has no attribute 'THUMBNAIL_TXT'
+2026-08-15 19:31:45,484 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:31:46,074 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:31:50,307 [ERROR] auto_blog.py:783 - list index out of range
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 780, in <module>
+    q_choose_work.reply(select)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 233, in reply
+    get_img_content()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 738, in get_img_content
+    title_str = get_title_str()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 745, in get_title_str
+    groupby_data = read_xlsx()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 674, in read_xlsx
+    target_sheet = Sheet.set_cur_sheet(target_sheet)
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 147, in set_cur_sheet
+    SRC.THUMBNAIL_IMG.set(sheet.value.THUMBNAIL_IMG.ck_exist())
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 76, in set
+    self.value[0].clear()
+    ~~~~~~~~~~^^^
+IndexError: list index out of range
+2026-08-15 19:33:06,400 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:33:06,892 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:33:08,491 [INFO] auto_blog.py:685 - 엑셀 파일을 읽기 완료
+2026-08-15 19:33:08,492 [INFO] auto_blog.py:748 - '어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:33:08,492 [ERROR] auto_blog.py:783 - 'types.SimpleNamespace' object has no attribute 'THUMBNAIL_TXT'
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 164, in get
+    value1 = getattr(cur_sheet.value, key1)
+AttributeError: 'types.SimpleNamespace' object has no attribute 'THUMBNAIL_TXT'. Did you mean: 'TUMBNAIL_TXT'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 780, in <module>
+    q_choose_work.reply(select)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 233, in reply
+    get_img_content()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 738, in get_img_content
+    title_str = get_title_str()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 749, in get_title_str
+    title_str += f"{Sheet.get("THUMBNAIL_TXT")}\n#{name}\n"
+                    ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 170, in get
+    raise AttributeError(e)
+AttributeError: 'types.SimpleNamespace' object has no attribute 'THUMBNAIL_TXT'
+2026-08-15 19:34:24,033 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:34:24,382 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:34:25,084 [INFO] auto_blog.py:686 - 엑셀 파일을 읽기 완료
+2026-08-15 19:34:25,084 [INFO] auto_blog.py:749 - '어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:34:25,106 [INFO] auto_blog.py:164 - [TEST] cur_sheet value: namespace(NAME='국어', COLS=namespace(TITLE='구분', WORD='단어', MEAN='뜻', ANSWER='정답'), HANJA_DICT_KEY=namespace(WORD='단어', HANJA='한자', HANJA_ALL='전체 한자', HANJA_SINGLE='한자 낱말', PRON='발음 키', MEAN='뜻'), TITLE=namespace(WORD='어휘', CONFUSING='헷갈리는 어휘', PROVERB='속담'), THUMBNAIL_IMG=<SRC.KOREAN_IMG: [WindowsPath('C:/Users/KJY/Documents/Programming/AutoBlog/img/korean.png')]>, TUMBNAIL_TXT='#해커스공무원 #매일 국어')
+2026-08-15 19:34:25,107 [ERROR] auto_blog.py:784 - 'types.SimpleNamespace' object has no attribute 'THUMBNAIL_TXT'
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 165, in get
+    value1 = getattr(cur_sheet.value, key1)
+AttributeError: 'types.SimpleNamespace' object has no attribute 'THUMBNAIL_TXT'. Did you mean: 'TUMBNAIL_TXT'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 781, in <module>
+    q_choose_work.reply(select)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 234, in reply
+    get_img_content()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 739, in get_img_content
+    title_str = get_title_str()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 750, in get_title_str
+    title_str += f"{Sheet.get("THUMBNAIL_TXT")}\n#{name}\n"
+                    ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 171, in get
+    raise AttributeError(e)
+AttributeError: 'types.SimpleNamespace' object has no attribute 'THUMBNAIL_TXT'
+2026-08-15 19:35:22,813 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:35:23,202 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:35:23,898 [INFO] auto_blog.py:685 - 엑셀 파일을 읽기 완료
+2026-08-15 19:35:23,898 [INFO] auto_blog.py:748 - '어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:35:23,898 [INFO] auto_blog.py:748 - '헷갈리는 어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:35:23,898 [INFO] auto_blog.py:748 - '속담'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:35:23,900 [INFO] auto_blog.py:775 - 썸네일에 쓸 텍스트 임시 저장 완료.
+2026-08-15 19:35:23,900 [INFO] auto_blog.py:320 - 썸네일 이미지를 생성합니다.
+2026-08-15 19:35:25,258 [ERROR] auto_blog.py:408 - 썸네일 이미지 생성 중, 예기치 않은 오류 발생: 'WindowsPath' object is not subscriptable
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 339, in create_thumbnail
+    title_font = SRC.FONT_CHIRONSUNGHK_EXTRABOLD.ck_exist()
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 80, in ck_exist
+    path = self.value[0]
+           ~~~~~~~~~~^^^
+TypeError: 'WindowsPath' object is not subscriptable
+2026-08-15 19:36:09,267 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:36:09,751 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:36:10,611 [INFO] auto_blog.py:685 - 엑셀 파일을 읽기 완료
+2026-08-15 19:36:10,626 [INFO] auto_blog.py:748 - '어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:36:10,631 [INFO] auto_blog.py:748 - '헷갈리는 어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:36:10,631 [INFO] auto_blog.py:748 - '속담'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:36:10,633 [INFO] auto_blog.py:775 - 썸네일에 쓸 텍스트 임시 저장 완료.
+2026-08-15 19:36:10,633 [INFO] auto_blog.py:320 - 썸네일 이미지를 생성합니다.
+2026-08-15 19:36:11,142 [ERROR] auto_blog.py:408 - 썸네일 이미지 생성 중, 예기치 않은 오류 발생: 'FreeTypeFont' object has no attribute 'exists'
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 343, in create_thumbnail
+    if title_font.exists():
+       ^^^^^^^^^^^^^^^^^
+AttributeError: 'FreeTypeFont' object has no attribute 'exists'
+2026-08-15 19:39:25,837 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:39:26,197 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:39:26,853 [INFO] auto_blog.py:685 - 엑셀 파일을 읽기 완료
+2026-08-15 19:39:26,853 [INFO] auto_blog.py:748 - '어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:39:26,853 [INFO] auto_blog.py:748 - '헷갈리는 어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:39:26,854 [INFO] auto_blog.py:748 - '속담'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:39:26,857 [INFO] auto_blog.py:775 - 썸네일에 쓸 텍스트 임시 저장 완료.
+2026-08-15 19:39:26,858 [INFO] auto_blog.py:320 - 썸네일 이미지를 생성합니다.
+2026-08-15 19:39:26,975 [ERROR] auto_blog.py:408 - 썸네일 이미지 생성 중, 예기치 않은 오류 발생: cannot open resource
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 344, in create_thumbnail
+    title_font = ImageFont.truetype(str(title_font), font_size)
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\venv\Lib\site-packages\PIL\ImageFont.py", line 885, in truetype
+    return freetype(font)
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\venv\Lib\site-packages\PIL\ImageFont.py", line 882, in freetype
+    return FreeTypeFont(font, size, index, encoding, layout_engine)
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\venv\Lib\site-packages\PIL\ImageFont.py", line 298, in __init__
+    self.font = core.getfont(
+                ~~~~~~~~~~~~^
+        font, size, index, encoding, layout_engine=layout_engine
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+OSError: cannot open resource
+2026-08-15 19:44:36,609 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:44:36,988 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:44:37,793 [INFO] auto_blog.py:687 - 엑셀 파일을 읽기 완료
+2026-08-15 19:44:37,793 [INFO] auto_blog.py:750 - '어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:44:37,793 [INFO] auto_blog.py:750 - '헷갈리는 어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:44:37,793 [INFO] auto_blog.py:750 - '속담'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:44:37,999 [INFO] auto_blog.py:777 - 썸네일에 쓸 텍스트 임시 저장 완료.
+2026-08-15 19:44:38,001 [INFO] auto_blog.py:320 - 썸네일 이미지를 생성합니다.
+2026-08-15 19:44:38,034 [INFO] auto_blog.py:340 - 현재 전달된 폰트 경로: <PIL.ImageFont.FreeTypeFont object at 0x00000191DA034EC0>
+2026-08-15 19:44:38,041 [ERROR] auto_blog.py:410 - 썸네일 이미지 생성 중, 예기치 않은 오류 발생: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'FreeTypeFont'
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 341, in create_thumbnail
+    logging.info(f"파일이 실제로 존재하는가?: {Path(title_font).exists()}")
+                                               ~~~~^^^^^^^^^^^^
+  File "C:\Users\KJY\AppData\Local\Programs\Python\Python314\Lib\pathlib\__init__.py", line 150, in __init__
+    raise TypeError(
+    ...<2 lines>...
+        f"not {type(path).__name__!r}")
+TypeError: argument should be a str or an os.PathLike object where __fspath__ returns a str, not 'FreeTypeFont'
+2026-08-15 19:48:09,046 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:48:09,396 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:48:10,119 [INFO] auto_blog.py:682 - 엑셀 파일을 읽기 완료
+2026-08-15 19:48:10,120 [INFO] auto_blog.py:745 - '어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:48:10,120 [INFO] auto_blog.py:745 - '헷갈리는 어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:48:10,120 [INFO] auto_blog.py:745 - '속담'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:48:10,181 [INFO] auto_blog.py:772 - 썸네일에 쓸 텍스트 임시 저장 완료.
+2026-08-15 19:48:10,182 [INFO] auto_blog.py:318 - 썸네일 이미지를 생성합니다.
+2026-08-15 19:48:15,903 [ERROR] auto_blog.py:405 - 썸네일 이미지 생성 중, 예기치 않은 오류 발생: [WinError 1155] 이 작업을 하기 위해 지정된 파일로 아무 응용 프로그램도 연결되어 있지 않습니다: 'C:\\Users\\KJY\\AppData\\Local\\Temp\\tmpbkrw0td0.PNG'
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 396, in create_thumbnail
+    img.show()
+    ~~~~~~~~^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\venv\Lib\site-packages\PIL\Image.py", line 2775, in show
+    ImageShow.show(self, title)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\venv\Lib\site-packages\PIL\ImageShow.py", line 61, in show
+    if viewer.show(image, title=title, **options):
+       ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\venv\Lib\site-packages\PIL\ImageShow.py", line 85, in show
+    return self.show_image(image, **options)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\venv\Lib\site-packages\PIL\ImageShow.py", line 112, in show_image
+    return self.show_file(self.save_image(image), **options)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\venv\Lib\site-packages\PIL\ImageShow.py", line 165, in show_file
+    os.startfile(path)
+    ~~~~~~~~~~~~^^^^^^
+OSError: [WinError 1155] 이 작업을 하기 위해 지정된 파일로 아무 응용 프로그램도 연결되어 있지 않습니다: 'C:\\Users\\KJY\\AppData\\Local\\Temp\\tmpbkrw0td0.PNG'
+2026-08-15 19:50:15,141 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:50:15,490 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:50:17,348 [INFO] auto_blog.py:682 - 엑셀 파일을 읽기 완료
+2026-08-15 19:50:17,348 [INFO] auto_blog.py:745 - '어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:50:17,348 [INFO] auto_blog.py:745 - '헷갈리는 어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:50:17,348 [INFO] auto_blog.py:745 - '속담'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:50:17,349 [INFO] auto_blog.py:772 - 썸네일에 쓸 텍스트 임시 저장 완료.
+2026-08-15 19:50:17,349 [INFO] auto_blog.py:318 - 썸네일 이미지를 생성합니다.
+2026-08-15 19:50:19,046 [ERROR] auto_blog.py:405 - 썸네일 이미지 생성 중, 예기치 않은 오류 발생: copy_to_clipboard() missing 1 required positional argument: 'data'
+Traceback (most recent call last):
+  File "C:\Users\KJY\Documents\Programming\AutoBlog\auto_blog.py", line 397, in create_thumbnail
+    copy_to_clipboard(img)  # 클립보드에 이미지 복사
+    ~~~~~~~~~~~~~~~~~^^^^^
+TypeError: copy_to_clipboard() missing 1 required positional argument: 'data'
+2026-08-15 19:57:47,813 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 19:57:54,121 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 19:58:02,453 [INFO] auto_blog.py:680 - 엑셀 파일을 읽기 완료
+2026-08-15 19:58:02,453 [INFO] auto_blog.py:743 - '어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:58:02,453 [INFO] auto_blog.py:743 - '헷갈리는 어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:58:02,453 [INFO] auto_blog.py:743 - '속담'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 19:58:02,455 [INFO] auto_blog.py:770 - 썸네일에 쓸 텍스트 임시 저장 완료.
+2026-08-15 19:58:02,455 [INFO] auto_blog.py:318 - 썸네일 이미지를 생성합니다.
+2026-08-15 19:58:05,209 [INFO] auto_blog.py:306 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-15 20:01:58,784 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 20:01:59,476 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 20:02:00,919 [INFO] auto_blog.py:680 - 엑셀 파일을 읽기 완료
+2026-08-15 20:02:00,920 [INFO] auto_blog.py:744 - '어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 20:02:00,920 [INFO] auto_blog.py:744 - '헷갈리는 어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 20:02:00,920 [INFO] auto_blog.py:744 - '속담'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 20:02:00,922 [INFO] auto_blog.py:771 - 썸네일에 쓸 텍스트 임시 저장 완료.
+2026-08-15 20:02:00,922 [INFO] auto_blog.py:318 - 썸네일 이미지를 생성합니다.
+2026-08-15 20:02:02,778 [INFO] auto_blog.py:306 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-15 20:40:45,955 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 20:40:46,515 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 20:43:02,802 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 20:43:03,221 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 20:43:05,512 [INFO] auto_blog.py:684 - 엑셀 파일을 읽기 완료
+2026-08-15 20:43:05,533 [INFO] auto_blog.py:729 - [TEST] groupby_data: defaultdict(<class 'list'>, {'어휘': [('침체', '어떤 현상이나 사물이 진전하지 못하고 제자리에 머무름', None), ('침착', '밑으로 가라앉아 들러붙음', None), ('부착', '떨어지지 않고 붙음 또는 그렇게 붙이거나 닮', None), ('고착', '물건 같은 것이 굳게 들러붙어 있음', None)], '헷갈리는 어휘': [('코로나에 걸려 밤새 아팠는데 (이튿날 / 이튿날) 되니까 회복되었다.', None, '이튿날'), ('(연두빛 / 연둣빛) 새순이 돋는 걸 보고 봄이 온지 알았다.', None, '연둣빛'), ('마름들은 (사래논 / 사래답)을 점점 넓혀가며 제 주머니만 불렸다.', None, '사래논')], '속담': [('강태공이 세월 낚듯 한다.', '무슨 일을 매우 더디고 느리게 함을 비유적으로 이르는 말', None), ('꽃은 목화가 제일이다.', '겉모양은 보잘것없어도 쓸모가 큰 목화가 꽃 중에서 가장 좋다는 뜻으로, 겉치레보다는 실속이 중요함을 비유적으로 이르는 말', None), ('군작이 어찌 대봉의 뜻을 알랴', '평범한 사람이 큰 인물의 뜻을 헤아려 알기가 어려움을 비유적으로 이르는 말', None), ('감기 고뿔도 남을 안 준다.', '감기도 남에게 주지 않을 만큼 지독하게 인색하다는 말', None)]})
+2026-08-15 20:43:05,534 [INFO] auto_blog.py:733 - '어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 20:43:05,534 [INFO] auto_blog.py:733 - '헷갈리는 어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 20:43:05,562 [INFO] auto_blog.py:733 - '속담'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 20:43:05,595 [INFO] auto_blog.py:773 - 썸네일에 쓸 텍스트 임시 저장 완료.
+2026-08-15 20:43:05,596 [INFO] auto_blog.py:318 - 썸네일 이미지를 생성합니다.
+2026-08-15 20:43:06,827 [INFO] auto_blog.py:306 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-15 20:45:39,514 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 20:45:40,079 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 20:45:41,733 [INFO] auto_blog.py:684 - 엑셀 파일을 읽기 완료
+2026-08-15 20:45:41,733 [INFO] auto_blog.py:729 - [TEST] groupby_data: defaultdict(<class 'list'>, {'어휘': [('침체', '어떤 현상이나 사물이 진전하지 못하고 제자리에 머무름', None), ('침착', '밑으로 가라앉아 들러붙음', None), ('부착', '떨어지지 않고 붙음 또는 그렇게 붙이거나 닮', None), ('고착', '물건 같은 것이 굳게 들러붙어 있음', None)], '헷갈리는 어휘': [('코로나에 걸려 밤새 아팠는데 (이튿날 / 이튿날) 되니까 회복되었다.', None, '이튿날'), ('(연두빛 / 연둣빛) 새순이 돋는 걸 보고 봄이 온지 알았다.', None, '연둣빛'), ('마름들은 (사래논 / 사래답)을 점점 넓혀가며 제 주머니만 불렸다.', None, '사래논')], '속담': [('강태공이 세월 낚듯 한다.', '무슨 일을 매우 더디고 느리게 함을 비유적으로 이르는 말', None), ('꽃은 목화가 제일이다.', '겉모양은 보잘것없어도 쓸모가 큰 목화가 꽃 중에서 가장 좋다는 뜻으로, 겉치레보다는 실속이 중요함을 비유적으로 이르는 말', None), ('군작이 어찌 대봉의 뜻을 알랴', '평범한 사람이 큰 인물의 뜻을 헤아려 알기가 어려움을 비유적으로 이르는 말', None), ('감기 고뿔도 남을 안 준다.', '감기도 남에게 주지 않을 만큼 지독하게 인색하다는 말', None)]})
+2026-08-15 20:45:41,734 [INFO] auto_blog.py:733 - '어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 20:45:41,734 [INFO] auto_blog.py:733 - '헷갈리는 어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 20:45:41,735 [INFO] auto_blog.py:733 - '속담'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 20:45:41,736 [INFO] auto_blog.py:773 - 썸네일에 쓸 텍스트 임시 저장 완료.
+2026-08-15 20:45:41,736 [INFO] auto_blog.py:318 - 썸네일 이미지를 생성합니다.
+2026-08-15 20:45:42,183 [INFO] auto_blog.py:306 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-15 20:46:23,115 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 20:46:23,858 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 20:46:25,405 [INFO] auto_blog.py:684 - 엑셀 파일을 읽기 완료
+2026-08-15 20:46:25,405 [INFO] auto_blog.py:729 - [TEST] groupby_data: defaultdict(<class 'list'>, {'어휘': [('침체', '어떤 현상이나 사물이 진전하지 못하고 제자리에 머무름', None), ('침착', '밑으로 가라앉아 들러붙음', None), ('부착', '떨어지지 않고 붙음 또는 그렇게 붙이거나 닮', None), ('고착', '물건 같은 것이 굳게 들러붙어 있음', None)], '헷갈리는 어휘': [('코로나에 걸려 밤새 아팠는데 (이튿날 / 이튿날) 되니까 회복되었다.', None, '이튿날'), ('(연두빛 / 연둣빛) 새순이 돋는 걸 보고 봄이 온지 알았다.', None, '연둣빛'), ('마름들은 (사래논 / 사래답)을 점점 넓혀가며 제 주머니만 불렸다.', None, '사래논')], '속담': [('강태공이 세월 낚듯 한다.', '무슨 일을 매우 더디고 느리게 함을 비유적으로 이르는 말', None), ('꽃은 목화가 제일이다.', '겉모양은 보잘것없어도 쓸모가 큰 목화가 꽃 중에서 가장 좋다는 뜻으로, 겉치레보다는 실속이 중요함을 비유적으로 이르는 말', None), ('군작이 어찌 대봉의 뜻을 알랴', '평범한 사람이 큰 인물의 뜻을 헤아려 알기가 어려움을 비유적으로 이르는 말', None), ('감기 고뿔도 남을 안 준다.', '감기도 남에게 주지 않을 만큼 지독하게 인색하다는 말', None)]})
+2026-08-15 20:46:25,405 [INFO] auto_blog.py:733 - '어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 20:46:25,405 [INFO] auto_blog.py:733 - '헷갈리는 어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 20:46:25,406 [INFO] auto_blog.py:733 - '속담'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 20:46:25,407 [INFO] auto_blog.py:773 - 썸네일에 쓸 텍스트 임시 저장 완료.
+2026-08-15 20:46:25,407 [INFO] auto_blog.py:318 - 썸네일 이미지를 생성합니다.
+2026-08-15 20:46:26,026 [INFO] auto_blog.py:306 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-15 20:46:54,528 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-15 20:46:55,760 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-15 20:46:58,260 [INFO] auto_blog.py:684 - 엑셀 파일을 읽기 완료
+2026-08-15 20:46:58,260 [INFO] auto_blog.py:729 - [TEST] groupby_data: defaultdict(<class 'list'>, {'어휘': [('침체', '어떤 현상이나 사물이 진전하지 못하고 제자리에 머무름', None), ('침착', '밑으로 가라앉아 들러붙음', None), ('부착', '떨어지지 않고 붙음 또는 그렇게 붙이거나 닮', None), ('고착', '물건 같은 것이 굳게 들러붙어 있음', None)], '헷갈리는 어휘': [('코로나에 걸려 밤새 아팠는데 (이튿날 / 이튿날) 되니까 회복되었다.', None, '이튿날'), ('(연두빛 / 연둣빛) 새순이 돋는 걸 보고 봄이 온지 알았다.', None, '연둣빛'), ('마름들은 (사래논 / 사래답)을 점점 넓혀가며 제 주머니만 불렸다.', None, '사래논')], '속담': [('강태공이 세월 낚듯 한다.', '무슨 일을 매우 더디고 느리게 함을 비유적으로 이르는 말', None), ('꽃은 목화가 제일이다.', '겉모양은 보잘것없어도 쓸모가 큰 목화가 꽃 중에서 가장 좋다는 뜻으로, 겉치레보다는 실속이 중요함을 비유적으로 이르는 말', None), ('군작이 어찌 대봉의 뜻을 알랴', '평범한 사람이 큰 인물의 뜻을 헤아려 알기가 어려움을 비유적으로 이르는 말', None), ('감기 고뿔도 남을 안 준다.', '감기도 남에게 주지 않을 만큼 지독하게 인색하다는 말', None)]})
+2026-08-15 20:46:58,260 [INFO] auto_blog.py:733 - '어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 20:46:58,260 [INFO] auto_blog.py:733 - '헷갈리는 어휘'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 20:46:58,261 [INFO] auto_blog.py:733 - '속담'의 데이터로 썸네일 텍스트를 작성 중입니다.
+2026-08-15 20:46:58,262 [INFO] auto_blog.py:773 - 썸네일에 쓸 텍스트 임시 저장 완료.
+2026-08-15 20:46:58,262 [INFO] auto_blog.py:318 - 썸네일 이미지를 생성합니다.
+2026-08-15 20:46:58,961 [INFO] auto_blog.py:306 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-16 13:42:47,911 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 13:42:55,271 [INFO] logger.py:11 - Get LATEST chromedriver version for google-chrome
+2026-08-16 13:42:56,221 [INFO] logger.py:11 - Get LATEST chromedriver version for google-chrome
+2026-08-16 13:42:56,445 [INFO] logger.py:11 - WebDriver version 151.0.7922.138 selected
+2026-08-16 13:42:56,450 [INFO] logger.py:11 - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.138/win64/chromedriver-win64.zip
+2026-08-16 13:42:56,451 [INFO] logger.py:11 - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.138/win64/chromedriver-win64.zip
+2026-08-16 13:42:56,881 [INFO] logger.py:11 - Driver downloading response is 200
+2026-08-16 13:42:58,654 [INFO] logger.py:11 - Driver has been saved in cache [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138]
+2026-08-16 13:43:58,399 [INFO] auto_blog.py:328 - 썸네일 이미지를 생성합니다.
+2026-08-16 13:44:00,153 [INFO] auto_blog.py:316 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-16 13:48:24,899 [INFO] auto_blog.py:331 - 썸네일 이미지를 생성합니다.
+2026-08-16 13:48:25,554 [INFO] auto_blog.py:319 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-16 13:50:24,911 [INFO] auto_blog.py:331 - 썸네일 이미지를 생성합니다.
+2026-08-16 13:50:25,074 [INFO] auto_blog.py:319 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-16 13:50:54,979 [INFO] auto_blog.py:331 - 썸네일 이미지를 생성합니다.
+2026-08-16 13:50:55,256 [INFO] auto_blog.py:319 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-16 13:52:07,918 [INFO] auto_blog.py:331 - 썸네일 이미지를 생성합니다.
+2026-08-16 13:52:08,095 [INFO] auto_blog.py:319 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-16 13:52:21,437 [INFO] auto_blog.py:331 - 썸네일 이미지를 생성합니다.
+2026-08-16 13:52:21,688 [INFO] auto_blog.py:319 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-16 13:54:08,752 [INFO] auto_blog.py:331 - 썸네일 이미지를 생성합니다.
+2026-08-16 13:54:08,919 [INFO] auto_blog.py:319 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-16 13:56:24,194 [INFO] auto_blog.py:331 - 썸네일 이미지를 생성합니다.
+2026-08-16 13:56:24,385 [INFO] auto_blog.py:319 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-16 13:57:12,121 [INFO] auto_blog.py:331 - 썸네일 이미지를 생성합니다.
+2026-08-16 13:57:12,301 [INFO] auto_blog.py:319 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-16 13:58:06,962 [INFO] auto_blog.py:242 - [TEST] word_list: ['#몸풀기 운동', '#피구', '#팔굽혀펴기 10회 당첨!', '#드디어 쌍절곤 2개!', '#물구나무서기', '#열심히 연습 중', '#흰띠', '#띠별 발차기', '#앞차기', '#기초 5형', '#호신술', '#기본 7수']
+2026-08-16 13:58:06,962 [INFO] auto_blog.py:332 - 썸네일 이미지를 생성합니다.
+2026-08-16 13:58:07,158 [INFO] auto_blog.py:320 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-16 13:59:24,467 [INFO] auto_blog.py:778 - [TEST] cur: 
+temp: 
+2026-08-16 13:59:24,468 [INFO] auto_blog.py:778 - [TEST] cur: #몸풀기 운동
+temp: 
+2026-08-16 13:59:24,469 [INFO] auto_blog.py:778 - [TEST] cur: #몸풀기 운동 #피구
+temp: 
+2026-08-16 13:59:24,469 [INFO] auto_blog.py:778 - [TEST] cur: 
+temp: 
+2026-08-16 13:59:24,469 [INFO] auto_blog.py:778 - [TEST] cur: #드디어 쌍절곤 2개!
+temp: 
+2026-08-16 13:59:24,470 [INFO] auto_blog.py:778 - [TEST] cur: 
+temp: 
+2026-08-16 13:59:24,470 [INFO] auto_blog.py:778 - [TEST] cur: #열심히 연습 중
+temp: 
+2026-08-16 13:59:24,471 [INFO] auto_blog.py:778 - [TEST] cur: #열심히 연습 중 #흰띠
+temp: 
+2026-08-16 13:59:24,471 [INFO] auto_blog.py:778 - [TEST] cur: 
+temp: 
+2026-08-16 13:59:24,471 [INFO] auto_blog.py:778 - [TEST] cur: #앞차기
+temp: 
+2026-08-16 13:59:24,472 [INFO] auto_blog.py:778 - [TEST] cur: #앞차기 #기초 5형
+temp: 
+2026-08-16 13:59:24,472 [INFO] auto_blog.py:778 - [TEST] cur: #앞차기 #기초 5형 #호신술
+temp: 
+2026-08-16 13:59:24,473 [INFO] auto_blog.py:331 - 썸네일 이미지를 생성합니다.
+2026-08-16 13:59:25,812 [INFO] auto_blog.py:319 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-16 14:00:44,034 [INFO] auto_blog.py:778 - [TEST] cur: 
+temp: 
+title_str: #33일차
+
+2026-08-16 14:00:44,034 [INFO] auto_blog.py:778 - [TEST] cur: #몸풀기 운동
+temp: 
+title_str: #33일차
+
+2026-08-16 14:00:44,034 [INFO] auto_blog.py:778 - [TEST] cur: #몸풀기 운동 #피구
+temp: 
+title_str: #33일차
+
+2026-08-16 14:00:44,034 [INFO] auto_blog.py:778 - [TEST] cur: 
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+
+2026-08-16 14:00:44,034 [INFO] auto_blog.py:778 - [TEST] cur: #드디어 쌍절곤 2개!
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+
+2026-08-16 14:00:44,035 [INFO] auto_blog.py:778 - [TEST] cur: 
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+#드디어 쌍절곤 2개!
+
+2026-08-16 14:00:44,035 [INFO] auto_blog.py:778 - [TEST] cur: #열심히 연습 중
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+#드디어 쌍절곤 2개!
+
+2026-08-16 14:00:44,035 [INFO] auto_blog.py:778 - [TEST] cur: #열심히 연습 중 #흰띠
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+#드디어 쌍절곤 2개!
+
+2026-08-16 14:00:44,035 [INFO] auto_blog.py:778 - [TEST] cur: 
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+#드디어 쌍절곤 2개!
+#열심히 연습 중 #흰띠
+
+2026-08-16 14:00:44,035 [INFO] auto_blog.py:778 - [TEST] cur: #앞차기
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+#드디어 쌍절곤 2개!
+#열심히 연습 중 #흰띠
+
+2026-08-16 14:00:44,035 [INFO] auto_blog.py:778 - [TEST] cur: #앞차기 #기초 5형
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+#드디어 쌍절곤 2개!
+#열심히 연습 중 #흰띠
+
+2026-08-16 14:00:44,035 [INFO] auto_blog.py:778 - [TEST] cur: #앞차기 #기초 5형 #호신술
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+#드디어 쌍절곤 2개!
+#열심히 연습 중 #흰띠
+
+2026-08-16 14:00:44,036 [INFO] auto_blog.py:331 - 썸네일 이미지를 생성합니다.
+2026-08-16 14:00:44,236 [INFO] auto_blog.py:319 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-16 14:03:50,009 [INFO] auto_blog.py:778 - [TEST] cur: 
+temp: 
+title_str: #33일차
+
+2026-08-16 14:03:50,010 [INFO] auto_blog.py:778 - [TEST] cur: #몸풀기 운동
+temp: 
+title_str: #33일차
+
+2026-08-16 14:03:50,010 [INFO] auto_blog.py:778 - [TEST] cur: #몸풀기 운동 #피구
+temp: 
+title_str: #33일차
+
+2026-08-16 14:03:50,010 [INFO] auto_blog.py:778 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+
+2026-08-16 14:03:50,010 [INFO] auto_blog.py:778 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+
+2026-08-16 14:03:50,010 [INFO] auto_blog.py:778 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+
+2026-08-16 14:03:50,010 [INFO] auto_blog.py:778 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기
+
+2026-08-16 14:03:50,011 [INFO] auto_blog.py:778 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중
+
+2026-08-16 14:03:50,011 [INFO] auto_blog.py:778 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠
+
+2026-08-16 14:03:50,011 [INFO] auto_blog.py:778 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기 #앞차기
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기
+
+2026-08-16 14:03:50,011 [INFO] auto_blog.py:778 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기 #앞차기 #기초 5형
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기 #앞차기
+
+2026-08-16 14:03:50,011 [INFO] auto_blog.py:778 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기 #앞차기 #기초 5형 #호신술
+temp: 
+title_str: #33일차
+#몸풀기 운동 #피구
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기 #앞차기
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기 #앞차기 #기초 5형
+
+2026-08-16 14:03:50,012 [INFO] auto_blog.py:331 - 썸네일 이미지를 생성합니다.
+2026-08-16 14:03:50,573 [INFO] auto_blog.py:319 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-16 14:06:58,426 [INFO] auto_blog.py:782 - [TEST] cur: 
+temp: #몸풀기 운동
+title_str: #33일차
+
+2026-08-16 14:06:58,427 [INFO] auto_blog.py:782 - [TEST] cur: #몸풀기 운동
+temp: #몸풀기 운동 #피구
+title_str: #33일차
+
+2026-08-16 14:06:58,427 [INFO] auto_blog.py:782 - [TEST] cur: #몸풀기 운동 #피구
+temp: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+title_str: #33일차
+
+2026-08-16 14:06:58,427 [INFO] auto_blog.py:782 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+temp: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+title_str: #33일차
+#몸풀기 운동 #피구
+
+2026-08-16 14:06:58,427 [INFO] auto_blog.py:782 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+temp: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기
+title_str: #33일차
+#몸풀기 운동 #피구
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+
+2026-08-16 14:06:58,427 [INFO] auto_blog.py:782 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기
+temp: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중
+title_str: #33일차
+#몸풀기 운동 #피구
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+
+2026-08-16 14:06:58,427 [INFO] auto_blog.py:782 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중
+temp: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠
+title_str: #33일차
+#몸풀기 운동 #피구
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기
+
+2026-08-16 14:06:58,427 [INFO] auto_blog.py:782 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠
+temp: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기
+title_str: #33일차
+#몸풀기 운동 #피구
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중
+
+2026-08-16 14:06:58,428 [INFO] auto_blog.py:782 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기
+temp: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기 #앞차기
+title_str: #33일차
+#몸풀기 운동 #피구
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠
+
+2026-08-16 14:06:58,428 [INFO] auto_blog.py:782 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기 #앞차기
+temp: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기 #앞차기 #기초 5형
+title_str: #33일차
+#몸풀기 운동 #피구
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기
+
+2026-08-16 14:06:58,428 [INFO] auto_blog.py:782 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기 #앞차기 #기초 5형
+temp: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기 #앞차기 #기초 5형 #호신술
+title_str: #33일차
+#몸풀기 운동 #피구
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기 #앞차기
+
+2026-08-16 14:06:58,428 [INFO] auto_blog.py:782 - [TEST] cur: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기 #앞차기 #기초 5형 #호신술
+temp: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기 #앞차기 #기초 5형 #호신술 #기본 7수
+title_str: #33일차
+#몸풀기 운동 #피구
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기 #앞차기
+#몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개! #물구나무서기 #열심히 연습 중 #흰띠 #띠별 발차기 #앞차기 #기초 5형
+
+2026-08-16 14:06:58,428 [INFO] auto_blog.py:331 - 썸네일 이미지를 생성합니다.
+2026-08-16 14:06:58,803 [INFO] auto_blog.py:319 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-16 14:10:00,132 [INFO] auto_blog.py:782 - [TEST] cur: 
+temp: #몸풀기 운동
+title_str: #33일차
+
+2026-08-16 14:10:00,132 [INFO] auto_blog.py:782 - [TEST] cur: #몸풀기 운동
+temp: #몸풀기 운동 #피구
+title_str: #33일차
+
+2026-08-16 14:10:00,132 [INFO] auto_blog.py:782 - [TEST] cur: #몸풀기 운동 #피구
+temp: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+title_str: #33일차
+
+2026-08-16 14:10:00,132 [INFO] auto_blog.py:782 - [TEST] cur: #팔굽혀펴기 10회 당첨!
+temp: #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+title_str: #33일차
+#몸풀기 운동 #피구
+
+2026-08-16 14:10:00,132 [INFO] auto_blog.py:782 - [TEST] cur: #드디어 쌍절곤 2개!
+temp: #드디어 쌍절곤 2개! #물구나무서기
+title_str: #33일차
+#몸풀기 운동 #피구
+#팔굽혀펴기 10회 당첨!
+
+2026-08-16 14:10:00,133 [INFO] auto_blog.py:782 - [TEST] cur: #물구나무서기
+temp: #물구나무서기 #열심히 연습 중
+title_str: #33일차
+#몸풀기 운동 #피구
+#팔굽혀펴기 10회 당첨!
+#드디어 쌍절곤 2개!
+
+2026-08-16 14:10:00,133 [INFO] auto_blog.py:782 - [TEST] cur: #열심히 연습 중
+temp: #열심히 연습 중 #흰띠
+title_str: #33일차
+#몸풀기 운동 #피구
+#팔굽혀펴기 10회 당첨!
+#드디어 쌍절곤 2개!
+#물구나무서기
+
+2026-08-16 14:10:00,133 [INFO] auto_blog.py:782 - [TEST] cur: #열심히 연습 중 #흰띠
+temp: #열심히 연습 중 #흰띠 #띠별 발차기
+title_str: #33일차
+#몸풀기 운동 #피구
+#팔굽혀펴기 10회 당첨!
+#드디어 쌍절곤 2개!
+#물구나무서기
+
+2026-08-16 14:10:00,133 [INFO] auto_blog.py:782 - [TEST] cur: #띠별 발차기
+temp: #띠별 발차기 #앞차기
+title_str: #33일차
+#몸풀기 운동 #피구
+#팔굽혀펴기 10회 당첨!
+#드디어 쌍절곤 2개!
+#물구나무서기
+#열심히 연습 중 #흰띠
+
+2026-08-16 14:10:00,133 [INFO] auto_blog.py:782 - [TEST] cur: #띠별 발차기 #앞차기
+temp: #띠별 발차기 #앞차기 #기초 5형
+title_str: #33일차
+#몸풀기 운동 #피구
+#팔굽혀펴기 10회 당첨!
+#드디어 쌍절곤 2개!
+#물구나무서기
+#열심히 연습 중 #흰띠
+
+2026-08-16 14:10:00,133 [INFO] auto_blog.py:782 - [TEST] cur: #기초 5형
+temp: #기초 5형 #호신술
+title_str: #33일차
+#몸풀기 운동 #피구
+#팔굽혀펴기 10회 당첨!
+#드디어 쌍절곤 2개!
+#물구나무서기
+#열심히 연습 중 #흰띠
+#띠별 발차기 #앞차기
+
+2026-08-16 14:10:00,133 [INFO] auto_blog.py:782 - [TEST] cur: #기초 5형 #호신술
+temp: #기초 5형 #호신술 #기본 7수
+title_str: #33일차
+#몸풀기 운동 #피구
+#팔굽혀펴기 10회 당첨!
+#드디어 쌍절곤 2개!
+#물구나무서기
+#열심히 연습 중 #흰띠
+#띠별 발차기 #앞차기
+
+2026-08-16 14:10:00,134 [INFO] auto_blog.py:331 - 썸네일 이미지를 생성합니다.
+2026-08-16 14:10:00,317 [INFO] auto_blog.py:319 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-16 14:12:44,022 [INFO] auto_blog.py:780 - [TEST] cur: 
+temp: #몸풀기 운동
+title_str: #33일차
+
+2026-08-16 14:12:44,022 [INFO] auto_blog.py:780 - [TEST] cur: #몸풀기 운동
+temp: #몸풀기 운동 #피구
+title_str: #33일차
+
+2026-08-16 14:12:44,023 [INFO] auto_blog.py:780 - [TEST] cur: #몸풀기 운동 #피구
+temp: #몸풀기 운동 #피구 #팔굽혀펴기 10회 당첨!
+title_str: #33일차
+
+2026-08-16 14:12:44,023 [INFO] auto_blog.py:780 - [TEST] cur: #팔굽혀펴기 10회 당첨!
+temp: #팔굽혀펴기 10회 당첨! #드디어 쌍절곤 2개!
+title_str: #33일차
+#몸풀기 운동 #피구
+
+2026-08-16 14:12:44,023 [INFO] auto_blog.py:780 - [TEST] cur: #드디어 쌍절곤 2개!
+temp: #드디어 쌍절곤 2개! #물구나무서기
+title_str: #33일차
+#몸풀기 운동 #피구
+#팔굽혀펴기 10회 당첨!
+
+2026-08-16 14:12:44,023 [INFO] auto_blog.py:780 - [TEST] cur: #물구나무서기
+temp: #물구나무서기 #열심히 연습 중
+title_str: #33일차
+#몸풀기 운동 #피구
+#팔굽혀펴기 10회 당첨!
+#드디어 쌍절곤 2개!
+
+2026-08-16 14:12:44,023 [INFO] auto_blog.py:780 - [TEST] cur: #열심히 연습 중
+temp: #열심히 연습 중 #흰띠
+title_str: #33일차
+#몸풀기 운동 #피구
+#팔굽혀펴기 10회 당첨!
+#드디어 쌍절곤 2개!
+#물구나무서기
+
+2026-08-16 14:12:44,023 [INFO] auto_blog.py:780 - [TEST] cur: #열심히 연습 중 #흰띠
+temp: #열심히 연습 중 #흰띠 #띠별 발차기
+title_str: #33일차
+#몸풀기 운동 #피구
+#팔굽혀펴기 10회 당첨!
+#드디어 쌍절곤 2개!
+#물구나무서기
+
+2026-08-16 14:12:44,023 [INFO] auto_blog.py:780 - [TEST] cur: #띠별 발차기
+temp: #띠별 발차기 #앞차기
+title_str: #33일차
+#몸풀기 운동 #피구
+#팔굽혀펴기 10회 당첨!
+#드디어 쌍절곤 2개!
+#물구나무서기
+#열심히 연습 중 #흰띠
+
+2026-08-16 14:12:44,024 [INFO] auto_blog.py:780 - [TEST] cur: #띠별 발차기 #앞차기
+temp: #띠별 발차기 #앞차기 #기초 5형
+title_str: #33일차
+#몸풀기 운동 #피구
+#팔굽혀펴기 10회 당첨!
+#드디어 쌍절곤 2개!
+#물구나무서기
+#열심히 연습 중 #흰띠
+
+2026-08-16 14:12:44,024 [INFO] auto_blog.py:780 - [TEST] cur: #기초 5형
+temp: #기초 5형 #호신술
+title_str: #33일차
+#몸풀기 운동 #피구
+#팔굽혀펴기 10회 당첨!
+#드디어 쌍절곤 2개!
+#물구나무서기
+#열심히 연습 중 #흰띠
+#띠별 발차기 #앞차기
+
+2026-08-16 14:12:44,024 [INFO] auto_blog.py:780 - [TEST] cur: #기초 5형 #호신술
+temp: #기초 5형 #호신술 #기본 7수
+title_str: #33일차
+#몸풀기 운동 #피구
+#팔굽혀펴기 10회 당첨!
+#드디어 쌍절곤 2개!
+#물구나무서기
+#열심히 연습 중 #흰띠
+#띠별 발차기 #앞차기
+
+2026-08-16 14:12:44,024 [INFO] auto_blog.py:335 - 썸네일 이미지를 생성합니다.
+2026-08-16 14:12:44,211 [INFO] auto_blog.py:319 - 생성한 썸네일이 클립보드에 복사되었습니다.
+2026-08-16 23:31:53,239 [INFO] crawl_dict.py:100 - '응되다' 사전 검색 중...
+2026-08-16 23:31:53,256 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:31:54,832 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:32:19,543 [INFO] crawl_dict.py:123 - [TEST]
+感應-- 감응되다
+感應-- 단어장에 저장
+1.
+어떤 느낌을 받아 마음이 따라 움직이게 되다.
+2.
+믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.
+3.
+전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:32:19,585 [INFO] crawl_dict.py:125 - [TEST]
+感應-- 감응되다
+感應-- 단어장에 저장
+1.
+어떤 느낌을 받아 마음이 따라 움직이게 되다.
+2.
+믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.
+3.
+전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.
+㈜오픈마인드인포테인먼트
+適應-- 적응되다
+適應-- 단어장에 저장
+1.
+일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다.
+2.
+생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.
+3.
+주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)가 있다.
+㈜오픈마인드인포테인먼트
+照應-- 조응되다
+照應-- 단어장에 저장
+1.
+둘 이상(以上)의 사물(事物)이나 현상(現象) 또는 말과 글의 앞뒤 따위가 서로 일치(一致)하게 대응(對應)되다.
+2.
+원인(原因)에 따라서 결과(結果)가 생기게 되다.
+㈜오픈마인드인포테인먼트
+對應-- 대응되다
+對應-- 단어장에 저장
+1.
+어떤 두 대상(對象)이 주어진 어떤 관계(關係)에 의(依)하여 서로 짝이 이루어지다.
+2.
+두 집합(集合)이 있을 때에 어떤 주어진 관계(關係)에 의(依)하여서 두 집합(集合)의 원소(元素)끼리 짝이 이루어지다.
+㈜오픈마인드인포테인먼트
+相應-- 상응되다
+相應-- 단어장에 저장
+1.
+서로 응(應)하거나 어울리다.
+2.
+서로 기맥(氣脈)이 통(通)하다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:32:22,390 [INFO] crawl_dict.py:181 - 크롤링 완료....(단어: 응되다)----------------------------------------
+2026-08-16 23:32:22,391 [INFO] crawl_dict.py:100 - '응고되다' 사전 검색 중...
+2026-08-16 23:32:22,391 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:32:23,153 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:32:29,443 [INFO] crawl_dict.py:123 - [TEST]
+凝固-- 응고되다
+凝固-- 단어장에 저장
+액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:32:29,458 [INFO] crawl_dict.py:125 - [TEST]
+凝固-- 응고되다
+凝固-- 단어장에 저장
+액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.
+㈜오픈마인드인포테인먼트
+江原特別自治道 寧越郡 山솔面 응고개길 강원특별자치도 영월군 산솔면 응고개길
+江原特別自治道 寧越郡 山솔面 <strong>응고</strong>개길 단어장에 저장
+강원특별자치도(江原特別自治道) 영월군(寧越郡) 산솔면(山솔面) 응고개길(응고개길) 〔Eunggogae-gil, Sansol-myeon, Yeongwol-gun, Gangwon-do〕.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:32:32,033 [INFO] crawl_dict.py:181 - 크롤링 완료....(단어: 응고되다)----------------------------------------
+2026-08-16 23:32:32,033 [INFO] crawl_dict.py:100 - '먀우' 사전 검색 중...
+2026-08-16 23:32:32,034 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:32:32,523 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:32:48,078 [INFO] crawl_dict.py:181 - 크롤링 완료....(단어: 먀우)----------------------------------------
+2026-08-16 23:36:32,040 [INFO] crawl_dict.py:100 - '응되다' 사전 검색 중...
+2026-08-16 23:36:32,041 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:36:32,604 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:36:38,408 [INFO] crawl_dict.py:126 - [TEST]
+感應-- 감응되다
+感應-- 단어장에 저장
+1.
+어떤 느낌을 받아 마음이 따라 움직이게 되다.
+2.
+믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.
+3.
+전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:36:38,447 [INFO] crawl_dict.py:128 - [TEST]
+感應-- 감응되다
+感應-- 단어장에 저장
+1.
+어떤 느낌을 받아 마음이 따라 움직이게 되다.
+2.
+믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.
+3.
+전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+適應-- 적응되다
+適應-- 단어장에 저장
+1.
+일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다.
+2.
+생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.
+3.
+주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)가 있다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+照應-- 조응되다
+照應-- 단어장에 저장
+1.
+둘 이상(以上)의 사물(事物)이나 현상(現象) 또는 말과 글의 앞뒤 따위가 서로 일치(一致)하게 대응(對應)되다.
+2.
+원인(原因)에 따라서 결과(結果)가 생기게 되다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+對應-- 대응되다
+對應-- 단어장에 저장
+1.
+어떤 두 대상(對象)이 주어진 어떤 관계(關係)에 의(依)하여 서로 짝이 이루어지다.
+2.
+두 집합(集合)이 있을 때에 어떤 주어진 관계(關係)에 의(依)하여서 두 집합(集合)의 원소(元素)끼리 짝이 이루어지다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+相應-- 상응되다
+相應-- 단어장에 저장
+1.
+서로 응(應)하거나 어울리다.
+2.
+서로 기맥(氣脈)이 통(通)하다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:36:40,640 [INFO] crawl_dict.py:184 - 크롤링 완료....(단어: 응되다)----------------------------------------
+2026-08-16 23:36:40,641 [INFO] crawl_dict.py:100 - '응고되다' 사전 검색 중...
+2026-08-16 23:36:40,642 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:36:40,994 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:36:46,618 [INFO] crawl_dict.py:126 - [TEST]
+凝固-- 응고되다
+凝固-- 단어장에 저장
+액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:36:46,636 [INFO] crawl_dict.py:128 - [TEST]
+凝固-- 응고되다
+凝固-- 단어장에 저장
+액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+江原特別自治道 寧越郡 山솔面 응고개길 강원특별자치도 영월군 산솔면 응고개길
+江原特別自治道 寧越郡 山솔面 <strong>응고</strong>개길 단어장에 저장
+강원특별자치도(江原特別自治道) 영월군(寧越郡) 산솔면(山솔面) 응고개길(응고개길) 〔Eunggogae-gil, Sansol-myeon, Yeongwol-gun, Gangwon-do〕.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:36:48,738 [INFO] crawl_dict.py:184 - 크롤링 완료....(단어: 응고되다)----------------------------------------
+2026-08-16 23:36:48,738 [INFO] crawl_dict.py:100 - '먀우' 사전 검색 중...
+2026-08-16 23:36:48,739 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:36:49,093 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:37:06,794 [INFO] crawl_dict.py:184 - 크롤링 완료....(단어: 먀우)----------------------------------------
+2026-08-16 23:37:34,874 [INFO] crawl_dict.py:100 - '응되다' 사전 검색 중...
+2026-08-16 23:37:34,875 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:37:35,302 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:37:40,388 [INFO] crawl_dict.py:126 - [TEST]
+感應-- 감응되다
+感應-- 단어장에 저장
+1.
+어떤 느낌을 받아 마음이 따라 움직이게 되다.
+2.
+믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.
+3.
+전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:37:40,429 [INFO] crawl_dict.py:128 - [TEST]
+感應-- 감응되다
+感應-- 단어장에 저장
+1.
+어떤 느낌을 받아 마음이 따라 움직이게 되다.
+2.
+믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.
+3.
+전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+適應-- 적응되다
+適應-- 단어장에 저장
+1.
+일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다.
+2.
+생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.
+3.
+주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)가 있다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+照應-- 조응되다
+照應-- 단어장에 저장
+1.
+둘 이상(以上)의 사물(事物)이나 현상(現象) 또는 말과 글의 앞뒤 따위가 서로 일치(一致)하게 대응(對應)되다.
+2.
+원인(原因)에 따라서 결과(結果)가 생기게 되다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+對應-- 대응되다
+對應-- 단어장에 저장
+1.
+어떤 두 대상(對象)이 주어진 어떤 관계(關係)에 의(依)하여 서로 짝이 이루어지다.
+2.
+두 집합(集合)이 있을 때에 어떤 주어진 관계(關係)에 의(依)하여서 두 집합(集合)의 원소(元素)끼리 짝이 이루어지다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+相應-- 상응되다
+相應-- 단어장에 저장
+1.
+서로 응(應)하거나 어울리다.
+2.
+서로 기맥(氣脈)이 통(通)하다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:37:42,549 [INFO] crawl_dict.py:184 - 크롤링 완료....(단어: 응되다)----------------------------------------
+2026-08-16 23:37:42,550 [INFO] crawl_dict.py:100 - '응고되다' 사전 검색 중...
+2026-08-16 23:37:42,550 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:37:42,904 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:37:48,593 [INFO] crawl_dict.py:126 - [TEST]
+凝固-- 응고되다
+凝固-- 단어장에 저장
+액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:37:48,619 [INFO] crawl_dict.py:128 - [TEST]
+凝固-- 응고되다
+凝固-- 단어장에 저장
+액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+江原特別自治道 寧越郡 山솔面 응고개길 강원특별자치도 영월군 산솔면 응고개길
+江原特別自治道 寧越郡 山솔面 <strong>응고</strong>개길 단어장에 저장
+강원특별자치도(江原特別自治道) 영월군(寧越郡) 산솔면(山솔面) 응고개길(응고개길) 〔Eunggogae-gil, Sansol-myeon, Yeongwol-gun, Gangwon-do〕.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:37:50,835 [INFO] crawl_dict.py:184 - 크롤링 완료....(단어: 응고되다)----------------------------------------
+2026-08-16 23:37:50,835 [INFO] crawl_dict.py:100 - '먀우' 사전 검색 중...
+2026-08-16 23:37:50,836 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:37:51,177 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:38:08,228 [INFO] crawl_dict.py:184 - 크롤링 완료....(단어: 먀우)----------------------------------------
+2026-08-16 23:48:50,105 [INFO] crawl_dict.py:100 - '응되다' 사전 검색 중...
+2026-08-16 23:48:50,105 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:48:50,459 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:48:56,450 [INFO] crawl_dict.py:126 - [TEST]
+感應-- 감응되다
+感應-- 단어장에 저장
+1.
+어떤 느낌을 받아 마음이 따라 움직이게 되다.
+2.
+믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.
+3.
+전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:48:56,494 [INFO] crawl_dict.py:128 - [TEST]
+感應-- 감응되다
+感應-- 단어장에 저장
+1.
+어떤 느낌을 받아 마음이 따라 움직이게 되다.
+2.
+믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.
+3.
+전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+適應-- 적응되다
+適應-- 단어장에 저장
+1.
+일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다.
+2.
+생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.
+3.
+주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)가 있다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+照應-- 조응되다
+照應-- 단어장에 저장
+1.
+둘 이상(以上)의 사물(事物)이나 현상(現象) 또는 말과 글의 앞뒤 따위가 서로 일치(一致)하게 대응(對應)되다.
+2.
+원인(原因)에 따라서 결과(結果)가 생기게 되다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+對應-- 대응되다
+對應-- 단어장에 저장
+1.
+어떤 두 대상(對象)이 주어진 어떤 관계(關係)에 의(依)하여 서로 짝이 이루어지다.
+2.
+두 집합(集合)이 있을 때에 어떤 주어진 관계(關係)에 의(依)하여서 두 집합(集合)의 원소(元素)끼리 짝이 이루어지다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+相應-- 상응되다
+相應-- 단어장에 저장
+1.
+서로 응(應)하거나 어울리다.
+2.
+서로 기맥(氣脈)이 통(通)하다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:48:58,559 [INFO] crawl_dict.py:184 - 크롤링 완료....(단어: 응되다)----------------------------------------
+2026-08-16 23:48:58,560 [INFO] crawl_dict.py:100 - '응고되다' 사전 검색 중...
+2026-08-16 23:48:58,561 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:48:58,909 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:49:04,613 [INFO] crawl_dict.py:126 - [TEST]
+凝固-- 응고되다
+凝固-- 단어장에 저장
+액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:49:04,631 [INFO] crawl_dict.py:128 - [TEST]
+凝固-- 응고되다
+凝固-- 단어장에 저장
+액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+江原特別自治道 寧越郡 山솔面 응고개길 강원특별자치도 영월군 산솔면 응고개길
+江原特別自治道 寧越郡 山솔面 <strong>응고</strong>개길 단어장에 저장
+강원특별자치도(江原特別自治道) 영월군(寧越郡) 산솔면(山솔面) 응고개길(응고개길) 〔Eunggogae-gil, Sansol-myeon, Yeongwol-gun, Gangwon-do〕.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:49:06,744 [INFO] crawl_dict.py:184 - 크롤링 완료....(단어: 응고되다)----------------------------------------
+2026-08-16 23:49:06,744 [INFO] crawl_dict.py:100 - '먀우' 사전 검색 중...
+2026-08-16 23:49:06,744 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:49:07,082 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:49:22,004 [WARNING] crawl_dict.py:124 - '먀우'를 찾을 수 없어 TimeOut 에러 발생: Message: 
+
+2026-08-16 23:49:24,122 [INFO] crawl_dict.py:184 - 크롤링 완료....(단어: 먀우)----------------------------------------
+2026-08-16 23:50:40,318 [INFO] crawl_dict.py:100 - '응되다' 사전 검색 중...
+2026-08-16 23:50:40,318 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:50:40,668 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:50:45,967 [INFO] crawl_dict.py:124 - [TEST]
+感應-- 감응되다
+感應-- 단어장에 저장
+1.
+어떤 느낌을 받아 마음이 따라 움직이게 되다.
+2.
+믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.
+3.
+전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:50:46,008 [INFO] crawl_dict.py:125 - [TEST]
+感應-- 감응되다
+感應-- 단어장에 저장
+1.
+어떤 느낌을 받아 마음이 따라 움직이게 되다.
+2.
+믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.
+3.
+전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+適應-- 적응되다
+適應-- 단어장에 저장
+1.
+일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다.
+2.
+생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.
+3.
+주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)가 있다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+照應-- 조응되다
+照應-- 단어장에 저장
+1.
+둘 이상(以上)의 사물(事物)이나 현상(現象) 또는 말과 글의 앞뒤 따위가 서로 일치(一致)하게 대응(對應)되다.
+2.
+원인(原因)에 따라서 결과(結果)가 생기게 되다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+對應-- 대응되다
+對應-- 단어장에 저장
+1.
+어떤 두 대상(對象)이 주어진 어떤 관계(關係)에 의(依)하여 서로 짝이 이루어지다.
+2.
+두 집합(集合)이 있을 때에 어떤 주어진 관계(關係)에 의(依)하여서 두 집합(集合)의 원소(元素)끼리 짝이 이루어지다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+相應-- 상응되다
+相應-- 단어장에 저장
+1.
+서로 응(應)하거나 어울리다.
+2.
+서로 기맥(氣脈)이 통(通)하다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:50:48,150 [INFO] crawl_dict.py:185 - 크롤링 완료....(단어: 응되다)----------------------------------------
+2026-08-16 23:50:48,150 [INFO] crawl_dict.py:100 - '응고되다' 사전 검색 중...
+2026-08-16 23:50:48,151 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:50:48,496 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:50:54,275 [INFO] crawl_dict.py:124 - [TEST]
+凝固-- 응고되다
+凝固-- 단어장에 저장
+액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:50:54,292 [INFO] crawl_dict.py:125 - [TEST]
+凝固-- 응고되다
+凝固-- 단어장에 저장
+액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.
+㈜오픈마인드인포테인먼트
+----------------------------------------
+江原特別自治道 寧越郡 山솔面 응고개길 강원특별자치도 영월군 산솔면 응고개길
+江原特別自治道 寧越郡 山솔面 <strong>응고</strong>개길 단어장에 저장
+강원특별자치도(江原特別自治道) 영월군(寧越郡) 산솔면(山솔面) 응고개길(응고개길) 〔Eunggogae-gil, Sansol-myeon, Yeongwol-gun, Gangwon-do〕.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:50:56,461 [INFO] crawl_dict.py:185 - 크롤링 완료....(단어: 응고되다)----------------------------------------
+2026-08-16 23:50:56,462 [INFO] crawl_dict.py:100 - '먀우' 사전 검색 중...
+2026-08-16 23:50:56,463 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:50:56,836 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:51:11,764 [WARNING] crawl_dict.py:127 - '먀우'를 찾을 수 없어 TimeOut 에러 발생: Message: 
+
+2026-08-16 23:51:13,915 [INFO] crawl_dict.py:185 - 크롤링 완료....(단어: 먀우)----------------------------------------
+2026-08-16 23:52:34,996 [INFO] crawl_dict.py:120 - '응되다' 사전 검색 중...
+2026-08-16 23:52:34,997 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:52:35,350 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:52:41,391 [INFO] crawl_dict.py:144 - [TEST]
+感應-- 감응되다
+感應-- 단어장에 저장
+1.
+어떤 느낌을 받아 마음이 따라 움직이게 되다.
+2.
+믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.
+3.
+전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:52:41,430 [INFO] crawl_dict.py:145 - [TEST]
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐│ 感應-- 감응되다                                                                                                            ││ 感應-- 단어장에 저장                                                                                                         ││ 1.                                                                                                                   ││ 어떤 느낌을 받아 마음이 따라 움직이게 되다.                                                                                            ││ 2.                                                                                                                   ││ 믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.                                                                                   ││ 3.                                                                                                                   ││ 전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다. ││ ㈜오픈마인드인포테인먼트                                                                                                         │└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------
+┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐│ 適應-- 적응되다                                                                                                             ││ 適應-- 단어장에 저장                                                                                                          ││ 1.                                                                                                                    ││ 일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다.                                                                      ││ 2.                                                                                                                    ││ 생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.                                                      ││ 3.                                                                                                                    ││ 주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)가 있다. ││ ㈜오픈마인드인포테인먼트                                                                                                          │└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------
+┌─────────────────────────────────────────────────────────────────┐│ 照應-- 조응되다                                                       ││ 照應-- 단어장에 저장                                                    ││ 1.                                                              ││ 둘 이상(以上)의 사물(事物)이나 현상(現象) 또는 말과 글의 앞뒤 따위가 서로 일치(一致)하게 대응(對應)되다. ││ 2.                                                              ││ 원인(原因)에 따라서 결과(結果)가 생기게 되다.                                     ││ ㈜오픈마인드인포테인먼트                                                    │└─────────────────────────────────────────────────────────────────┘
+----------------------------------------
+┌─────────────────────────────────────────────────────────────────────┐│ 對應-- 대응되다                                                           ││ 對應-- 단어장에 저장                                                        ││ 1.                                                                  ││ 어떤 두 대상(對象)이 주어진 어떤 관계(關係)에 의(依)하여 서로 짝이 이루어지다.                     ││ 2.                                                                  ││ 두 집합(集合)이 있을 때에 어떤 주어진 관계(關係)에 의(依)하여서 두 집합(集合)의 원소(元素)끼리 짝이 이루어지다. ││ ㈜오픈마인드인포테인먼트                                                        │└─────────────────────────────────────────────────────────────────────┘
+----------------------------------------
+┌────────────────────┐│ 相應-- 상응되다          ││ 相應-- 단어장에 저장       ││ 1.                 ││ 서로 응(應)하거나 어울리다.   ││ 2.                 ││ 서로 기맥(氣脈)이 통(通)하다. ││ ㈜오픈마인드인포테인먼트       │└────────────────────┘
+
+
+
+2026-08-16 23:52:43,629 [INFO] crawl_dict.py:205 - 크롤링 완료....(단어: 응되다)----------------------------------------
+2026-08-16 23:52:43,630 [INFO] crawl_dict.py:120 - '응고되다' 사전 검색 중...
+2026-08-16 23:52:43,631 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:52:44,010 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:52:49,812 [INFO] crawl_dict.py:144 - [TEST]
+凝固-- 응고되다
+凝固-- 단어장에 저장
+액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:52:49,849 [INFO] crawl_dict.py:145 - [TEST]
+┌──────────────────────────────┐│ 凝固-- 응고되다                    ││ 凝固-- 단어장에 저장                 ││ 액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다. ││ ㈜오픈마인드인포테인먼트                 │└──────────────────────────────┘
+----------------------------------------
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐│ 江原特別自治道 寧越郡 山솔面 응고개길 강원특별자치도 영월군 산솔면 응고개길                                                              ││ 江原特別自治道 寧越郡 山솔面 <strong>응고</strong>개길 단어장에 저장                                                          ││ 강원특별자치도(江原特別自治道) 영월군(寧越郡) 산솔면(山솔面) 응고개길(응고개길) 〔Eunggogae-gil, Sansol-myeon, Yeongwol-gun, Gangwon-do〕. ││ ㈜오픈마인드인포테인먼트                                                                                           │└────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+
+2026-08-16 23:52:51,991 [INFO] crawl_dict.py:205 - 크롤링 완료....(단어: 응고되다)----------------------------------------
+2026-08-16 23:52:51,992 [INFO] crawl_dict.py:120 - '먀우' 사전 검색 중...
+2026-08-16 23:52:51,992 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:52:52,359 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:53:07,273 [WARNING] crawl_dict.py:147 - '먀우'를 찾을 수 없어 TimeOut 에러 발생: Message: 
+
+2026-08-16 23:53:09,427 [INFO] crawl_dict.py:205 - 크롤링 완료....(단어: 먀우)----------------------------------------
+2026-08-16 23:53:35,510 [INFO] crawl_dict.py:120 - '응되다' 사전 검색 중...
+2026-08-16 23:53:35,532 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:53:35,926 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:53:41,422 [INFO] crawl_dict.py:144 - [TEST]
+感應-- 감응되다
+感應-- 단어장에 저장
+1.
+어떤 느낌을 받아 마음이 따라 움직이게 되다.
+2.
+믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.
+3.
+전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:53:41,465 [INFO] crawl_dict.py:145 - [TEST]
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 感應-- 감응되다                                                                                                            │
+│ 感應-- 단어장에 저장                                                                                                         │
+│ 1.                                                                                                                   │
+│ 어떤 느낌을 받아 마음이 따라 움직이게 되다.                                                                                            │
+│ 2.                                                                                                                   │
+│ 믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.                                                                                   │
+│ 3.                                                                                                                   │
+│ 전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다. │
+│ ㈜오픈마인드인포테인먼트                                                                                                         │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------
+┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 適應-- 적응되다                                                                                                             │
+│ 適應-- 단어장에 저장                                                                                                          │
+│ 1.                                                                                                                    │
+│ 일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다.                                                                      │
+│ 2.                                                                                                                    │
+│ 생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.                                                      │
+│ 3.                                                                                                                    │
+│ 주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)가 있다. │
+│ ㈜오픈마인드인포테인먼트                                                                                                          │
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------
+┌─────────────────────────────────────────────────────────────────┐
+│ 照應-- 조응되다                                                       │
+│ 照應-- 단어장에 저장                                                    │
+│ 1.                                                              │
+│ 둘 이상(以上)의 사물(事物)이나 현상(現象) 또는 말과 글의 앞뒤 따위가 서로 일치(一致)하게 대응(對應)되다. │
+│ 2.                                                              │
+│ 원인(原因)에 따라서 결과(結果)가 생기게 되다.                                     │
+│ ㈜오픈마인드인포테인먼트                                                    │
+└─────────────────────────────────────────────────────────────────┘
+----------------------------------------
+┌─────────────────────────────────────────────────────────────────────┐
+│ 對應-- 대응되다                                                           │
+│ 對應-- 단어장에 저장                                                        │
+│ 1.                                                                  │
+│ 어떤 두 대상(對象)이 주어진 어떤 관계(關係)에 의(依)하여 서로 짝이 이루어지다.                     │
+│ 2.                                                                  │
+│ 두 집합(集合)이 있을 때에 어떤 주어진 관계(關係)에 의(依)하여서 두 집합(集合)의 원소(元素)끼리 짝이 이루어지다. │
+│ ㈜오픈마인드인포테인먼트                                                        │
+└─────────────────────────────────────────────────────────────────────┘
+----------------------------------------
+┌────────────────────┐
+│ 相應-- 상응되다          │
+│ 相應-- 단어장에 저장       │
+│ 1.                 │
+│ 서로 응(應)하거나 어울리다.   │
+│ 2.                 │
+│ 서로 기맥(氣脈)이 통(通)하다. │
+│ ㈜오픈마인드인포테인먼트       │
+└────────────────────┘
+
+
+
+2026-08-16 23:53:43,588 [INFO] crawl_dict.py:205 - 크롤링 완료....(단어: 응되다)
+----------------------------------------
+2026-08-16 23:53:43,589 [INFO] crawl_dict.py:120 - '응고되다' 사전 검색 중...
+2026-08-16 23:53:43,590 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:53:43,933 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:53:49,673 [INFO] crawl_dict.py:144 - [TEST]
+凝固-- 응고되다
+凝固-- 단어장에 저장
+액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-16 23:53:49,689 [INFO] crawl_dict.py:145 - [TEST]
+┌──────────────────────────────┐
+│ 凝固-- 응고되다                    │
+│ 凝固-- 단어장에 저장                 │
+│ 액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다. │
+│ ㈜오픈마인드인포테인먼트                 │
+└──────────────────────────────┘
+----------------------------------------
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 江原特別自治道 寧越郡 山솔面 응고개길 강원특별자치도 영월군 산솔면 응고개길                                                              │
+│ 江原特別自治道 寧越郡 山솔面 <strong>응고</strong>개길 단어장에 저장                                                          │
+│ 강원특별자치도(江原特別自治道) 영월군(寧越郡) 산솔면(山솔面) 응고개길(응고개길) 〔Eunggogae-gil, Sansol-myeon, Yeongwol-gun, Gangwon-do〕. │
+│ ㈜오픈마인드인포테인먼트                                                                                           │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+
+2026-08-16 23:53:51,845 [INFO] crawl_dict.py:205 - 크롤링 완료....(단어: 응고되다)
+----------------------------------------
+2026-08-16 23:53:51,845 [INFO] crawl_dict.py:120 - '먀우' 사전 검색 중...
+2026-08-16 23:53:51,846 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-16 23:53:52,189 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-16 23:54:07,250 [WARNING] crawl_dict.py:147 - '먀우'를 찾을 수 없어 TimeOut 에러 발생: Message: 
+
+2026-08-16 23:54:09,362 [INFO] crawl_dict.py:205 - 크롤링 완료....(단어: 먀우)
+----------------------------------------
+2026-08-17 00:04:03,280 [INFO] crawl_dict.py:142 - '응되다' 사전 검색 중...
+2026-08-17 00:04:03,280 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 00:04:04,439 [INFO] logger.py:11 - Get LATEST chromedriver version for google-chrome
+2026-08-17 00:04:05,227 [INFO] logger.py:11 - Get LATEST chromedriver version for google-chrome
+2026-08-17 00:04:05,404 [INFO] logger.py:11 - WebDriver version 151.0.7922.138 selected
+2026-08-17 00:04:05,409 [INFO] logger.py:11 - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.138/win64/chromedriver-win64.zip
+2026-08-17 00:04:05,410 [INFO] logger.py:11 - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/151.0.7922.138/win64/chromedriver-win64.zip
+2026-08-17 00:04:05,908 [INFO] logger.py:11 - Driver downloading response is 200
+2026-08-17 00:04:07,781 [INFO] logger.py:11 - Driver has been saved in cache [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138]
+2026-08-17 00:04:23,348 [INFO] crawl_dict.py:166 - [TEST]
+感應-- 감응되다
+感應-- 단어장에 저장
+1.
+어떤 느낌을 받아 마음이 따라 움직이게 되다.
+2.
+믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.
+3.
+전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-17 00:04:23,485 [INFO] crawl_dict.py:167 - [TEST]
+┌────────────────────────────────────────────────────────────────────────────────┐
+│ 感應-- 감응되다                                                                │
+│ 感應-- 단어장에 저장                                                           │
+│ 1.                                                                             │
+│ 어떤 느낌을 받아 마음이 따라 움직이게 되다.                                    │
+│ 2.                                                                             │
+│ 믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.                       │
+│ 3.                                                                             │
+│ 전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 │
+│ 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 │
+│ 전기(電氣)나 자기(磁氣)를 띠게 되다.                                           │
+│ ㈜오픈마인드인포테인먼트                                                       │
+└────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│ 適應-- 적응되다                                                                  │
+│ 適應-- 단어장에 저장                                                             │
+│ 1.                                                                               │
+│ 일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다. │
+│ 2.                                                                               │
+│ 생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록                            │
+│ 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.                           │
+│ 3.                                                                               │
+│ 주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이      │
+│ 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어      │
+│ 조화(調和)가 이루어지는 경우(境遇)가 있다.                                       │
+│ ㈜오픈마인드인포테인먼트                                                         │
+└──────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------
+┌───────────────────────────────────────────────────────────────────────────┐
+│ 照應-- 조응되다                                                           │
+│ 照應-- 단어장에 저장                                                      │
+│ 1.                                                                        │
+│ 둘 이상(以上)의 사물(事物)이나 현상(現象) 또는 말과 글의 앞뒤 따위가 서로 │
+│ 일치(一致)하게 대응(對應)되다.                                            │
+│ 2.                                                                        │
+│ 원인(原因)에 따라서 결과(結果)가 생기게 되다.                             │
+│ ㈜오픈마인드인포테인먼트                                                  │
+└───────────────────────────────────────────────────────────────────────────┘
+----------------------------------------
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ 對應-- 대응되다                                                                 │
+│ 對應-- 단어장에 저장                                                            │
+│ 1.                                                                              │
+│ 어떤 두 대상(對象)이 주어진 어떤 관계(關係)에 의(依)하여 서로 짝이 이루어지다.  │
+│ 2.                                                                              │
+│ 두 집합(集合)이 있을 때에 어떤 주어진 관계(關係)에 의(依)하여서 두 집합(集合)의 │
+│ 원소(元素)끼리 짝이 이루어지다.                                                 │
+│ ㈜오픈마인드인포테인먼트                                                        │
+└─────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------
+┌───────────────────────────────┐
+│ 相應-- 상응되다               │
+│ 相應-- 단어장에 저장          │
+│ 1.                            │
+│ 서로 응(應)하거나 어울리다.   │
+│ 2.                            │
+│ 서로 기맥(氣脈)이 통(通)하다. │
+│ ㈜오픈마인드인포테인먼트      │
+└───────────────────────────────┘
+
+
+
+2026-08-17 00:04:26,144 [INFO] crawl_dict.py:227 - 크롤링 완료....(단어: 응되다)
+----------------------------------------
+2026-08-17 00:04:26,145 [INFO] crawl_dict.py:142 - '응고되다' 사전 검색 중...
+2026-08-17 00:04:26,145 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 00:04:26,631 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 00:04:34,004 [INFO] crawl_dict.py:166 - [TEST]
+凝固-- 응고되다
+凝固-- 단어장에 저장
+액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-17 00:04:34,024 [INFO] crawl_dict.py:167 - [TEST]
+┌──────────────────────────────────────────────────┐
+│ 凝固-- 응고되다                                  │
+│ 凝固-- 단어장에 저장                             │
+│ 액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다. │
+│ ㈜오픈마인드인포테인먼트                         │
+└──────────────────────────────────────────────────┘
+----------------------------------------
+┌─────────────────────────────────────────────────────────────────────────────────┐
+│ 江原特別自治道 寧越郡 山솔面 응고개길 강원특별자치도 영월군 산솔면 응고개길     │
+│ 江原特別自治道 寧越郡 山솔面 <strong>응고</strong>개길 단어장에 저장            │
+│ 강원특별자치도(江原特別自治道) 영월군(寧越郡) 산솔면(山솔面) 응고개길(응고개길) │
+│ 〔Eunggogae-gil, Sansol-myeon, Yeongwol-gun,                                    │
+│ Gangwon-do〕.                                                                   │
+│ ㈜오픈마인드인포테인먼트                                                        │
+└─────────────────────────────────────────────────────────────────────────────────┘
+
+
+
+2026-08-17 00:04:36,426 [INFO] crawl_dict.py:227 - 크롤링 완료....(단어: 응고되다)
+----------------------------------------
+2026-08-17 00:04:36,426 [INFO] crawl_dict.py:142 - '먀우' 사전 검색 중...
+2026-08-17 00:04:36,427 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 00:04:36,877 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 00:04:52,879 [WARNING] crawl_dict.py:169 - '먀우'를 찾을 수 없어 TimeOut 에러 발생: Message: 
+
+2026-08-17 00:04:55,514 [INFO] crawl_dict.py:227 - 크롤링 완료....(단어: 먀우)
+----------------------------------------
+2026-08-17 00:13:53,598 [INFO] crawl_dict.py:142 - '응되다' 사전 검색 중...
+2026-08-17 00:13:53,598 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 00:13:53,988 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 00:13:59,381 [INFO] crawl_dict.py:166 - [TEST]
+感應-- 감응되다
+感應-- 단어장에 저장
+1.
+어떤 느낌을 받아 마음이 따라 움직이게 되다.
+2.
+믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.
+3.
+전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-17 00:13:59,423 [INFO] crawl_dict.py:167 - [TEST]
+[1번]
+┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 感應-- 감응되다                                                                                                                                               │
+│ 感應-- 단어장에 저장                                                                                                                                          │
+│ 1.                                                                                                                                                            │
+│ 어떤 느낌을 받아 마음이 따라 움직이게 되다.                                                                                                                   │
+│ 2.                                                                                                                                                            │
+│ 믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.                                                                                                      │
+│ 3.                                                                                                                                                            │
+│ 전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 │
+│ 전기(電氣)나 자기(磁氣)를 띠게 되다.                                                                                                                          │
+│ ㈜오픈마인드인포테인먼트                                                                                                                                      │
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[2번]
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 適應-- 적응되다                                                                                                                                                      │
+│ 適應-- 단어장에 저장                                                                                                                                                 │
+│ 1.                                                                                                                                                                   │
+│ 일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다.                                                                                     │
+│ 2.                                                                                                                                                                   │
+│ 생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.                                                         │
+│ 3.                                                                                                                                                                   │
+│ 주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어 조화(調和)가 │
+│ 이루어지는 경우(境遇)가 있다.                                                                                                                                        │
+│ ㈜오픈마인드인포테인먼트                                                                                                                                             │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[3번]
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 照應-- 조응되다                                                                                          │
+│ 照應-- 단어장에 저장                                                                                     │
+│ 1.                                                                                                       │
+│ 둘 이상(以上)의 사물(事物)이나 현상(現象) 또는 말과 글의 앞뒤 따위가 서로 일치(一致)하게 대응(對應)되다. │
+│ 2.                                                                                                       │
+│ 원인(原因)에 따라서 결과(結果)가 생기게 되다.                                                            │
+│ ㈜오픈마인드인포테인먼트                                                                                 │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[4번]
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 對應-- 대응되다                                                                                                 │
+│ 對應-- 단어장에 저장                                                                                            │
+│ 1.                                                                                                              │
+│ 어떤 두 대상(對象)이 주어진 어떤 관계(關係)에 의(依)하여 서로 짝이 이루어지다.                                  │
+│ 2.                                                                                                              │
+│ 두 집합(集合)이 있을 때에 어떤 주어진 관계(關係)에 의(依)하여서 두 집합(集合)의 원소(元素)끼리 짝이 이루어지다. │
+│ ㈜오픈마인드인포테인먼트                                                                                        │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[5번]
+┌───────────────────────────────┐
+│ 相應-- 상응되다               │
+│ 相應-- 단어장에 저장          │
+│ 1.                            │
+│ 서로 응(應)하거나 어울리다.   │
+│ 2.                            │
+│ 서로 기맥(氣脈)이 통(通)하다. │
+│ ㈜오픈마인드인포테인먼트      │
+└───────────────────────────────┘
+
+
+
+2026-08-17 00:14:01,658 [INFO] crawl_dict.py:227 - 크롤링 완료....(단어: 응되다)
+----------------------------------------
+2026-08-17 00:14:01,658 [INFO] crawl_dict.py:142 - '응고되다' 사전 검색 중...
+2026-08-17 00:14:01,659 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 00:14:02,060 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 00:14:07,806 [INFO] crawl_dict.py:166 - [TEST]
+凝固-- 응고되다
+凝固-- 단어장에 저장
+액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-17 00:14:07,822 [INFO] crawl_dict.py:167 - [TEST]
+[1번]
+┌──────────────────────────────────────────────────┐
+│ 凝固-- 응고되다                                  │
+│ 凝固-- 단어장에 저장                             │
+│ 액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다. │
+│ ㈜오픈마인드인포테인먼트                         │
+└──────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[2번]
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 江原特別自治道 寧越郡 山솔面 응고개길 강원특별자치도 영월군 산솔면 응고개길                                                  │
+│ 江原特別自治道 寧越郡 山솔面 <strong>응고</strong>개길 단어장에 저장                                                         │
+│ 강원특별자치도(江原特別自治道) 영월군(寧越郡) 산솔면(山솔面) 응고개길(응고개길) 〔Eunggogae-gil, Sansol-myeon, Yeongwol-gun, │
+│ Gangwon-do〕.                                                                                                                │
+│ ㈜오픈마인드인포테인먼트                                                                                                     │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+
+2026-08-17 00:14:09,944 [INFO] crawl_dict.py:227 - 크롤링 완료....(단어: 응고되다)
+----------------------------------------
+2026-08-17 00:14:09,945 [INFO] crawl_dict.py:142 - '먀우' 사전 검색 중...
+2026-08-17 00:14:09,945 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 00:14:10,295 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 00:14:25,244 [WARNING] crawl_dict.py:169 - '먀우'를 찾을 수 없어 TimeOut 에러 발생: Message: 
+
+2026-08-17 00:14:27,364 [INFO] crawl_dict.py:227 - 크롤링 완료....(단어: 먀우)
+----------------------------------------
+2026-08-17 01:46:18,631 [INFO] crawl_dict.py:142 - '응되다' 사전 검색 중...
+2026-08-17 01:46:18,632 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 01:46:19,061 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 01:46:28,557 [INFO] crawl_dict.py:166 - [TEST]
+感應-- 감응되다
+感應-- 단어장에 저장
+1.
+어떤 느낌을 받아 마음이 따라 움직이게 되다.
+2.
+믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.
+3.
+전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-17 01:46:28,595 [INFO] crawl_dict.py:167 - ['[1번]\n┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐\n│ 感應-- 감응되다                                                                                                                                               │\n│ 感應-- 단어장에 저장                                                                                                                                          │\n│ 1.                                                                                                                                                            │\n│ 어떤 느낌을 받아 마음이 따라 움직이게 되다.                                                                                                                   │\n│ 2.                                                                                                                                                            │\n│ 믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.                                                                                                      │\n│ 3.                                                                                                                                                            │\n│ 전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 │\n│ 전기(電氣)나 자기(磁氣)를 띠게 되다.                                                                                                                          │\n│ ㈜오픈마인드인포테인먼트                                                                                                                                      │\n└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘', '[2번]\n┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐\n│ 適應-- 적응되다                                                                                                                                                      │\n│ 適應-- 단어장에 저장                                                                                                                                                 │\n│ 1.                                                                                                                                                                   │\n│ 일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다.                                                                                     │\n│ 2.                                                                                                                                                                   │\n│ 생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.                                                         │\n│ 3.                                                                                                                                                                   │\n│ 주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어 조화(調和)가 │\n│ 이루어지는 경우(境遇)가 있다.                                                                                                                                        │\n│ ㈜오픈마인드인포테인먼트                                                                                                                                             │\n└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘', '[3번]\n┌──────────────────────────────────────────────────────────────────────────────────────────────────────────┐\n│ 照應-- 조응되다                                                                                          │\n│ 照應-- 단어장에 저장                                                                                     │\n│ 1.                                                                                                       │\n│ 둘 이상(以上)의 사물(事物)이나 현상(現象) 또는 말과 글의 앞뒤 따위가 서로 일치(一致)하게 대응(對應)되다. │\n│ 2.                                                                                                       │\n│ 원인(原因)에 따라서 결과(結果)가 생기게 되다.                                                            │\n│ ㈜오픈마인드인포테인먼트                                                                                 │\n└──────────────────────────────────────────────────────────────────────────────────────────────────────────┘', '[4번]\n┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐\n│ 對應-- 대응되다                                                                                                 │\n│ 對應-- 단어장에 저장                                                                                            │\n│ 1.                                                                                                              │\n│ 어떤 두 대상(對象)이 주어진 어떤 관계(關係)에 의(依)하여 서로 짝이 이루어지다.                                  │\n│ 2.                                                                                                              │\n│ 두 집합(集合)이 있을 때에 어떤 주어진 관계(關係)에 의(依)하여서 두 집합(集合)의 원소(元素)끼리 짝이 이루어지다. │\n│ ㈜오픈마인드인포테인먼트                                                                                        │\n└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘']
+2026-08-17 01:46:30,941 [INFO] crawl_dict.py:228 - 크롤링 완료....(단어: 응되다)
+----------------------------------------
+2026-08-17 01:46:30,942 [INFO] crawl_dict.py:142 - '응고되다' 사전 검색 중...
+2026-08-17 01:46:30,942 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 01:46:31,690 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 01:46:40,176 [INFO] crawl_dict.py:166 - [TEST]
+凝固-- 응고되다
+凝固-- 단어장에 저장
+액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.
+㈜오픈마인드인포테인먼트
+
+
+
+2026-08-17 01:46:40,184 [INFO] crawl_dict.py:167 - ['[1번]\n┌──────────────────────────────────────────────────┐\n│ 凝固-- 응고되다                                  │\n│ 凝固-- 단어장에 저장                             │\n│ 액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다. │\n│ ㈜오픈마인드인포테인먼트                         │\n└──────────────────────────────────────────────────┘']
+2026-08-17 01:46:42,277 [INFO] crawl_dict.py:228 - 크롤링 완료....(단어: 응고되다)
+----------------------------------------
+2026-08-17 01:46:42,278 [INFO] crawl_dict.py:142 - '먀우' 사전 검색 중...
+2026-08-17 01:46:42,278 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 01:46:42,946 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 01:46:58,527 [WARNING] crawl_dict.py:170 - '먀우'를 찾을 수 없어 TimeOut 에러 발생: Message: 
+
+2026-08-17 01:47:00,653 [INFO] crawl_dict.py:228 - 크롤링 완료....(단어: 먀우)
+----------------------------------------
+2026-08-17 01:47:48,342 [INFO] crawl_dict.py:142 - '응되다' 사전 검색 중...
+2026-08-17 01:47:48,342 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 01:47:49,057 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 01:47:55,267 [INFO] crawl_dict.py:167 - [(0, <selenium.webdriver.remote.webelement.WebElement (session="e45a3ca92fd91588482409a0039a3cfb", element="f.E6CE70BEF7AAB6496E45B1E7D005BAED.d.B812A107FF3AB556F1D4624133D3BD78.e.95")>), (1, <selenium.webdriver.remote.webelement.WebElement (session="e45a3ca92fd91588482409a0039a3cfb", element="f.E6CE70BEF7AAB6496E45B1E7D005BAED.d.B812A107FF3AB556F1D4624133D3BD78.e.96")>), (2, <selenium.webdriver.remote.webelement.WebElement (session="e45a3ca92fd91588482409a0039a3cfb", element="f.E6CE70BEF7AAB6496E45B1E7D005BAED.d.B812A107FF3AB556F1D4624133D3BD78.e.97")>), (3, <selenium.webdriver.remote.webelement.WebElement (session="e45a3ca92fd91588482409a0039a3cfb", element="f.E6CE70BEF7AAB6496E45B1E7D005BAED.d.B812A107FF3AB556F1D4624133D3BD78.e.98")>)]
+2026-08-17 01:47:57,442 [INFO] crawl_dict.py:228 - 크롤링 완료....(단어: 응되다)
+----------------------------------------
+2026-08-17 01:47:57,443 [INFO] crawl_dict.py:142 - '응고되다' 사전 검색 중...
+2026-08-17 01:47:57,443 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 01:47:57,882 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 01:48:03,919 [INFO] crawl_dict.py:167 - [(0, <selenium.webdriver.remote.webelement.WebElement (session="c5f651a84ee28af5057e958c9aa20bf4", element="f.BBB478836D09EB060F9AAA4FBBAE3A00.d.6DE8E53B0ABE76AD3BE2794A1F35F31F.e.94")>)]
+2026-08-17 01:48:07,609 [INFO] crawl_dict.py:142 - '응되다' 사전 검색 중...
+2026-08-17 01:48:07,609 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 01:48:08,083 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 01:48:14,180 [INFO] crawl_dict.py:167 - [(0, '感應-- 감응되다\n感應-- 단어장에 저장\n1.\n어떤 느낌을 받아 마음이 따라 움직이게 되다.\n2.\n믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.\n3.\n전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.\n㈜오픈마인드인포테인먼트'), (1, '適應-- 적응되다\n適應-- 단어장에 저장\n1.\n일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다.\n2.\n생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.\n3.\n주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)가 있다.\n㈜오픈마인드인포테인먼트'), (2, '照應-- 조응되다\n照應-- 단어장에 저장\n1.\n둘 이상(以上)의 사물(事物)이나 현상(現象) 또는 말과 글의 앞뒤 따위가 서로 일치(一致)하게 대응(對應)되다.\n2.\n원인(原因)에 따라서 결과(結果)가 생기게 되다.\n㈜오픈마인드인포테인먼트'), (3, '對應-- 대응되다\n對應-- 단어장에 저장\n1.\n어떤 두 대상(對象)이 주어진 어떤 관계(關係)에 의(依)하여 서로 짝이 이루어지다.\n2.\n두 집합(集合)이 있을 때에 어떤 주어진 관계(關係)에 의(依)하여서 두 집합(集合)의 원소(元素)끼리 짝이 이루어지다.\n㈜오픈마인드인포테인먼트')]
+2026-08-17 01:48:16,292 [INFO] crawl_dict.py:228 - 크롤링 완료....(단어: 응되다)
+----------------------------------------
+2026-08-17 01:48:16,319 [INFO] crawl_dict.py:142 - '응고되다' 사전 검색 중...
+2026-08-17 01:48:16,319 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 01:48:16,670 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 01:48:22,696 [INFO] crawl_dict.py:167 - [(0, '凝固-- 응고되다\n凝固-- 단어장에 저장\n액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.\n㈜오픈마인드인포테인먼트')]
+2026-08-17 01:48:24,850 [INFO] crawl_dict.py:228 - 크롤링 완료....(단어: 응고되다)
+----------------------------------------
+2026-08-17 01:48:24,851 [INFO] crawl_dict.py:142 - '먀우' 사전 검색 중...
+2026-08-17 01:48:24,852 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 01:48:25,240 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 01:48:40,271 [WARNING] crawl_dict.py:170 - '먀우'를 찾을 수 없어 TimeOut 에러 발생: Message: 
+
+2026-08-17 01:48:42,400 [INFO] crawl_dict.py:228 - 크롤링 완료....(단어: 먀우)
+----------------------------------------
+2026-08-17 01:51:56,688 [INFO] crawl_dict.py:142 - '응되다' 사전 검색 중...
+2026-08-17 01:51:56,688 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 01:51:57,042 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 01:52:02,503 [WARNING] crawl_dict.py:170 - '응되다'를 찾을 수 없어 TimeOut 에러 발생: name 'tag' is not defined
+2026-08-17 01:52:04,592 [INFO] crawl_dict.py:228 - 크롤링 완료....(단어: 응되다)
+----------------------------------------
+2026-08-17 01:52:04,593 [INFO] crawl_dict.py:142 - '응고되다' 사전 검색 중...
+2026-08-17 01:52:04,594 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 01:52:04,975 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 01:52:10,658 [WARNING] crawl_dict.py:170 - '응고되다'를 찾을 수 없어 TimeOut 에러 발생: name 'tag' is not defined
+2026-08-17 01:52:12,767 [INFO] crawl_dict.py:228 - 크롤링 완료....(단어: 응고되다)
+----------------------------------------
+2026-08-17 01:52:12,768 [INFO] crawl_dict.py:142 - '먀우' 사전 검색 중...
+2026-08-17 01:52:12,768 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 01:52:13,215 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 01:52:28,116 [WARNING] crawl_dict.py:170 - '먀우'를 찾을 수 없어 TimeOut 에러 발생: Message: 
+
+2026-08-17 01:52:30,254 [INFO] crawl_dict.py:228 - 크롤링 완료....(단어: 먀우)
+----------------------------------------
+2026-08-17 01:55:40,583 [INFO] crawl_dict.py:142 - '응되다' 사전 검색 중...
+2026-08-17 01:55:40,583 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 01:55:41,068 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 01:55:48,884 [INFO] crawl_dict.py:177 - [TEST]
+[1번]
+┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 感應-- 감응되다                                                                                                                                               │
+│ 1.                                                                                                                                                            │
+│ 어떤 느낌을 받아 마음이 따라 움직이게 되다.                                                                                                                   │
+│ 2.                                                                                                                                                            │
+│ 믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.                                                                                                      │
+│ 3.                                                                                                                                                            │
+│ 전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 │
+│ 전기(電氣)나 자기(磁氣)를 띠게 되다.                                                                                                                          │
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[2번]
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 適應-- 적응되다                                                                                                                                                      │
+│ 1.                                                                                                                                                                   │
+│ 일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다.                                                                                     │
+│ 2.                                                                                                                                                                   │
+│ 생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.                                                         │
+│ 3.                                                                                                                                                                   │
+│ 주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어 조화(調和)가 │
+│ 이루어지는 경우(境遇)가 있다.                                                                                                                                        │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[3번]
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 照應-- 조응되다                                                                                          │
+│ 1.                                                                                                       │
+│ 둘 이상(以上)의 사물(事物)이나 현상(現象) 또는 말과 글의 앞뒤 따위가 서로 일치(一致)하게 대응(對應)되다. │
+│ 2.                                                                                                       │
+│ 원인(原因)에 따라서 결과(結果)가 생기게 되다.                                                            │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[4번]
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 對應-- 대응되다                                                                                                 │
+│ 1.                                                                                                              │
+│ 어떤 두 대상(對象)이 주어진 어떤 관계(關係)에 의(依)하여 서로 짝이 이루어지다.                                  │
+│ 2.                                                                                                              │
+│ 두 집합(集合)이 있을 때에 어떤 주어진 관계(關係)에 의(依)하여서 두 집합(集合)의 원소(元素)끼리 짝이 이루어지다. │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[5번]
+┌───────────────────────────────┐
+│ 相應-- 상응되다               │
+│ 1.                            │
+│ 서로 응(應)하거나 어울리다.   │
+│ 2.                            │
+│ 서로 기맥(氣脈)이 통(通)하다. │
+└───────────────────────────────┘
+
+
+
+2026-08-17 01:55:51,005 [INFO] crawl_dict.py:239 - 크롤링 완료....(단어: 응되다)
+----------------------------------------
+2026-08-17 01:55:51,005 [INFO] crawl_dict.py:142 - '응고되다' 사전 검색 중...
+2026-08-17 01:55:51,006 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 01:55:51,411 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 01:55:57,780 [INFO] crawl_dict.py:177 - [TEST]
+[1번]
+┌──────────────────────────────────────────────────┐
+│ 凝固-- 응고되다                                  │
+│ 액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다. │
+└──────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[2번]
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 江原特別自治道 寧越郡 山솔面 응고개길 강원특별자치도 영월군 산솔면 응고개길                                                  │
+│ 강원특별자치도(江原特別自治道) 영월군(寧越郡) 산솔면(山솔面) 응고개길(응고개길) 〔Eunggogae-gil, Sansol-myeon, Yeongwol-gun, │
+│ Gangwon-do〕.                                                                                                                │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+
+2026-08-17 01:56:00,058 [INFO] crawl_dict.py:239 - 크롤링 완료....(단어: 응고되다)
+----------------------------------------
+2026-08-17 01:56:00,059 [INFO] crawl_dict.py:142 - '먀우' 사전 검색 중...
+2026-08-17 01:56:00,059 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 01:56:00,431 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 01:56:15,420 [WARNING] crawl_dict.py:181 - '먀우'를 찾을 수 없어 TimeOut 에러 발생: Message: 
+
+2026-08-17 01:56:17,534 [INFO] crawl_dict.py:239 - 크롤링 완료....(단어: 먀우)
+----------------------------------------
+2026-08-17 01:56:56,954 [INFO] crawl_dict.py:142 - '응되다' 사전 검색 중...
+2026-08-17 01:56:56,954 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 01:56:57,454 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 01:57:05,322 [INFO] crawl_dict.py:177 - [TEST]
+['感應-- 감응되다', '1.', '어떤 느낌을 받아 마음이 따라 움직이게 되다.', '2.', '믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.', '3.', '전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.']
+2026-08-17 01:57:05,331 [INFO] crawl_dict.py:177 - [TEST]
+['適應-- 적응되다', '1.', '일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다.', '2.', '생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.', '3.', '주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)가 있다.']
+2026-08-17 01:57:05,340 [INFO] crawl_dict.py:177 - [TEST]
+['照應-- 조응되다', '1.', '둘 이상(以上)의 사물(事物)이나 현상(現象) 또는 말과 글의 앞뒤 따위가 서로 일치(一致)하게 대응(對應)되다.', '2.', '원인(原因)에 따라서 결과(結果)가 생기게 되다.']
+2026-08-17 01:57:05,349 [INFO] crawl_dict.py:177 - [TEST]
+['對應-- 대응되다', '1.', '어떤 두 대상(對象)이 주어진 어떤 관계(關係)에 의(依)하여 서로 짝이 이루어지다.', '2.', '두 집합(集合)이 있을 때에 어떤 주어진 관계(關係)에 의(依)하여서 두 집합(集合)의 원소(元素)끼리 짝이 이루어지다.']
+2026-08-17 01:57:05,358 [INFO] crawl_dict.py:177 - [TEST]
+['相應-- 상응되다', '1.', '서로 응(應)하거나 어울리다.', '2.', '서로 기맥(氣脈)이 통(通)하다.']
+2026-08-17 01:57:05,359 [INFO] crawl_dict.py:178 - [TEST]
+[1번]
+┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 感應-- 감응되다                                                                                                                                               │
+│ 1.                                                                                                                                                            │
+│ 어떤 느낌을 받아 마음이 따라 움직이게 되다.                                                                                                                   │
+│ 2.                                                                                                                                                            │
+│ 믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.                                                                                                      │
+│ 3.                                                                                                                                                            │
+│ 전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 │
+│ 전기(電氣)나 자기(磁氣)를 띠게 되다.                                                                                                                          │
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[2번]
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 適應-- 적응되다                                                                                                                                                      │
+│ 1.                                                                                                                                                                   │
+│ 일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다.                                                                                     │
+│ 2.                                                                                                                                                                   │
+│ 생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.                                                         │
+│ 3.                                                                                                                                                                   │
+│ 주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어 조화(調和)가 │
+│ 이루어지는 경우(境遇)가 있다.                                                                                                                                        │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[3번]
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 照應-- 조응되다                                                                                          │
+│ 1.                                                                                                       │
+│ 둘 이상(以上)의 사물(事物)이나 현상(現象) 또는 말과 글의 앞뒤 따위가 서로 일치(一致)하게 대응(對應)되다. │
+│ 2.                                                                                                       │
+│ 원인(原因)에 따라서 결과(結果)가 생기게 되다.                                                            │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[4번]
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 對應-- 대응되다                                                                                                 │
+│ 1.                                                                                                              │
+│ 어떤 두 대상(對象)이 주어진 어떤 관계(關係)에 의(依)하여 서로 짝이 이루어지다.                                  │
+│ 2.                                                                                                              │
+│ 두 집합(集合)이 있을 때에 어떤 주어진 관계(關係)에 의(依)하여서 두 집합(集合)의 원소(元素)끼리 짝이 이루어지다. │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[5번]
+┌───────────────────────────────┐
+│ 相應-- 상응되다               │
+│ 1.                            │
+│ 서로 응(應)하거나 어울리다.   │
+│ 2.                            │
+│ 서로 기맥(氣脈)이 통(通)하다. │
+└───────────────────────────────┘
+
+
+
+2026-08-17 01:57:07,480 [INFO] crawl_dict.py:240 - 크롤링 완료....(단어: 응되다)
+----------------------------------------
+2026-08-17 01:57:07,481 [INFO] crawl_dict.py:142 - '응고되다' 사전 검색 중...
+2026-08-17 01:57:07,481 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 01:57:07,848 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 01:57:13,174 [INFO] crawl_dict.py:177 - [TEST]
+['凝固-- 응고되다', '액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.']
+2026-08-17 01:57:13,182 [INFO] crawl_dict.py:177 - [TEST]
+['江原特別自治道 寧越郡 山솔面 응고개길 강원특별자치도 영월군 산솔면 응고개길', '강원특별자치도(江原特別自治道) 영월군(寧越郡) 산솔면(山솔面) 응고개길(응고개길) 〔Eunggogae-gil, Sansol-myeon, Yeongwol-gun, Gangwon-do〕.']
+2026-08-17 01:57:13,183 [INFO] crawl_dict.py:178 - [TEST]
+[1번]
+┌──────────────────────────────────────────────────┐
+│ 凝固-- 응고되다                                  │
+│ 액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다. │
+└──────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[2번]
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 江原特別自治道 寧越郡 山솔面 응고개길 강원특별자치도 영월군 산솔면 응고개길                                                  │
+│ 강원특별자치도(江原特別自治道) 영월군(寧越郡) 산솔면(山솔面) 응고개길(응고개길) 〔Eunggogae-gil, Sansol-myeon, Yeongwol-gun, │
+│ Gangwon-do〕.                                                                                                                │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+
+2026-08-17 01:57:15,308 [INFO] crawl_dict.py:240 - 크롤링 완료....(단어: 응고되다)
+----------------------------------------
+2026-08-17 01:57:15,308 [INFO] crawl_dict.py:142 - '먀우' 사전 검색 중...
+2026-08-17 01:57:15,308 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 01:57:15,674 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 01:57:30,512 [WARNING] crawl_dict.py:182 - '먀우'를 찾을 수 없어 TimeOut 에러 발생: Message: 
+
+2026-08-17 01:57:32,694 [INFO] crawl_dict.py:240 - 크롤링 완료....(단어: 먀우)
+----------------------------------------
+2026-08-17 02:04:47,999 [INFO] crawl_dict.py:142 - '응되다' 사전 검색 중...
+2026-08-17 02:04:47,999 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 02:04:48,538 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 02:05:05,950 [INFO] crawl_dict.py:187 - [TEST]
+['感應-- 감응되다', '1.', '1.어떤 느낌을 받아 마음이 따라 움직이게 되다.', '2.', '2.믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.', '3.', '3.전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.']
+2026-08-17 02:05:05,959 [INFO] crawl_dict.py:187 - [TEST]
+['適應-- 적응되다', '1.', '1.일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다.', '2.', '2.생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.', '3.', '3.주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)가 있다.']
+2026-08-17 02:05:05,969 [INFO] crawl_dict.py:187 - [TEST]
+['照應-- 조응되다', '1.', '1.둘 이상(以上)의 사물(事物)이나 현상(現象) 또는 말과 글의 앞뒤 따위가 서로 일치(一致)하게 대응(對應)되다.', '2.', '2.원인(原因)에 따라서 결과(結果)가 생기게 되다.']
+2026-08-17 02:05:05,982 [INFO] crawl_dict.py:187 - [TEST]
+['對應-- 대응되다', '1.', '1.어떤 두 대상(對象)이 주어진 어떤 관계(關係)에 의(依)하여 서로 짝이 이루어지다.', '2.', '2.두 집합(集合)이 있을 때에 어떤 주어진 관계(關係)에 의(依)하여서 두 집합(集合)의 원소(元素)끼리 짝이 이루어지다.']
+2026-08-17 02:05:05,994 [INFO] crawl_dict.py:187 - [TEST]
+['相應-- 상응되다', '1.', '1.서로 응(應)하거나 어울리다.', '2.', '2.서로 기맥(氣脈)이 통(通)하다.']
+2026-08-17 02:05:05,995 [INFO] crawl_dict.py:188 - [TEST]
+[1번]
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 感應-- 감응되다                                                                                                                                                 │
+│ 1.                                                                                                                                                              │
+│ 1.어떤 느낌을 받아 마음이 따라 움직이게 되다.                                                                                                                   │
+│ 2.                                                                                                                                                              │
+│ 2.믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.                                                                                                      │
+│ 3.                                                                                                                                                              │
+│ 3.전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 │
+│ 전기(電氣)나 자기(磁氣)를 띠게 되다.                                                                                                                            │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[2번]
+┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 適應-- 적응되다                                                                                                                                           │
+│ 1.                                                                                                                                                        │
+│ 1.일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다.                                                                        │
+│ 2.                                                                                                                                                        │
+│ 2.생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.                                            │
+│ 3.                                                                                                                                                        │
+│ 3.주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어 │
+│ 조화(調和)가 이루어지는 경우(境遇)가 있다.                                                                                                                │
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[3번]
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 照應-- 조응되다                                                                                            │
+│ 1.                                                                                                         │
+│ 1.둘 이상(以上)의 사물(事物)이나 현상(現象) 또는 말과 글의 앞뒤 따위가 서로 일치(一致)하게 대응(對應)되다. │
+│ 2.                                                                                                         │
+│ 2.원인(原因)에 따라서 결과(結果)가 생기게 되다.                                                            │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[4번]
+┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 對應-- 대응되다                                                                                                   │
+│ 1.                                                                                                                │
+│ 1.어떤 두 대상(對象)이 주어진 어떤 관계(關係)에 의(依)하여 서로 짝이 이루어지다.                                  │
+│ 2.                                                                                                                │
+│ 2.두 집합(集合)이 있을 때에 어떤 주어진 관계(關係)에 의(依)하여서 두 집합(集合)의 원소(元素)끼리 짝이 이루어지다. │
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[5번]
+┌─────────────────────────────────┐
+│ 相應-- 상응되다                 │
+│ 1.                              │
+│ 1.서로 응(應)하거나 어울리다.   │
+│ 2.                              │
+│ 2.서로 기맥(氣脈)이 통(通)하다. │
+└─────────────────────────────────┘
+
+
+
+2026-08-17 02:05:08,255 [INFO] crawl_dict.py:250 - 크롤링 완료....(단어: 응되다)
+----------------------------------------
+2026-08-17 02:05:08,256 [INFO] crawl_dict.py:142 - '응고되다' 사전 검색 중...
+2026-08-17 02:05:08,257 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 02:05:08,838 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 02:05:15,397 [INFO] crawl_dict.py:187 - [TEST]
+['凝固-- 응고되다', '액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.']
+2026-08-17 02:05:15,405 [INFO] crawl_dict.py:187 - [TEST]
+['江原特別自治道 寧越郡 山솔面 응고개길 강원특별자치도 영월군 산솔면 응고개길', '강원특별자치도(江原特別自治道) 영월군(寧越郡) 산솔면(山솔面) 응고개길(응고개길) 〔Eunggogae-gil, Sansol-myeon, Yeongwol-gun, Gangwon-do〕.']
+2026-08-17 02:05:15,405 [INFO] crawl_dict.py:188 - [TEST]
+[1번]
+┌──────────────────────────────────────────────────┐
+│ 凝固-- 응고되다                                  │
+│ 액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다. │
+└──────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[2번]
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 江原特別自治道 寧越郡 山솔面 응고개길 강원특별자치도 영월군 산솔면 응고개길                                                  │
+│ 강원특별자치도(江原特別自治道) 영월군(寧越郡) 산솔면(山솔面) 응고개길(응고개길) 〔Eunggogae-gil, Sansol-myeon, Yeongwol-gun, │
+│ Gangwon-do〕.                                                                                                                │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+
+2026-08-17 02:05:17,602 [INFO] crawl_dict.py:250 - 크롤링 완료....(단어: 응고되다)
+----------------------------------------
+2026-08-17 02:05:17,603 [INFO] crawl_dict.py:142 - '먀우' 사전 검색 중...
+2026-08-17 02:05:17,603 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 02:05:17,988 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 02:05:27,577 [INFO] crawl_dict.py:142 - '응되다' 사전 검색 중...
+2026-08-17 02:05:27,577 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 02:05:28,509 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 02:05:37,304 [INFO] crawl_dict.py:189 - [TEST]
+[1번]
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 感應-- 감응되다                                                                                                                                                 │
+│ 1.어떤 느낌을 받아 마음이 따라 움직이게 되다.                                                                                                                   │
+│ 2.믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.                                                                                                      │
+│ 3.전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 │
+│ 전기(電氣)나 자기(磁氣)를 띠게 되다.                                                                                                                            │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[2번]
+┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 適應-- 적응되다                                                                                                                                           │
+│ 1.일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다.                                                                        │
+│ 2.생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.                                            │
+│ 3.주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어 │
+│ 조화(調和)가 이루어지는 경우(境遇)가 있다.                                                                                                                │
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[3번]
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 照應-- 조응되다                                                                                            │
+│ 1.둘 이상(以上)의 사물(事物)이나 현상(現象) 또는 말과 글의 앞뒤 따위가 서로 일치(一致)하게 대응(對應)되다. │
+│ 2.원인(原因)에 따라서 결과(結果)가 생기게 되다.                                                            │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[4번]
+┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 對應-- 대응되다                                                                                                   │
+│ 1.어떤 두 대상(對象)이 주어진 어떤 관계(關係)에 의(依)하여 서로 짝이 이루어지다.                                  │
+│ 2.두 집합(集合)이 있을 때에 어떤 주어진 관계(關係)에 의(依)하여서 두 집합(集合)의 원소(元素)끼리 짝이 이루어지다. │
+└───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[5번]
+┌─────────────────────────────────┐
+│ 相應-- 상응되다                 │
+│ 1.서로 응(應)하거나 어울리다.   │
+│ 2.서로 기맥(氣脈)이 통(通)하다. │
+└─────────────────────────────────┘
+
+
+
+2026-08-17 02:05:39,540 [INFO] crawl_dict.py:251 - 크롤링 완료....(단어: 응되다)
+----------------------------------------
+2026-08-17 02:05:39,541 [INFO] crawl_dict.py:142 - '응고되다' 사전 검색 중...
+2026-08-17 02:05:39,541 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 02:05:40,834 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 02:05:48,618 [INFO] crawl_dict.py:189 - [TEST]
+[1번]
+┌──────────────────────────────────────────────────┐
+│ 凝固-- 응고되다                                  │
+│ 액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다. │
+└──────────────────────────────────────────────────┘
+----------------------------------------------------------------------------------------------------
+[2번]
+┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ 江原特別自治道 寧越郡 山솔面 응고개길 강원특별자치도 영월군 산솔면 응고개길                                                  │
+│ 강원특별자치도(江原特別自治道) 영월군(寧越郡) 산솔면(山솔面) 응고개길(응고개길) 〔Eunggogae-gil, Sansol-myeon, Yeongwol-gun, │
+│ Gangwon-do〕.                                                                                                                │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+
+2026-08-17 02:05:50,700 [INFO] crawl_dict.py:251 - 크롤링 완료....(단어: 응고되다)
+----------------------------------------
+2026-08-17 02:05:50,701 [INFO] crawl_dict.py:142 - '먀우' 사전 검색 중...
+2026-08-17 02:05:50,702 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 02:05:51,438 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 02:06:07,049 [WARNING] crawl_dict.py:193 - '먀우'를 찾을 수 없어 TimeOut 에러 발생: Message: 
+
+2026-08-17 02:06:09,163 [INFO] crawl_dict.py:251 - 크롤링 완료....(단어: 먀우)
+----------------------------------------
+2026-08-17 22:09:23,453 [INFO] crawl_dict.py:142 - '응되다' 사전 검색 중...
+2026-08-17 22:09:23,483 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 22:09:27,342 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 22:10:05,115 [INFO] crawl_dict.py:198 - [TEST] hanja_tag: 단어장 저장
+感應--
+감응되다
+장단음 감ː응-되다
+2026-08-17 22:10:05,116 [WARNING] crawl_dict.py:207 - '응되다'를 찾을 수 없어 TimeOut 에러 발생: 'WebDriverWait' object has no attribute 'util'
+2026-08-17 22:10:08,478 [INFO] crawl_dict.py:266 - 크롤링 완료....(단어: 응되다)
+----------------------------------------
+2026-08-17 22:10:08,478 [INFO] crawl_dict.py:142 - '응고되다' 사전 검색 중...
+2026-08-17 22:10:08,478 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 22:10:09,769 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 22:10:19,358 [INFO] crawl_dict.py:198 - [TEST] hanja_tag: 단어장 저장
+凝固--
+응고되다
+凝 엉길 응 固 굳을 고
+장단음 응ː고-되다
+2026-08-17 22:10:19,359 [WARNING] crawl_dict.py:207 - '응고되다'를 찾을 수 없어 TimeOut 에러 발생: 'WebDriverWait' object has no attribute 'util'
+2026-08-17 22:10:21,457 [INFO] crawl_dict.py:266 - 크롤링 완료....(단어: 응고되다)
+----------------------------------------
+2026-08-17 22:10:21,458 [INFO] crawl_dict.py:142 - '먀우' 사전 검색 중...
+2026-08-17 22:10:21,459 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 22:10:21,878 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 22:10:39,225 [WARNING] crawl_dict.py:207 - '먀우'를 찾을 수 없어 TimeOut 에러 발생: Message: 
+
+2026-08-17 22:10:41,328 [INFO] crawl_dict.py:266 - 크롤링 완료....(단어: 먀우)
+----------------------------------------
+2026-08-17 22:11:59,360 [INFO] crawl_dict.py:142 - '응되다' 사전 검색 중...
+2026-08-17 22:11:59,360 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 22:11:59,790 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 22:12:05,396 [WARNING] connectionpool.py:869 - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=54685): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다")': /session/28a43a7e0aba5fdc66f5be39cf4b73b4
+2026-08-17 22:12:09,445 [WARNING] connectionpool.py:869 - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=54685): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다")': /session/28a43a7e0aba5fdc66f5be39cf4b73b4
+2026-08-17 22:12:13,538 [WARNING] connectionpool.py:869 - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPConnection(host='localhost', port=54685): Failed to establish a new connection: [WinError 10061] 대상 컴퓨터에서 연결을 거부했으므로 연결하지 못했습니다")': /session/28a43a7e0aba5fdc66f5be39cf4b73b4
+2026-08-17 22:12:17,622 [INFO] crawl_dict.py:266 - 크롤링 완료....(단어: 응되다)
+----------------------------------------
+2026-08-17 22:12:21,369 [INFO] crawl_dict.py:142 - '응되다' 사전 검색 중...
+2026-08-17 22:12:21,369 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 22:12:22,363 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 22:12:41,859 [INFO] crawl_dict.py:198 - [TEST] hanja_tag: 단어장 저장
+感應--
+감응되다
+장단음 감ː응-되다
+2026-08-17 22:12:41,877 [INFO] crawl_dict.py:204 - [TEST] mean_tag: 1. 어떤 느낌을 받아 마음이 따라 움직이게 되다.
+2. 믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.
+3. 전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.
+2026-08-17 22:12:44,207 [INFO] crawl_dict.py:266 - 크롤링 완료....(단어: 응되다)
+----------------------------------------
+2026-08-17 22:12:44,207 [INFO] crawl_dict.py:142 - '응고되다' 사전 검색 중...
+2026-08-17 22:12:44,207 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 22:12:45,840 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 22:12:56,228 [INFO] crawl_dict.py:198 - [TEST] hanja_tag: 단어장 저장
+凝固--
+응고되다
+凝 엉길 응 固 굳을 고
+장단음 응ː고-되다
+2026-08-17 22:12:56,241 [INFO] crawl_dict.py:204 - [TEST] mean_tag: 1. 액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.
+2026-08-17 22:12:58,730 [INFO] crawl_dict.py:266 - 크롤링 완료....(단어: 응고되다)
+----------------------------------------
+2026-08-17 22:12:58,730 [INFO] crawl_dict.py:142 - '먀우' 사전 검색 중...
+2026-08-17 22:12:58,731 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 22:12:59,929 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 22:13:19,616 [WARNING] crawl_dict.py:207 - '먀우'를 찾을 수 없어 TimeOut 에러 발생: Message: 
+
+2026-08-17 22:13:22,784 [INFO] crawl_dict.py:266 - 크롤링 완료....(단어: 먀우)
+----------------------------------------
+2026-08-17 22:14:06,555 [INFO] crawl_dict.py:142 - '응되다' 사전 검색 중...
+2026-08-17 22:14:06,555 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 22:14:07,377 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 22:14:16,237 [INFO] crawl_dict.py:198 - [TEST] hanja_tag: ['感應--', '감응되다', '感 느낄 감 應 응할 응', '장단음 감ː응-되다']
+2026-08-17 22:14:16,375 [INFO] crawl_dict.py:204 - [TEST] mean_tag: ['1. 어떤 느낌을 받아 마음이 따라 움직이게 되다.', '2. 믿거나 비는 정성(精誠)이 신령(神靈)에게 통(通)하게 되다.', '3. 전기장(電氣場)이나 자기장(磁氣場) 속에 있는 물체(物體)가 그 전기장(電氣場)이나 자기장(磁氣場), 즉 전기(電氣)ㆍ방사선(放射線)ㆍ빛ㆍ열 따위의 영향(影響)을 받아 전기(電氣)나 자기(磁氣)를 띠게 되다.']
+2026-08-17 22:14:18,517 [INFO] crawl_dict.py:266 - 크롤링 완료....(단어: 응되다)
+----------------------------------------
+2026-08-17 22:14:18,517 [INFO] crawl_dict.py:142 - '응고되다' 사전 검색 중...
+2026-08-17 22:14:18,517 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 22:14:18,965 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 22:14:25,655 [INFO] crawl_dict.py:198 - [TEST] hanja_tag: ['凝固--', '응고되다', '장단음 응ː고-되다']
+2026-08-17 22:14:25,671 [INFO] crawl_dict.py:204 - [TEST] mean_tag: ['1. 액체(液體) 따위가 엉겨서 뭉쳐 딱딱하게 굳어지다.']
+2026-08-17 22:14:27,790 [INFO] crawl_dict.py:266 - 크롤링 완료....(단어: 응고되다)
+----------------------------------------
+2026-08-17 22:14:27,791 [INFO] crawl_dict.py:142 - '먀우' 사전 검색 중...
+2026-08-17 22:14:27,792 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 22:14:28,207 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 22:14:43,593 [WARNING] crawl_dict.py:207 - '먀우'를 찾을 수 없어 TimeOut 에러 발생: Message: 
+
+2026-08-17 22:14:45,740 [INFO] crawl_dict.py:266 - 크롤링 완료....(단어: 먀우)
+----------------------------------------
+2026-08-17 22:32:42,194 [INFO] crawl_dict.py:142 - '응되다' 사전 검색 중...
+2026-08-17 22:32:42,194 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 22:32:42,954 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 22:32:59,419 [INFO] crawl_dict.py:198 - [TEST] hanja_tag: ['適應--', '적응되다', '장단음 적응-되다']
+2026-08-17 22:32:59,478 [INFO] crawl_dict.py:204 - [TEST] mean_tag: ['1. 일정(一定)한 조건(條件)이나 환경(環境) 따위에 맞추어 응(應)해지거나 알맞게 되다.', '2. 생물(生物)이 주위(周圍) 환경(環境)에 적합(適合)하도록 형태적(形態的)ㆍ생리학적(生理學的)으로 변화(變化)되다.', '3. 주위(周圍) 환경(環境)과 생활(生活)이 조화(調和)를 이루게 되다. 환경(環境)이 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)와 스스로가 변화(變化)되어 조화(調和)가 이루어지는 경우(境遇)가 있다.']
+2026-08-17 22:33:02,159 [INFO] crawl_dict.py:266 - 크롤링 완료....(단어: 응되다)
+----------------------------------------
+2026-08-17 22:33:02,159 [INFO] crawl_dict.py:142 - '응고되다' 사전 검색 중...
+2026-08-17 22:33:02,160 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 22:33:03,558 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 22:33:11,455 [INFO] crawl_dict.py:198 - [TEST] hanja_tag: ['江原特別自治道 寧越郡 山솔面 응고개길 (도로명)', '강원특별자치도 영월군 산솔면 응고개길']
+2026-08-17 22:33:11,468 [INFO] crawl_dict.py:204 - [TEST] mean_tag: ['1. 강원특별자치도(江原特別自治道) 영월군(寧越郡) 산솔면(山솔面) 응고개길(응고개길) 〔Eunggogae-gil, Sansol-myeon, Yeongwol-gun, Gangwon-do〕.']
+2026-08-17 22:33:13,597 [INFO] crawl_dict.py:266 - 크롤링 완료....(단어: 응고되다)
+----------------------------------------
+2026-08-17 22:33:13,597 [INFO] crawl_dict.py:142 - '먀우' 사전 검색 중...
+2026-08-17 22:33:13,597 [INFO] logger.py:11 - ====== WebDriver manager ======
+2026-08-17 22:33:14,300 [INFO] logger.py:11 - Driver [C:\Users\KJY\.wdm\drivers\chromedriver\win64\151.0.7922.138\chromedriver-win64/chromedriver.exe] found in cache by browser version
+2026-08-17 22:33:29,809 [WARNING] crawl_dict.py:207 - '먀우'를 찾을 수 없어 TimeOut 에러 발생: Message: 
+
+2026-08-17 22:33:31,964 [INFO] crawl_dict.py:266 - 크롤링 완료....(단어: 먀우)
+----------------------------------------

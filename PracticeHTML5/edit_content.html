@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice HTML5</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+    <!-- 테마 추가 (선택) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/mdn-like.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/duotone-light.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/lucario.min.css">
+    <!-- 2. CodeMirror JS Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <!-- 3. 구문 강조 모드 (HTML/JS/CSS) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/htmlmixed/htmlmixed.min.js"></script>
+    <!-- jstree -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.17/jstree.min.js" integrity="sha512-Rzhxh2sskKwa+96nRopp/hvGexBzEPG6mnFI6uRy059FZfksJJFYmqDFn050KUDhivXLsT6SvoaEf5iSp2SHjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let jsonData = {}; // JSON 데이터 저장 변수
+        let myCodeMirror; // CodeMirror 인스턴스를 전역 변수로 선언
+
+        $(document).ready(function() {
+            // CodeMirror 초기화
+            myCodeMirror  =  CodeMirror.fromTextArea ( document.getElementById("example_code"),  {
+                lineNumbers :  true , // 줄 번호 표시
+                matchBrackets :  true , // 괄호 자동 매칭
+                styleActiveLine :  true , // 현재 줄 강조
+                lineWrapping :  true, // 긴 줄 자동 줄바꿈
+                mode :  "htmlmixed" , // HTML 모드 설정
+                theme :  "mdn-like" , // 테마 설정 (원하는 테마로 변경 가능)
+                indentUnit :  4 , // 들여쓰기 단위 설정
+                tabSize :  4 , // 탭 크기 설정
+            } ) ;
+
+
+            // 수정 유형 선택
+            $("input[name=edit_type]").change(function() {
+                let selectedType = $(this).val();
+
+                if (selectedType === "category") {
+                    getContent();
+                    $("#type_category").show();
+                    $("#type_code").hide();
+                    $("#type_quiz").hide();
+                } else if (selectedType === "code") {
+                    $("#type_category").hide();
+                    $("#type_code").show();
+                    $("#type_quiz").hide();
+                } else if (selectedType === "quiz") {
+                    $("#type_category").hide();
+                    $("#type_code").hide();
+                    $("#type_quiz").show();
+                }
+            });
+
+
+            // 퀴즈 유형 선택
+            $("input[name=quiz_type]").change(function() {
+                let parent = $("#type_quiz");
+                clearFileInput("quiz_img_dir");
+                clearFileInput("answer_img_dir");
+                parent.find('input[type=text], textarea').val("");
+
+                if ($(this).val() === "objective") {
+                    $("#options").show();
+                    $("#answer_options").show();
+                } else {
+                    parent.find('input[name=answer], input[name=add_option]').prop("checked", false);
+                    let lastOptionInput = $(".last_option_input");
+                    lastOptionInput.hide();
+                    lastOptionInput.prev('span').show();
+                    $("#options").hide();
+                    $("#answer_options").hide();
+                }
+
+                $(".type_quiz").children('textarea').each(function() {
+                    $(this).val("");
+
+                });
+            });
+
+            // 퀴즈 이미지 추가
+            $("input[type='file']").change(function(event) {
+                let file = event.target.files[0];
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        let imgElement = $(event.target).parent('.img_input').next("img");
+                        imgElement.attr("src", e.target.result).show();
+                        $(event.target).parent('.img_input').parent('.image').css("height", "250px");
+                    }
+                    reader.readAsDataURL(file);  // 파일 데이터를 읽어 base64로 변환
+                }
+            });
+
+            // 업로드된 이미지 크기 정보 가져오기
+            $("img").on("load", function() {
+                let imgLengthElement = $(this).siblings('.img_input').children(".img_length");
+                let imgWidth = $(this).width();
+                let imgHeight = $(this).height();
+
+                imgLengthElement.find(".width").val(imgWidth);
+                imgLengthElement.find(".height").val(imgHeight);
+                imgLengthElement.find("#img_ratio").val(imgWidth / imgHeight);
+                imgLengthElement.show();
+            });
+
+            // 이미지 크기 수정
+            $(".img_length_input").on('propertychange change keyup paste input', function(e) {
+                let imgRatio = $(this).siblings("#img_ratio").val();
+                let settedLength = $(this).val();
+
+                if ($(this).hasClass("width")) {
+                    let newHeight = settedLength / imgRatio;
+                    $(this).siblings(".height").val(newHeight);
+                } else {
+                    let newWidth = settedLength * imgRatio;
+                    $(this).siblings(".width").val(newWidth);
+                }
+            })
+
+            // 퀴즈 선택지 추가
+            $("input[name=add_option]").change(function() {
+                let lastOptionInput = $(".last_option_input");
+                if ($(this).is(":checked")) {
+                    lastOptionInput.css("display", "flex");
+                    lastOptionInput.css("flex-direction", "row");
+                    lastOptionInput.prev('span').hide();
+                } else {
+                    lastOptionInput.children('input[type=text]').val("");
+                    lastOptionInput.hide();
+                    lastOptionInput.prev('span').show();
+                }
+            });
+            
+
+
+            // $.ajax({
+            //     url: GITHUB_URL,
+            //     type: 'GET',
+            //     dataType: 'json',
+            //     success: function(data) {
+            //         console.log('success');
+            //         if (data && data.length > 0) {
+            //             console.log('데이터가 존재합니다.', data);
+            //             jsonData = data;
+                        
+            //             // 단원 목록 리스트 정리 쿼리 작성하기
+
+            //         } else {
+            //             console.log('데이터가 비어있습니다.');
+            //             jsonData = {};
+            //         }
+            //     },
+            //     error: function(xhr, status, error) {
+            //         if (xhr.status === 404) {
+            //             console.log("404 오류: json 파일이 존재하지 않습니다. 새 파일을 생성합니다.");
+            //             jsonData = {};
+            //         } else {
+            //             console.error("기타 오류 발생:", status, error);
+            //         }
+            //     }
+            // });
+        });
+
+        // 버튼 클릭 효과
+        let bgColor;
+        let bottomColor;
+        let bottomWidth;
+
+        $("button").mousedown(function() {
+            bgColor = $(this).css("background-color");
+            bottomColor = $(this).css("border-bottom");
+            bottomWidth = $(this).css('border-bottom-width');
+            console.log("borderBottomWidth:",bottomWidth);
+            console.log("bgcolor:", bgColor, "bottomColor:", bottomColor, "bottomWidth:", bottomWidth);
+            $(this).css("border-bottom", "none");
+            $(this).css("margin-top", bottomWidth);
+        }).mouseup(function() {
+            $(this).css("border-bottom", bottomColor);   
+            $(this).css("margin-top", "0");
+        });
+
+
+        // 목차 수정 관련
+        // 단원 추가
+        let chapterNum = 1;
+        function addChapter(i) {
+            let chapter = 
+            `<li id="chapterList_${chapterNum}">
+                <div class="chapter_group">
+                    <input type="text" class="chapter_title" name="chapter" placeholder="제목">
+                    <input type="text" class="chapter_page" name="chapter_page" placeholder="페이지">
+                    <button class="btn orange small square" title="단원 위로 옮기기" onclick="moveUpChapter(${chapterNum})">↑</button>
+                    <button class="btn orange small square" title="단원 아래로 옮기기" onclick="moveDownChapter(${chapterNum})">↓</button>
+                    <button class="btn blue small square" title="소제목 추가" onclick="addChapter(${chapterNum})">+</button>
+                    <button class="btn red small square" title="단원 제거" onclick="deleteChapter(${chapterNum})">-</button>
+                </div>
+            </li>`;
+
+            if (i === undefined) {
+                $("#chapterUL_0").append(chapter);
+            } else {
+                if ($(`#chapterList_${i}`).children("ul").length === 0) {
+                    $(`#chapterList_${i}`).append(`<ul id="chapterUL_${chapterNum}">${chapter}</ul>`);
+                } else {
+                    $(`#chapterList_${i}`).children("ul").append(chapter);
+                }
+            }
+
+            chapterNum++;
+
+        }
+
+        function deleteChapter(i) {
+            let liElement = $(`#chapterList_${i}`);
+            if ($(`#chapterUL_${i}`).children("li").length === 1) {
+               $(`#chapterUL_${i}`).remove();
+            } else {
+                liElement.remove();
+            }
+            
+            chapterNum--;
+        }
+
+        function moveUpChapter(i) {
+            let liElement = $(`#chapterList_${i}`);
+            if (liElement.is(":first-child")) {
+                return;
+            }
+
+            liElement.insertBefore(liElement.prev("li"));
+        }
+
+        function moveDownChapter(i) {
+            let liElement = $(`#chapterList_${i}`);
+            if (liElement.is(":last-child")) {
+                return;
+            }
+
+            liElement.insertAfter(liElement.next("li"));
+        }
+
+
+        // 예제 코드 수정 관련
+
+        let maxSubTitleCnt = 3;
+
+        // 소제목 추가
+        let subTitleCnt = 1;
+        function addSubTitle() {
+            let subtitle = `<div class="subTitle_group" id="subTitle_group${subTitleCnt}">
+                                &nbsp;/ <select class="subTitle" name="subTitle${subTitleCnt}" onchange="setInput(${subTitleCnt})">
+                                    <option value="" selected>직접 입력</option>
+                                </select>
+                                <input type="text" class="subTitle" name="subTitle${subTitleCnt}" placeholder="소제목${subTitleCnt}">
+                            </div>`;
+
+            if (subTitleCnt == 1) {
+                $("#delete_input").show();
+                $("#main_title").after(subtitle);
+            } else if(subTitleCnt < maxSubTitleCnt) {
+                $("#delete_input").before(subtitle);
+            } else if (subTitleCnt == maxSubTitleCnt) {
+                $("#add_input").hide();
+                $("#delete_input").before(subtitle);
+            }
+
+            subTitleCnt++;
+        }
+
+        // 소제목 제거
+        function deleteSubTitle() {
+            subTitleCnt--;
+
+            $(`#subTitle_group${subTitleCnt}`).remove();
+
+            if (subTitleCnt == 1) {
+                $("#delete_input").hide();
+            } else if (subTitleCnt == maxSubTitleCnt) {
+                $("#add_input").show();
+            }
+        }
+
+        function setInput(i) {
+            if ($(`select[name=subTitle${i}]`).val() === "") {
+                $(`input[name=subTitle${i}]`).hide();
+            } else {
+                $(`input[name=subTitle${i}]`).show();
+            }
+        }
+
+        // CodeMirror 테마 변경
+        function changeTheme() {
+            let selectedTheme = $("#theme_selector").val();
+            myCodeMirror.setOption("theme", selectedTheme);
+        };
+
+        // 코드 실행
+        function runCode() {
+            let code = myCodeMirror.getValue();
+            $("#result").html(code);
+            if (code.trim() === "") {
+                $("#result").css("border", "none");
+            } else {
+                $("#result").css("border", "1px solid rgb(1, 11, 22)");
+            }
+        }
+
+        // 코드 변환
+        function convertCode() {
+            let code = myCodeMirror.getValue();
+            let convertedCode = code.replace(/</g, "&lt;")
+                                    .replace(/>/g, "&gt;")
+                                    .replace(/\n/g, "<br>")
+                                    .replace(/ /g, "&nbsp;");
+            myCodeMirror.setValue(convertedCode);
+        }
+
+        // 퀴즈 수정 관련
+
+        // 이미지 파일 제거
+        function clearFileInput(inputName) {
+            let fileInput = $(`input[name=${inputName}]`);
+            fileInput.val("");
+            fileInput.parent().next("img").attr("src", "").hide();
+            fileInput.parent().parent().css("height", "35px");
+            fileInput.siblings('.img_length').hide();
+        }
+
+        // 이미지 크기 변경
+        function resizeImage(id, width, height) {
+            console.log("resizeImage called with width:", width, "height:", height);
+            let imgElement = $(`${id}`).parent().parent().next("img");
+            imgElement.css({
+                width: width + "px",
+                height: height + "px"
+            });
+        }
+        
+
+        // 데이터 관련
+        // id 재할당
+        function setChapterId(){
+            let idCounter = 0;
+            $("#type_category").children("ul").each(function() {
+
+            });
+        };
+
+
+        // JSON 데이터로 변환
+        function convertToJSON() {
+            setChapterId();
+            let thisType = $("input[name=edit_type]:checked").val();
+            let idMap = {};
+            if (thisType === "category") {
+                let data = [];
+                let idCounter = 0; // 고유 ID를 위한 카운터
+                $("#type_category").find("ul").each(function() {
+                    // let parentId = parseInt($(this).attr("id").split("_")[1]);
+                    let parentId = idCounter;
+                    idMap[$(this).attr("id").split("_")[1]] = parentId;
+
+                    $(this).children("li").each(function() {
+                        // let thisId = parseInt($(this).attr("id").split("_")[1]) - 1;
+                        let thisParentId = $(this).parent("ul").attr("id").split("_")[1];
+                        if (idMap.hasOwnProperty(thisParentId)) {
+                            thisParentId = idMap[thisParentId];
+                        }
+                        let thisId = idCounter++;
+                        let thisNth = $(this).index();
+                        let thisTitle = $(this).children("div").children(".chapter_title").val();
+                        let thisPage = $(this).children("div").children(".chapter_page").val();
+                        let thisJson = {"id":thisId, "parentId": thisParentId, "nthChild": thisNth, "name": thisTitle, "page": thisPage};
+                        data.push(thisJson);
+                    });
+                    
+                    // 단원 제목과 페이지 정보 저장 로직 작성
+                });
+                return JSON.stringify(data);
+                // 목차 데이터 변환 로직 작성
+            } else if (thisType === "code") {
+                // 예제 코드 데이터 변환 로직 작성
+            } else if (thisType === "quiz") {
+                // 퀴즈 데이터 변환 로직 작성
+            }
+        };
+
+        // GITHUB 관련 변수
+        let username = 'MinjuKang727';
+        let repo = 'Small_Project';
+        let projectName = 'PracticeHTML5';
+        let branch = 'main';
+        let path = `${projectName}/data/data.json`;
+        let GITHUB_URL = `https://api.github.com/repos/${username}/${repo}/contents/${path}`;
+        let GITHUB_GET_URL = `https://raw.githubusercontent.com/${username}/${repo}/main/${path}`;
+        let GITHUB_GET_SHA_URL = `https://github.com/repos/${username}/${repo}/commits/${branch}`;
+        let SHA = '';
+
+        // JSON 데이터 저장 (GitHub API 사용)
+        function saveContent() {
+            //최신 커밋 SHA 가져오기
+            $.ajax({
+                url: GITHUB_GET_SHA_URL,
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/vnd.github+json',
+                },
+                success: function(response) {
+                    console.log('GET SHA!', response);
+                    SHA = response.sha;
+                },
+                error: function(xhr, status, error) {
+                    console.log("error:", error);
+                }
+            });
+
+            // console.log("ACCESS_TOKEN:", config.ACCESS_TOKEN);
+            jsonData = convertToJSON();  // JSON 데이터 저장 변수
+            let payload = {
+                message: "UPDATE 'practiceHTML5' JSON 데이터",
+                content: window.btoa(unescape(encodeURIComponent( jsonData ))), // 데이터는 Base64로 인코딩
+                branch: branch, // 저장할 브랜치
+                sha: SHA // 업데이트할 파일의 SHA (파일이 이미 존재하는 경우 필요)
+            };
+
+            $.ajax({
+                url: GITHUB_URL,
+                method: 'PUT',
+                contentType: 'application/json',
+                headers: {
+                    'Authorization': 'token ${{secrets.ACCESS_TOKEN}}'
+                },
+                data: JSON.stringify(payload),
+                success: function(response) {
+                    console.log('Saved!', response);
+                },
+                error: function(e) {
+                    console.log("error:", e);
+                }
+            });
+        }
+
+        function getContent() {
+            $.ajax({
+                url: GITHUB_GET_URL,
+                method: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    // console.log('success');
+                    if (data && data.length > 0) {
+                        // console.log('데이터가 존재합니다.', data);
+                        if (data && data.length > 0) {
+                            // console.log('데이터가 존재합니다.', data);
+                            // 단원 목록 리스트 정리 쿼리 작성하기
+                            data.sort((a, b) => a.id - b.id); // ID 기준으로 정렬
+                            data.forEach(item => {
+                                // console.log("item:", item.id, item.parentId, item.name, item.page);
+                                if (item.parentId != 0 && $(`#chapterList_${item.parentId}`).length === 0) {
+                                        item.parentId--;
+                                        // console.log("parentId: ", item.parentId);
+                                    }
+
+                                if ($(`#chapterUL_${item.parentId}`).length === 0) {
+                                    
+                                    $(`#chapterList_${item.parentId}`).append(`<ul id="chapterUL_${item.parentId}"></ul>`);
+                                    // console.log($(`#chapterList_${item.parentId}`).html());
+                                }
+                                
+                                let chapter = 
+                                `<li id="chapterList_${item.id}">
+                                    <div class="chapter_group">
+                                        <input type="text" class="chapter_title" name="chapter" value="${item.name}" placeholder="제목">
+                                        <input type="text" class="chapter_page" name="chapter_page" value="${item.page}" placeholder="페이지">
+                                        <button class="btn orange small square" title="단원 위로 옮기기" onclick="moveUpChapter(${item.id})">↑</button>
+                                        <button class="btn orange small square" title="단원 아래로 옮기기" onclick="moveDownChapter(${item.id})">↓</button>
+                                        <button class="btn blue small square" title="소제목 추가" onclick="addChapter(${item.id})">+</button>
+                                        <button class="btn red small square" title="단원 제거" onclick="deleteChapter(${item.id})">-</button>
+                                    </div>
+                                </li>`
+                                $(`#chapterUL_${item.parentId}`).append(chapter);
+                                // console.log($(`#chapterList_${item.parentId}`).html());
+                            });
+                        }
+                    }
+
+                    // console.log('데이터가 비어있습니다.');
+                },
+                error: function(xhr, status, error) {
+                    if (xhr.status === 404) {
+                        // console.log("404 오류: json 파일이 존재하지 않습니다. 새 파일을 생성합니다.");
+                    } else {
+                        // console.error("기타 오류 발생:", status, error);
+                    }
+                }
+            });
+        }
+
+    
+    </script>
+    <style>
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            width: 95%;
+            height: 100%;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .desc {
+            width: 100%;
+            height: 100%;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 2px solid rgb(32, 132, 255);
+            overflow-y: auto;
+            scrollbar-width: auto;
+            scrollbar-color: rgb(32, 132, 255) rgb(236, 247, 255);
+        }
+
+        .chapter {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-content: space-evenly;
+            font-size: 10px;
+            background-color: rgb(211, 235, 255);
+            max-width: 100%;
+            width: fit-content;
+            height: fit-content;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        #type_category .chapter_title{
+            width: 200px;
+        }
+
+        .chapter_page {
+            width: 50px;
+        }
+
+        #add_input {
+            margin-left:5px;
+        }
+
+        #delete_input {
+            margin-left: 5px;
+            display: none;
+        }
+
+        #type_category, #type_quiz{
+            display: none;
+            margin-bottom: 30px;
+        }
+
+        .input_desc, #question, #quiz_solution {
+            font-size: 15px;
+            width: 100%;
+            height: 20vh;
+            resize: none;
+            overflow: auto;
+        }
+        .example {
+            margin-top: 20px;
+        }
+        .ex_num {
+            font-size: 15px;
+            font-weight: normal;
+            text-align: center;
+            color: white;
+            background: linear-gradient(to bottom, #d0d0d0, #4f4f4f);
+            max-width: 60px;
+            width: fit-content;
+            padding: 5px;
+            vertical-align: middle;
+            margin-right: 5px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        .ex_title {
+            font-size: 15px;
+            color: rgb(0, 133, 250);
+        }
+        #example_code {
+            width: 100%;
+            background-color: rgb(236, 247, 255);
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid rgb(43, 142, 255);
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+        .practice {
+            width: 70%;
+            height: 100%;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 2px solid rgb(32, 132, 255);
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .example_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .btn_group {
+            display: flex;
+            align-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn {
+            width: fit-content;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            border-bottom-width: 4px;
+            border-bottom-style: solid;
+        }
+
+        .square {
+            aspect-ratio: 1 / 1;
+        }
+
+        .lectangle {
+            aspect-ratio: 2 / 1;
+        }
+
+        .small {
+            min-width: 20px;
+        }
+
+        .normal {
+            min-width: 40px;
+        }
+
+        .big {
+            min-width: 50px;
+        }
+
+        .long {
+            min-width: 60px;
+        }
+
+        .green {
+            background-color: rgb(3, 167, 3);
+            border-bottom-color: rgb(0, 133, 0);
+            color: white;
+        }
+
+        .red {
+            background-color: rgb(247, 91, 91);
+            border-bottom-color: rgb(133, 0, 0);
+            color: white;
+        }
+
+        .blue {
+            background-color: rgb(32, 132, 255);
+            border-bottom-color: rgb(0, 82, 255);
+            color: white;
+        }
+
+        .orange {
+            background-color: rgb(255, 166, 0);
+            border-bottom-color: rgb(173, 95, 0);
+            color: white;
+        }
+
+        #convert {
+            padding: 7px 10px 4px 10px;
+            font-size: 20px;
+        }
+
+        #run {
+            font-size: 15px;
+        }
+        
+        hr {
+            margin: 10px 0;
+            border: none;
+            border-top: 1px solid rgb(32, 132, 255);
+        }
+        .practice_bottom {
+            height: 50%;
+            overflow: auto;
+            scrollbar-width: auto; 
+            scrollbar-color: rgb(32, 132, 255) rgb(236, 247, 255);
+        }
+        .result {
+            margin: auto;
+            width: fit-content;
+            height: fit-content;
+            padding: 10px;
+        }
+
+        /* 퀴즈 관련 */
+        .image {
+            width: 100%;
+            height: 35px;
+            margin: 15px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .img_input {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            padding: 5px 10px;
+        }
+    
+        .image img {
+            max-height: 80%;
+            width: auto;
+            object-fit: contain;
+            margin: 10px 0;
+            display: none;
+        }
+
+        .img_length {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 5px;
+            display: none;
+            background-color: rgb(228, 234, 238);
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+
+        .img_length_input {
+            width: 60px;
+        }
+        
+        #options {
+            margin: 15px 0;
+            max-height: 100%;
+            width: auto;
+        }
+
+        .quiz_op {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .op_group {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .last_option_input {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <span class="title">Practice HTML5</span>
+    </div>
+    <div id="edit_type"><span>수정 유형: </span>
+            <input type="radio" name="edit_type" value="category"/>목차
+            <input type="radio" name="edit_type" value="code" checked/>예제 코드
+            <input type="radio" name="edit_type" value="quiz"/>퀴즈
+    </div>
+    
+    <div class="content">
+        <div class="desc">
+            <div id="type_category">
+                <span>단원 추가</span><button class="btn blue small square" id="add_chapter" title="단원 추가" onclick="addChapter()">+</button>
+                <ul id="chapterUL_0">
+                    <!-- 단원 목록이 추가될 영역 -->
+                </ul>
+            </div>
+
+            <div id="type_code">
+                <div class="chapter">
+                    <div id="main_title">
+                        <select class="chapter_title" id="chapter_title" name="chapter_title">
+                            <option value="" selected>직접 입력</option>
+                        </select>
+                        <input type="text" class="chapter_title" name="chapter_title" placeholder="단원 제목">
+                    </div>
+                    <button class="btn red small square" id="delete_input" onclick="deleteSubTitle()" title="최하위 부제목 제거">-</button>
+                    <button class="btn blue small square" id="add_input" onclick="addSubTitle()" title="소제목 추가">+</button>
+                </div>
+                <div class="concept"><textarea class="input_desc" placeholder="개념 설명"></textarea></div>
+                <div class="example">
+                    <div class="example_header">
+                        <div class="example_title">
+                            <input type="text" class="ex_num input_ex_num" placeholder="예제 2-1">
+                            <input type="text" class="ex_title input_ex_title" placeholder="줄바꿈을 수행하는 br 요소">
+                        </div>
+                        <div class="btn_group">
+                            <button class="btn green normal square" id="convert" onclick="convertCode()" title="코드 변환">↻</button>
+                            <button class="btn green normal square" id="run" onclick="runCode()" title="코드 실행">▶</button>
+                        </div>
+                    </div>
+                    <textarea class="input_ex_code" id="example_code" placeholder="코드 입력"></textarea>
+                    <hr>
+                    <div class="practice_bottom">
+                        <div class="result" id="result"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="type_quiz">
+                <div class="quiz_type">
+                    <input type="radio" name="quiz_type" value="objective" checked/><span> 객관식</span>
+                    <input type="radio" name="quiz_type" value="subjective"/><span> 주관식</span>
+                </div>
+                <div class="image">
+                    <div class="img_input">
+                        <span>이미지 삽입: </span>
+                        <input type="file" name="quiz_img_dir" accept="image/*"/>
+                        <button class="btn red small square" title="이미지 제거" onclick="clearFileInput('quiz_img_dir')">X</button>
+                        <div class="img_length">
+                                <span>이미지 크기: </span>
+                                <input type="text" class="img_length_input width" name="ans_img_w" placeholder="너비">
+                                <span>x</span>
+                                <input type="text" class="img_length_input height" name="ans_img_h" placeholder="높이">
+                                <input type="text" id="img_ratio" name="img_ratio" hidden/>
+                                <button class="btn green small square" id="resize_quiz_image" title="이미지 크기 변경" onclick="resizeImage('#resize_quiz_image', $(this).siblings('.width').val(), $(this).siblings('.height').val())">✔</button>
+                            </div>
+                    </div>
+                    <img src="" alt="퀴즈 사진">
+                </div>
+                
+                <textarea id="question" placeholder="퀴즈 입력"></textarea>
+
+                <div id="options">
+                    <div class="op_group"><span>1. </span><input type="text" class="quiz_op" placeholder="선택지 1"></div>
+                    <div class="op_group"><span>2. </span><input type="text" class="quiz_op" placeholder="선택지 2"></div>
+                    <div class="op_group"><span>3. </span><input type="text" class="quiz_op" placeholder="선택지 3"></div>
+                    <div class="op_group"><span>4. </span><input type="text" class="quiz_op" placeholder="선택지 4"></div>
+
+                    <div class="last_option op_group">
+                        <input type="checkbox" name="add_option" value="add_option"/><span> 선택지 추가</span> 
+                        <div class="last_option_input"><span>5. </span><input type="text" class="quiz_op" placeholder="선택지 5"></div>
+                    </div>
+                </div>
+
+                <div id="solution">
+                    <span>정답: </span>
+                    <div id="answer_options">
+                        <input type="radio" name="answer" value="1"/><span>①</span>
+                        <input type="radio" name="answer" value="2"/><span>②</span>
+                        <input type="radio" name="answer" value="3"/><span>③</span>
+                        <input type="radio" name="answer" value="4"/><span>④</span>
+                        <input type="radio" name="answer" value="5"/><span>⑤</span>
+                    </div>
+                    <div class="image">
+                        <div class="img_input">
+                            <span>이미지 삽입: </span>
+                            <input type="file" name="answer_img_dir" accept="image/*"/>
+                            <button class="btn red small square" title="이미지 제거" onclick="clearFileInput('answer_img_dir')">X</button>
+                            <div class="img_length">
+                                <span>이미지 크기: </span>
+                                <input type="text" class="img_length_input width" name="ans_img_w" placeholder="너비">
+                                <span>x</span>
+                                <input type="text" class="img_length_input height" name="ans_img_h" placeholder="높이">
+                                <input type="text" id="img_ratio" name="img_ratio" hidden/>
+                                <button class="btn green small square" id="resize_answer_image" title="이미지 크기 변경" onclick="resizeImage('#resize_answer_image',$(this).siblings('.width').val(), $(this).siblings('.height').val())">✔</button>
+                            </div>
+                        </div>
+                        <img src="" alt="퀴즈 풀이 사진">
+                    </div>
+                    <textarea id="quiz_solution" placeholder="풀이 입력"></textarea>
+                </div>
+            </div>
+            <button class="btn orange long lectangle" id="save" title="저장" onclick="saveContent()" title="저장">SAVE</button>
+        </div>
+    </div>
+</body>
+</html>

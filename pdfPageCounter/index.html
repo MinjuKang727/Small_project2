@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Page Counter</title>
+    <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --success-color: #2ECC71;
+            --bg-color: #F8FAFC;
+            --text-color: #333;
+            --nav-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- 네비게이션 바 스타일 --- */
+        nav {
+            width: 100%;
+            height: 70px;
+            background-color: var(--nav-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        /* --- 메인 컨텐츠 영역 --- */
+        .container {
+            background: white;
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            text-align: center;
+            margin-top: 120px; /* Nav바 높이만큼 여백 */
+            margin-bottom: 40px;
+        }
+
+        h1 { font-size: 1.6rem; margin-bottom: 8px; font-weight: 800; color: #1A202C; }
+        p.subtitle { color: #718096; margin-bottom: 30px; font-size: 0.95rem; line-height: 1.6; }
+
+        #drop-zone {
+            border: 2px dashed #E2E8F0;
+            border-radius: 20px;
+            padding: 50px 20px;
+            transition: all 0.3s ease;
+            background: #F7FAFC;
+            cursor: pointer;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        #drop-zone.dragover {
+            border-color: var(--primary-color);
+            background-color: #EBF8FF;
+            transform: translateY(-2px);
+        }
+
+        .icon { font-size: 3.5rem; margin-bottom: 15px; display: block; }
+        
+        .result-card {
+            background: #F8FAFC;
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .total-pages {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin: 5px 0;
+            line-height: 1;
+        }
+
+        .file-info { font-size: 0.95rem; color: #718096; font-weight: 500; }
+
+        .btn-reset {
+            margin-top: 25px;
+            background: #EDF2F7;
+            border: none;
+            color: #4A5568;
+            padding: 12px 24px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+        .btn-reset:hover { background: #E2E8F0; }
+
+        .spinner {
+            display: none;
+            margin: 40px auto;
+            width: 45px;
+            height: 45px;
+            border: 5px solid #EDF2F7;
+            border-left-color: var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#" class="nav-logo" onclick="location.reload()">
+        <span>📄</span> PDF Tools
+    </a>
+    <div class="nav-links">
+        <a href="https://minjukang727.github.io/CodingWithGemini/pdfPageCounter/" class="active">페이지 카운터</a>
+        <!-- <a href="#">PDF 병합</a> -->
+        <a href="https://minjukang727.github.io/CodingWithGemini/pdf2img/">PDF ➔ IMG</a>
+        <!-- <a href="#">고객지원</a> -->
+    </div>
+</nav>
+
+<div class="container">
+    <h1>PDF Page Counter</h1>
+    <p class="subtitle">온라인으로 제본 맡길 때 일일이 세기 힘드셨죠?<br>파일만 끌어다 놓으면 총 <b>장 수</b>를 즉시 계산합니다.</p>
+
+    <div id="drop-zone" onclick="document.getElementById('fileInput').click()">
+        <span class="icon">📄</span>
+            <p style="margin-top: 15px;">PDF 파일을 직접 <b>드래그 앤 드롭</b>하시거나 여기를 <b>클릭</b>하여 파일을 추가하세요.<br>(다중 선택 지원)</p>
+        <input type="file" id="fileInput" multiple accept=".pdf" style="display:none" onchange="processFiles(this.files)">
+    </div>
+    
+    <div id="loader" class="spinner"></div>
+
+    <div id="result-card" class="result-card">
+        <div class="file-info" id="file-count">총 0개의 파일</div>
+        <div class="total-pages" id="total-pages">0</div>
+        <div style="font-weight: 800; letter-spacing: 1px; color: #4A5568;">TOTAL PAGES</div>
+        <button class="btn-reset" onclick="resetAll()">새로 계산하기</button>
+    </div>
+</div>
+
+<script>
+    const dropZone = document.getElementById('drop-zone');
+    const resultCard = document.getElementById('result-card');
+    const totalPagesEl = document.getElementById('total-pages');
+    const fileCountEl = document.getElementById('file-count');
+    const loader = document.getElementById('loader');
+
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        dropZone.addEventListener(eventName, preventDefaults, false);
+    });
+
+    function preventDefaults(e) {
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    ['dragenter', 'dragover'].forEach(eventName => {
+        dropZone.addEventListener(eventName, () => dropZone.classList.add('dragover'), false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+        dropZone.addEventListener(eventName, () => dropZone.classList.remove('dragover'), false);
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+        const dt = e.dataTransfer;
+        const files = dt.files;
+        processFiles(files);
+    });
+
+    async function processFiles(files) {
+        const pdfFiles = Array.from(files).filter(file => file.name.toLowerCase().endsWith('.pdf'));
+        
+        if (pdfFiles.length === 0) {
+            alert("PDF 파일이 없습니다.");
+            return;
+        }
+
+        dropZone.style.display = 'none';
+        resultCard.style.display = 'none';
+        loader.style.display = 'block';
+
+        let totalPageCount = 0;
+        let successCount = 0;
+
+        for (const file of pdfFiles) {
+            try {
+                const arrayBuffer = await file.arrayBuffer();
+                const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer, { ignoreEncryption: true });
+                totalPageCount += pdfDoc.getPageCount();
+                successCount++;
+            } catch (err) {
+                console.error("파일 로드 실패:", file.name);
+            }
+        }
+
+        loader.style.display = 'none';
+        resultCard.style.display = 'block';
+        fileCountEl.textContent = `총 ${successCount}개의 PDF 파일 분석 완료`;
+        totalPagesEl.textContent = totalPageCount.toLocaleString();
+    }
+
+    function resetAll() {
+        dropZone.style.display = 'block';
+        resultCard.style.display = 'none';
+        document.getElementById('fileInput').value = '';
+    }
+</script>
+
+</body>
+</html>

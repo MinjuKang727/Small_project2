@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>풀스크린 멀티 타이머 & 비디오 생성기</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #0b0b0b;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* 캔버스 배경 전체 화면 채우기 */
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* 상단 모드 선택 영역 */
+        .top-nav {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            gap: 10px;
+            background: rgba(20, 20, 20, 0.6);
+            padding: 8px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .mode-btn {
+            background: transparent;
+            color: #aaa;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .mode-btn.active {
+            background: #00ff66;
+            color: #0b0b0b;
+        }
+
+        /* 우측 상단 설정 버튼 */
+        .settings-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 10;
+            background: rgba(20, 20, 20, 0.6);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            backdrop-filter: blur(10px);
+            transition: background 0.2s;
+        }
+        .settings-btn:hover { background: rgba(50, 50, 50, 0.8); }
+
+        /* 하단 제어 컨트롤러 */
+        .bottom-controls {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            gap: 12px;
+            background: rgba(20, 20, 20, 0.6);
+            padding: 12px 20px;
+            border-radius: 14px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .ctrl-btn {
+            background: #2a2a2a;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        .ctrl-btn:hover { background: #3a3a3a; }
+        .ctrl-btn.primary {
+            background: #00ff66;
+            color: #0b0b0b;
+        }
+        .ctrl-btn.primary:hover { background: #00cc52; }
+
+        /* 설정 모달 팝업 */
+        .modal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 100;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+        }
+        .modal {
+            background: #18181b;
+            color: #e4e4e7;
+            padding: 30px;
+            border-radius: 16px;
+            width: 400px;
+            max-width: 90vw;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+            border: 1px solid #27272a;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .modal h2 { margin: 0 0 10px 0; color: #00ff66; font-size: 20px; }
+        .modal label {
+            display: flex;
+            flex-direction: column;
+            font-size: 13px;
+            gap: 5px;
+            color: #a1a1aa;
+        }
+        .modal input, .modal select {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #3f3f46;
+            background: #27272a;
+            color: #fff;
+            font-size: 14px;
+        }
+        .modal input[type="color"] {
+            width: 100%;
+            height: 40px;
+            padding: 2px;
+            cursor: pointer;
+        }
+        .modal-close {
+            margin-top: 10px;
+            background: #00ff66;
+            color: #0b0b0b;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .modal-close:hover { background: #00cc52; }
+
+        .status-msg {
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            color: #00ff66;
+            font-size: 14px;
+            background: rgba(0,0,0,0.8);
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 상단 모드 선택 -->
+    <div class="top-nav">
+        <button class="mode-btn active" onclick="switchMode('up')">카운트 업</button>
+        <button class="mode-btn" onclick="switchMode('down')">카운트 다운</button>
+        <button class="mode-btn" onclick="switchMode('alarm')">알람</button>
+    </div>
+
+    <!-- 우측 상단 설정 버튼 -->
+    <button class="settings-btn" onclick="toggleModal(true)">⚙️ 설정</button>
+
+    <!-- 상태 메시지 -->
+    <div id="statusMsg" class="status-msg">동영상 녹화 중...</div>
+
+    <!-- 캔버스 (전체 화면 렌더링) -->
+    <canvas id="canvas"></canvas>
+
+    <!-- 하단 제어 컨트롤러 -->
+    <div class="bottom-controls">
+        <button class="ctrl-btn primary" id="playPauseBtn" onclick="togglePlayPause()">일시정지</button>
+        <button class="ctrl-btn" onclick="resetTimer()">처음으로</button>
+        <button class="ctrl-btn" onclick="startRecording()">동영상 다운로드</button>
+    </div>
+
+    <!-- 설정 모달 팝업 창 -->
+    <div class="modal-overlay" id="settingsModal">
+        <div class="modal">
+            <h2>타이머 설정</h2>
+            
+            <div id="durationSettingBox">
+                <label>총 재생/목표 시간 (초):
+                    <input type="number" id="settingDuration" value="10" min="1" max="3600">
+                </label>
+            </div>
+            <div id="alarmSettingBox" style="display:none;">
+                <label>알람 울릴 시간 (초):
+                    <input type="number" id="settingAlarmTime" value="5" min="1" max="3600">
+                </label>
+                <label>알람 도달 시 텍스트:
+                    <input type="text" id="settingAlarmText" value="TIME OVER!">
+                </label>
+            </div>
+
+            <label>글자 색상:
+                <input type="color" id="settingTextColor" value="#00ff66">
+            </label>
+            <label>글자 투명도 (0 ~ 255):
+                <input type="number" id="settingTextAlpha" value="255" min="0" max="255">
+            </label>
+            
+            <label>배경 박스 표시 여부:
+                <select id="settingUseBox" onchange="toggleBoxOptions()">
+                    <option value="yes">표시함</option>
+                    <option value="no">표시 안 함 (시간만)</option>
+                </select>
+            </label>
+
+            <div id="boxOptionsContainer">
+                <label>배경 색상:
+                    <input type="color" id="settingBgColor" value="#141414">
+                </label>
+                <label>배경 투명도 (0 ~ 255):
+                    <input type="number" id="settingBgAlpha" value="180" min="0" max="255">
+                </label>
+            </div>
+
+            <label>소리 알람(오디오 비프음) 여부:
+                <select id="settingSound">
+                    <option value="yes">사용함</option>
+                    <option value="no">사용 안 함</option>
+                </select>
+            </label>
+
+            <button class="modal-close" onclick="toggleModal(false)">설정 완료</button>
+        </div>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const statusMsg = document.getElementById('statusMsg');
+
+        let currentMode = 'up'; // 'up', 'down', 'alarm'
+        let isPlaying = true;
+        let currentTime = 0;
+        let alarmTriggered = false;
+
+        // 화면 크기 반응형 자동 조절
+        function resizeCanvas() {
+            canvas.width = window.innerWidth * window.devicePixelRatio;
+            canvas.height = window.innerHeight * window.devicePixelRatio;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        function switchMode(mode) {
+            currentMode = mode;
+            resetTimer();
+            document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            if (mode === 'alarm') {
+                document.getElementById('durationSettingBox').style.display = 'none';
+                document.getElementById('alarmSettingBox').style.display = 'block';
+            } else {
+                document.getElementById('durationSettingBox').style.display = 'block';
+                document.getElementById('alarmSettingBox').style.display = 'none';
+            }
+        }
+
+        function toggleModal(show) {
+            document.getElementById('settingsModal').style.display = show ? 'flex' : 'js' ? 'flex' : 'none'; // 안전처리
+            document.getElementById('settingsModal').style.display = show ? 'flex' : 'none';
+        }
+
+        function toggleBoxOptions() {
+            let useBox = document.getElementById('settingUseBox').value;
+            document.getElementById('boxOptionsContainer').style.display = useBox === 'yes' ? 'block' : 'none';
+        }
+
+        function togglePlayPause() {
+            isPlaying = !isPlaying;
+            document.getElementById('playPauseBtn').innerText = isPlaying ? "일시정지" : "재생";
+        }
+
+        function resetTimer() {
+            currentTime = 0;
+            alarmTriggered = false;
+        }
+
+        function hexToRgba(hex, alpha) {
+            let r = parseInt(hex.slice(1, 3), 16);
+            let g = parseInt(hex.slice(3, 5), 16);
+            let b = parseInt(hex.slice(5, 7), 16);
+            return `rgba(${r}, ${g}, ${b}, ${alpha / 255})`;
+        }
+
+        function playBeep() {
+            if (document.getElementById('settingSound').value === 'no') return;
+            try {
+                const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.value = 880;
+                gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + 0.25);
+            } catch (e) {}
+        }
+
+        function formatTime(sec) {
+            if (sec < 0) sec = 0;
+            let hours = Math.floor(sec / 3600);
+            let minutes = Math.floor((sec % 3600) / 60);
+            let seconds = Math.floor(sec % 60);
+            let milliseconds = Math.floor((sec % 1) * 1000);
+            return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}.${String(milliseconds).padStart(3, '0')}`;
+        }
+
+        // 렌더링 핵심 함수
+        function drawScene(timeSec) {
+            const width = canvas.width;
+            const height = canvas.height;
+            ctx.clearRect(0, 0, width, height);
+
+            // 설정값 읽기
+            const textColor = document.getElementById('settingTextColor').value;
+            const textAlpha = parseInt(document.getElementById('settingTextAlpha').value);
+            const useBox = document.getElementById('settingUseBox').value;
+            const bgColor = document.getElementById('settingBgColor').value;
+            const bgAlpha = parseInt(document.getElementById('settingBgAlpha').value);
+
+            let displayText = "";
+            let targetDuration = parseFloat(document.getElementById('settingDuration').value);
+
+            if (currentMode === 'up') {
+                if (timeSec > targetDuration) timeSec = targetDuration;
+                displayText = formatTime(timeSec);
+            } else if (currentMode === 'down') {
+                let remaining = targetDuration - timeSec;
+                if (remaining <= 0) {
+                    remaining = 0;
+                    if (!alarmTriggered) { playBeep(); alarmTriggered = true; }
+                }
+                displayText = formatTime(remaining);
+            } else if (currentMode === 'alarm') {
+                let alarmTime = parseFloat(document.getElementById('settingAlarmTime').value);
+                let alarmText = document.getElementById('settingAlarmText').value;
+                if (timeSec >= alarmTime) {
+                    displayText = alarmText;
+                    if (!alarmTriggered) { playBeep(); alarmTriggered = true; }
+                } else {
+                    let remaining = alarmTime - timeSec;
+                    displayText = formatTime(remaining);
+                }
+            }
+
+            // 글자 크기 화면 비율에 맞춰 동적 조절
+            let fontSize = Math.min(width / 8, 120);
+            ctx.font = `bold ${fontSize}px sans-serif`;
+            ctx.textBaseline = 'middle';
+            ctx.textAlign = 'center';
+
+            let textMetrics = ctx.measureText(displayText);
+            let textWidth = textMetrics.width;
+            let textHeight = fontSize;
+
+            let centerX = width / 2;
+            let centerY = height / 2;
+
+            // 배경 박스 사용 시
+            if (useBox === 'yes') {
+                let paddingX = 60;
+                let paddingY = 40;
+                let boxW = textWidth + paddingX;
+                let boxH = textHeight + paddingY;
+                let boxX = centerX - boxW / 2;
+                let boxY = centerY - boxH / 2;
+
+                ctx.beginPath();
+                ctx.roundRect(boxX, boxY, boxW, boxH, 24);
+                ctx.fillStyle = hexToRgba(bgColor, bgAlpha);
+                ctx.fill();
+            }
+
+            // 텍스트 그리기
+            ctx.fillStyle = hexToRgba(textColor, textAlpha);
+            ctx.fillText(displayText, centerX, centerY);
+        }
+
+        // 메인 애니메이션 루프
+        let lastTime = performance.now();
+        function loop(now) {
+            let delta = (now - lastTime) / 1000;
+            lastTime = now;
+
+            if (isPlaying) {
+                currentTime += delta;
+                let maxLimit = currentMode === 'alarm' ? parseFloat(document.getElementById('settingAlarmTime').value) + 5 : parseFloat(document.getElementById('settingDuration').value);
+                if (currentTime > maxLimit) {
+                    currentTime = maxLimit;
+                }
+            }
+
+            drawScene(currentTime);
+            requestAnimationFrame(loop);
+        }
+        requestAnimationFrame(loop);
+
+        // 동영상 다운로드 기능 (MediaRecorder)
+        async function startRecording() {
+            statusMsg.style.display = 'block';
+            statusMsg.innerText = "동영상 파일 생성 중... 잠시 기다려주세요.";
+
+            let targetDuration = currentMode === 'alarm' ? parseFloat(document.getElementById('settingAlarmTime').value) + 2 : parseFloat(document.getElementById('settingDuration').value);
+            let fps = 30;
+            let totalFrames = targetDuration * fps;
+
+            resetTimer();
+            isPlaying = true;
+
+            const stream = canvas.captureStream(fps);
+            let recorder;
+            try {
+                recorder = new MediaRecorder(stream, { mimeType: 'video/webm; codecs=vp9' });
+            } catch (e) {
+                recorder = new MediaRecorder(stream);
+            }
+
+            let chunks = [];
+            recorder.ondataavailable = e => chunks.push(e.data);
+            recorder.onstop = () => {
+                let blob = new Blob(chunks, { type: 'video/webm' });
+                let url = URL.createObjectURL(blob);
+                let a = document.createElement('a');
+                a.href = url;
+                a.download = `timer_${currentMode}.webm`;
+                a.click();
+
+                statusMsg.innerText = "다운로드 완료!";
+                setTimeout(() => { statusMsg.style.display = 'none'; }, 3000);
+            };
+
+            recorder.start();
+
+            // 빠른 속도로 프레임 녹화 강제 진행
+            let frameIdx = 0;
+            let recordInterval = setInterval(() => {
+                if (frameIdx >= totalFrames) {
+                    clearInterval(recordInterval);
+                    recorder.stop();
+                    return;
+                }
+                currentTime = frameIdx / fps;
+                drawScene(currentTime);
+                frameIdx++;
+            }, 1000 / fps);
+        }
+    </script>
+</body>
+</html>

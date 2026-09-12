@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice HTML5</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+    <!-- 테마 추가 (선택) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/mdn-like.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/duotone-light.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/lucario.min.css">
+    <!-- 2. CodeMirror JS Core -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <!-- 3. 구문 강조 모드 (HTML/JS/CSS) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/htmlmixed/htmlmixed.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+
+            $("#run").mousedown(function() {
+                $(this).css("background-color", "rgb(63, 174, 63)");
+                $(this).css("border-bottom", "none");
+                $(this).css("margin-top", "4px");
+            }).mouseup(function() {
+                $(this).css("background-color", "rgb(3, 167, 3)");
+                $(this).css("border-bottom", "4px solid rgb(0, 133, 0)");   
+                $(this).css("margin-top", "0");
+            });
+
+
+            $('#input_code').on('input', function(e) {
+                const value = $(this).val();
+                const lines = value.split('\n').length;
+
+                // 줄번호 입력
+                $('.line_numbers').html(Array(lines).fill(0).map((_, i) => `<span>${i + 1}</span>`).join('<br>'));
+
+                // 자동 들여쓰기
+                if (value.slice(-1) === '\n') {
+                    let start = $(this).get(0).selectionStart;
+                    let end = $(this).get(0).selectionEnd;
+                    let prevLineStart = value.lastIndexOf('\n', start - 2) + 1;
+                    let prevLine = value.substring(prevLineStart, start - 1);
+                    let indentSize = prevLine.match(/^\s*/)[0].length;
+                    let indent = " ".repeat(indentSize);
+                    $(this).val(value.substring(0, start) + indent + value.substring(end))
+                    $(this).get(0).selectionStart = $(this).get(0).selectionEnd = start + indent.length;
+                }
+            });
+
+            // 스크롤 동기화
+            $('#input_code').scroll(function() {
+                $('.line_numbers').scrollTop($(this).scrollTop());
+            });
+
+            $('#input_code').keydown(function(e) {
+                if (e.shiftKey && e.keyCode === 9) {  // keyCode: 13(Shift키), keyCode: 9(Tab키)
+                    // 내어쓰기
+                    e.preventDefault();  // 포커스 이동 막기
+                    let start = $(this).get(0).selectionStart;
+                    let end = $(this).get(0).selectionEnd;
+                    let value = $(this).val();
+                    let lineStart = value.lastIndexOf('\n', start - 1) + 1;
+
+                    // 내어쓰기 로직
+                    for (let i = 4; i > 0; i--) {
+                        if (value.substring(lineStart, lineStart + i) === ' '.repeat(i)) {
+                            $(this).val(value.substring(0, lineStart) + value.substring(lineStart + i));
+                            $(this).get(0).selectionStart = $(this).get(0).selectionEnd = start - i;
+                            break;
+                        }
+                    }
+                } else if (e.keyCode === 9) {  // keyCode: 9(Tab키)
+                    // 들여쓰기
+                    e.preventDefault();  // 포커스 이동 막기
+                    let value = $(this).val();
+                    let start = $(this).get(0).selectionStart;
+                    let end = $(this).get(0).selectionEnd;
+                    const indent = " ".repeat(4);  // 들여쓰기: 공백 4칸
+                    
+                    $(this).val(value.substring(0, start) + indent + value.substring(end))
+                    $(this).get(0).selectionStart = $(this).get(0).selectionEnd = start + indent.length;
+                }
+            });
+        });
+
+        function runCode() {
+            var code = myCodeMirror.getValue();
+            $("#result").html(code);
+            if (code.trim() === "") {
+                $("#result").css("border", "none");
+            } else {
+                $("#result").css("border", "1px solid rgb(1, 11, 22)");
+            }
+        }
+
+    </script>
+    <style>
+        /* 기본 태그 */
+        h1, h2, h3 {
+            margin-bottom: 5px;
+        }
+
+        
+        hr {
+            margin: 10px 0;
+            border: none;
+            border-top: 1px solid rgb(32, 132, 255);
+        }
+
+        textarea {
+            outline: none;
+        }
+        /* 공통 스타일 지정 */
+        .font_small {
+            font-size: 15px;
+        }
+
+        .font_tiny {
+            font-size: 10px;
+        }
+
+        .font_weight_normal {
+            font-weight: normal;
+        }
+
+        .blue_txt {
+            color: rgb(0, 133, 250);
+        }
+
+        .title {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .content {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 85vh;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .desc {
+            width: 40%;
+            height: 100%;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 2px solid rgb(32, 132, 255);
+            overflow: auto;
+            scrollbar-width: auto;
+            scrollbar-color: rgb(32, 132, 255) rgb(236, 247, 255);
+        }
+
+        .chapter {
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .concept_desc {
+            font-size: 15px;
+        }
+        .example {
+            margin-top: 20px;
+        }
+        .ex_num {
+            font-size: 15px;
+            font-weight: normal;
+            color: white;
+            background: linear-gradient(to bottom, #d0d0d0, #4f4f4f);
+            width: fit-content;
+            padding: 0 7px 2px 7px;
+            margin-right: 5px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+        .ex_title {
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .ex_code {
+            background-color: rgb(236, 247, 255);
+            padding: 10px;
+            border-radius: 3px;
+            border: 1px solid rgb(43, 142, 255);
+            margin-top: 10px;
+        }
+        .practice {
+            width: 60%;
+            height: 100%;
+            padding: 5px 10px;
+            border-radius: 5px;
+            border: 2px solid rgb(32, 132, 255);
+            display: flex;
+            flex-direction: column;
+        }
+        .practice_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .btn {
+            padding: 4px 10px 5px 10px;
+            font-size: 15px;
+            background-color: rgb(3, 167, 3);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            border-bottom: 4px solid rgb(0, 133, 0);
+        }
+        .code_editor {
+            display: flex;
+            gap: 10px;
+            height: 40%;
+        }
+        .line_numbers {
+            width: 15px;
+            background-color: #d1e4ff;
+            padding: 10px;
+            text-align: right;
+            color: rgb(41, 105, 194);
+            font-family: monospace;
+            font-size: 15px;
+            line-height: 20px;
+            user-select: none; /* 줄 번호 선택 방지 */
+            overflow: auto;
+            scrollbar-width: none;
+        }
+        .input_code {
+            width: 100%;
+            height: 100%;
+            font-size: 15px;
+            padding: 10px;
+            border: 1px solid rgb(43, 142, 255);
+            margin-bottom: 20px;
+            /* 선 넣기 핵심 CSS */
+            line-height: 20px; /* 줄 높이 */
+            background-image: linear-gradient(#1b82ff 1px, transparent 1px);
+            background-size: 100% 20px; /* line-height와 동일하게 설정 */
+            background-position: 0 10px; /* 텍스트 높이에 맞게 조절 */
+            background-attachment: local; /* 스크롤 시 배경도 같이 움직이도록 설정 */
+            resize: none;
+            box-sizing: border-box;
+            overflow: auto;
+            scrollbar-width: auto;
+            scrollbar-color: rgb(32, 132, 255) rgb(236, 247, 255);
+            tab-size: 4;
+        }
+        
+        .practice_bottom {
+            height: 50%;
+            overflow: auto;
+            scrollbar-width: auto; 
+            scrollbar-color: rgb(32, 132, 255) rgb(236, 247, 255);
+        }
+        .result {
+            width: fit-content;
+            height: fit-content;
+            padding: 10px;
+        }
+
+        .border {
+            border: 1px solid rgb(17, 107, 203);
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <span class="title">Practice HTML5</span>
+    </div>
+
+    <div class="content">
+        <div class="desc">
+            <div class="chapter">
+                <h1 class="font_tiny font_weight_normal blue_txt">
+                <span class="chapter_title">제2장. HTML5: 웹 문서 만들기</span>
+                 / <span class="subtitle1">2.1 텍스트 표현</span>
+                  / <span class="subtitle2">2.1.1 줄을 바꾸는 br 요소</span>
+                </h1>
+            </div>
+
+            <div class="concept">
+                <span class="concept_desc"></span>
+            </div>
+
+            <div class="example">
+                <div class="example_header">
+                    <h2><span class="ex_num">예제 2-1</span> <span class="ex_title blue_txt">줄바꿈을 수행하는 br 요소</span></h2>
+                </div>
+
+                <pre class="ex_code">&lt;!DOCTYPE&nbsp;html&gt;<br>&lt;html&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;&nbsp;br&nbsp;요소&nbsp;&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/head&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;body&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;br&nbsp;요소는&nbsp;문서의&nbsp;어느&nbsp;곳에서든&nbsp;강제로&nbsp;줄바꿈을&nbsp;수행한다.&nbsp;&lt;br&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;여러&nbsp;줄을&nbsp;바꾸는&nbsp;경우&nbsp;원하는&nbsp;개수만큼을&nbsp;연속적으로&nbsp;사용한다.<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;br을&nbsp;세&nbsp;번&nbsp;사용했으므로&nbsp;위&nbsp;문장&nbsp;사이에는&nbsp;빈&nbsp;두&nbsp;줄이&nbsp;나타난다.<br>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/body&gt;<br>&lt;/html&gt;</pre>
+                <hr>
+                <h3 class="font_small blue_txt">실행 결과</h3>
+                <div class="result border">
+                    <!DOCTYPE html>
+                        <html>
+                            <head>
+                                <title> br 요소 </title>
+                            </head>
+                            <body>
+                                br 요소는 문서의 어느 곳에서든 강제로 줄바꿈을 수행한다. <br>
+                                여러 줄을 바꾸는 경우 원하는 개수만큼을 연속적으로 사용한다.
+                                <br/><br/><br/>
+                                br을 세 번 사용했으므로 위 문장 사이에는 빈 두 줄이 나타난다.
+                            </body>
+                        </html>
+                </div>
+            </div>
+        </div>
+        <div class="practice">
+            <div class="practice_header">
+                <button class="btn" id="run" onclick="runCode()" title="코드 실행">▶</button>
+            </div>
+            <div class="code_editor">
+                <div class="line_numbers"><span>1</span></div>
+                <textarea class="input_code" id="input_code" name="input_code" placeholder="여기에 코드를 입력하세요"></textarea>
+            </div>
+            <hr>
+
+            <div class="practice_bottom">
+                <div class="result" id="result"></div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

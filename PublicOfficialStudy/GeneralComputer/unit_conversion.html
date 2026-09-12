@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>종합 단위 환산기</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .converter-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            max-width: 420px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333333;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .input-group, .select-box {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #666666;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        input[type="number"], select {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.2s;
+            background-color: #fff;
+        }
+
+        input[type="number"]:focus, select:focus {
+            border-color: #4a90e2;
+        }
+
+        .select-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .select-box {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        .arrow {
+            font-size: 20px;
+            color: #888888;
+            margin-top: 22px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #357abd;
+        }
+
+        .result-container {
+            margin-top: 24px;
+            padding: 16px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .result-container h2 {
+            font-size: 14px;
+            color: #888888;
+            margin-bottom: 6px;
+        }
+
+        #result-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333;
+        }
+    </style>
+</head>
+<body>
+    <div class="converter-container">
+        <h1>종합 단위 환산기</h1>
+        
+        <div class="input-group">
+            <label for="category">단위 종류</label>
+            <select id="category">
+                <option value="length">길이 (Length)</option>
+                <option value="storage">기억용량 (Storage)</option>
+                <option value="speed">연산 속도 (Speed)</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="from-value">값 입력</label>
+            <input type="number" id="from-value" placeholder="숫자를 입력하세요">
+        </div>
+
+        <div class="select-group">
+            <div class="select-box">
+                <label for="from-unit">from</label>
+                <select id="from-unit">
+                    <!-- JavaScript로 동적 생성 -->
+                </select>
+            </div>
+
+            <div class="arrow">⇄</div>
+
+            <div class="select-box">
+                <label for="to-unit">to</label>
+                <select id="to-unit">
+                    <!-- JavaScript로 동적 생성 -->
+                </select>
+            </div>
+        </div>
+
+        <button id="convert-btn">변환하기</button>
+
+        <div class="result-container">
+            <h2>변환 결과</h2>
+            <p id="result-value">0</p>
+        </div>
+    </div>
+
+    <script>
+        // 단위 카테고리별 목록 정의 (기준 단위 기준 배율)
+        const units = {
+            length: {
+                name: "길이",
+                units: {
+                    mm: { name: "밀리미터 (mm)", rate: 0.001 },
+                    cm: { name: "센티미터 (cm)", rate: 0.01 },
+                    m: { name: "미터 (m)", rate: 1 },
+                    km: { name: "킬로미터 (km)", rate: 1000 }
+                }
+            },
+            storage: {
+                name: "기억용량",
+                units: {
+                    B: { name: "바이트 (B)", rate: 1 },
+                    KB: { name: "킬로바이트 (KB)", rate: 2 ** 10 },
+                    MB: { name: "메가바이트 (MB)", rate: 2 ** 20 },
+                    GB: { name: "기가바이트 (GB)", rate: 2 ** 30 },
+                    TB: { name: "테라바이트 (TB)", rate: 2 ** 40 },
+                    PB: { name: "페타바이트 (PB)", rate: 2 ** 50 },
+                    EB: { name: "엑사바이트 (EB)", rate: 2 ** 60 },
+                    ZB: { name: "제타바이트 (ZB)", rate: 2 ** 70 },
+                    YB: { name: "요타바이트 (YB)", rate: 2 ** 80 }
+                }
+            },
+            speed: {
+                name: "연산속도",
+                units: {
+                    s: { name: "초 (s)", rate: 1 },
+                    ms: { name: "밀리초 (ms)", rate: 10 ** (-3) },
+                    µs: { name: "마이크로초 (µs)", rate: 10 ** (-6) },
+                    ns: { name: "나노초 (ns)", rate: 10 ** (-9) },
+                    ps: { name: "피코초 (ps)", rate: 10 ** (-12) },
+                    fs: { name: "펨토초 (fs)", rate: 10 ** (-15) },
+                    as: { name: "아토초 (as)", rate: 10 ** (-18) }
+                }
+            }
+        };
+
+        const categorySelect = document.getElementById('category');
+        const fromUnitSelect = document.getElementById('from-unit');
+        const toUnitSelect = document.getElementById('to-unit');
+        const fromValueInput = document.getElementById('from-value');
+        const resultValueDisplay = document.getElementById('result-value'); // 이름 변경 resultValue -> resultValueDisplay
+        const resultContainer = document.querySelector('.result-container');
+
+        // [추가] 폰트 크기 동적 조절 함수
+        function adjustFontSize() {
+            const containerWidth = resultContainer.clientWidth - 32; // 패딩(16px * 2) 제외
+            const textSpan = resultValueDisplay;
+            
+            // 폰트 크기 초기화 (최대 32px)
+            let currentSize = 32;
+            textSpan.style.fontSize = currentSize + 'px';
+
+            // 텍스트 너비가 컨테이너 너비보다 클 때까지 반복해서 폰트 크기 줄임
+            // scrollWidth는 텍스트의 실제 너비
+            while (textSpan.scrollWidth > containerWidth && currentSize > 16) {
+                currentSize -= 1; // 1px씩 감소
+                textSpan.style.fontSize = currentSize + 'px';
+            }
+        }
+
+        // 카테고리 변경 시 단위 셀렉트박스 업데이트
+        function updateUnits() {
+            const category = categorySelect.value;
+            const unitList = units[category].units;
+
+            fromUnitSelect.innerHTML = '';
+            toUnitSelect.innerHTML = '';
+
+            for (const [key, value] of Object.entries(unitList)) {
+                fromUnitSelect.add(new Option(value.name, key));
+                toUnitSelect.add(new Option(value.name, key));
+            }
+
+            const keys = Object.keys(unitList);
+            if (keys.length > 1) {
+                toUnitSelect.value = keys[1];
+            }
+        }
+
+        // 변환 로직 수행
+        function convert() {
+            const category = categorySelect.value;
+            const unitList = units[category].units;
+            const inputValue = parseFloat(fromValueInput.value);
+
+            if (isNaN(inputValue)) {
+                resultValueDisplay.textContent = "0";
+                adjustFontSize(); // 크기 재조절
+                return;
+            }
+
+            const fromUnit = fromUnitSelect.value;
+            const toUnit = toUnitSelect.value;
+
+            const baseValue = inputValue * unitList[fromUnit].rate;
+            const result = baseValue / unitList[toUnit].rate;
+
+            // 숫자가 너무 크거나 작으면 지수 표기법이 나오므로toLocaleString 대신 커스텀 처리
+            // 여기서는 소수점 6자리까지 제한하고, 그 이상은 자동 지수 표기법을 사용하되
+            // 너무 긴 지수 표기법도 레이아웃을 깨지 않도록 조정합니다.
+            let formattedResult;
+            if (result > 1e15 || (result < 1e-6 && result !== 0)) {
+                formattedResult = result.toExponential(4); // 지수 표기법 사용
+            } else {
+                // 일반 표기법 (최대 소수점 6자리까지, 불필요한 0 제거)
+                formattedResult = parseFloat(result.toFixed(6)).toLocaleString('en-US', {maximumFractionDigits: 6});
+            }
+
+            resultValueDisplay.textContent = formattedResult;
+            
+            adjustFontSize();
+        }
+
+        // 이벤트 리스너 등록
+        categorySelect.addEventListener('change', () => {
+            updateUnits();
+            convert();
+        });
+
+        fromUnitSelect.addEventListener('change', convert);
+        toUnitSelect.addEventListener('change', convert);
+        fromValueInput.addEventListener('input', convert);
+
+        window.addEventListener('resize', adjustFontSize);
+
+        // 초기화 실행
+        updateUnits();
+        adjustFontSize();
+    </script>
+</body>
+</html>
