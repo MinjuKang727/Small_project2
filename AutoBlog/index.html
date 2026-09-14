@@ -520,6 +520,7 @@ $5</textarea>
         try {
             let rawBlocks = text.split(/\n\s*\n/);
             let results = [];
+            let exclude_list = ['연관 단어', '관련한자단어', '디지털 한자사전', '한국한자어사전', '이전 탭', '댜음 탭'];
 
             rawBlocks.forEach(block => {
                 let lines = block.split('\n').map(l => l.trim()).filter(l => l !== '');
@@ -541,8 +542,15 @@ $5</textarea>
                 let tempBody = [];
                 for (let i = startIndex; i < lines.length; i++) {
                     let l = lines[i];
-                    exclude_list = ['연관 단어', '관련한자단어', '디지털 한자사전', '한국한자어사전', '이전 탭', '댜음 탭']
-                    if (l in exclude_list) {
+                    
+                    // 만약 숫자로 시작하는 행(예: "1.", "2.")이라면 메타 단어가 포함되어 있어도 본문으로 인정하고 유지
+                    if (/^\d+\./.test(l)) {
+                        tempBody.push(l);
+                        continue;
+                    }
+
+                    // 숫자로 시작하지 않는 일반 행인 경우에만 excludelist 체크
+                    if (exclude_list.includes(l) || exclude_list.some(ex => l.includes(ex))) {
                         continue;
                     }
                     tempBody.push(l);
