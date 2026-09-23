@@ -10,7 +10,10 @@ Qbank/serviceAccountKey.json
 .env
 client_secret.json
 token.json
+token_*.json
+*_token.json
 node_modules/
+dist/
 build/
 *.zip
 *.mp4
