@@ -21,4 +21,5 @@ build/
 *.wav
 *.spec
 *.log
+*.sbv
 build/
