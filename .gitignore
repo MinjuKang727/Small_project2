@@ -24,4 +24,5 @@ build/
 *.spec
 *.log
 *.sbv
+*.exe
 build/
