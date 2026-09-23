@@ -19,6 +19,6 @@ build/
 *.iso
 *.mp3
 *.wav
-*.ico
+*.spec
 *.log
 build/
